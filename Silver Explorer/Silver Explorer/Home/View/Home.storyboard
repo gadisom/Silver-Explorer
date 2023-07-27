@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kmn-qL-Xgp">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Silver_Explorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sO-C8-NlC" userLabel="UIExplore Button">
+                                <rect key="frame" x="272.5" y="540" width="275" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KDe-NW-UOh"/>
+                                    <constraint firstAttribute="width" constant="275" id="ffj-Qj-5pR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="스마트 기기 UI 탐험하기">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="uiExploreBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rkB-FG-z2a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEQ-51-v6w" userLabel="AIExplore Button">
+                                <rect key="frame" x="272.5" y="800" width="275" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Wy3-jB-dJP"/>
+                                    <constraint firstAttribute="width" constant="275" id="hxW-fg-2iY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="AI 탐험하기">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="arKioskBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="U3a-Ou-hCU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0b-BK-308" userLabel="ARKiosk Button">
+                                <rect key="frame" x="272.5" y="670" width="275" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bbT-Ps-jpi"/>
+                                    <constraint firstAttribute="width" constant="275" id="o6r-vh-eki"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="키오스크 탐험하기">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="aiExplore:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="14O-3m-twc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4sO-C8-NlC" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Mb4-l2-huM"/>
+                            <constraint firstItem="i0b-BK-308" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="130" id="U9o-iy-Eqp"/>
+                            <constraint firstItem="xEQ-51-v6w" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="260" id="Yve-QD-F43"/>
+                            <constraint firstItem="4sO-C8-NlC" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Z3s-1Y-BSV"/>
+                            <constraint firstItem="i0b-BK-308" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="igL-xd-Alr"/>
+                            <constraint firstItem="xEQ-51-v6w" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pb8-au-Hpt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fny-TM-HbA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804.14634146341461" y="-2.0338983050847457"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0ub-Px-Trw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kmn-qL-Xgp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4t7-ra-oMK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="K29-Lm-jUu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1y-9M-ITg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.560975609756099" y="-2.0338983050847457"/>
+        </scene>
+    </scenes>
+</document>
