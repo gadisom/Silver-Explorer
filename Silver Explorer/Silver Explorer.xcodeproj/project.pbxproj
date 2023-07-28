@@ -14,7 +14,6 @@
 		CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57ABEC2A710A4200E892FF /* AppDelegate.swift */; };
 		CC57ABEF2A710A4200E892FF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABEE2A710A4200E892FF /* art.scnassets */; };
 		CC57ABF12A710A4200E892FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57ABF02A710A4200E892FF /* ViewController.swift */; };
-		CC57ABF62A710A4300E892FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABF52A710A4300E892FF /* Assets.xcassets */; };
 		CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABF72A710A4300E892FF /* LaunchScreen.storyboard */; };
 		CC57AC042A710AE100E892FF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC57AC032A710AE100E892FF /* Home.storyboard */; };
 		CC57AC062A710AFA00E892FF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC052A710AFA00E892FF /* HomeViewController.swift */; };
@@ -25,6 +24,19 @@
 		CC57AC162A710DC900E892FF /* ARCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC152A710DC900E892FF /* ARCharacter.swift */; };
 		CC57AC182A710DD100E892FF /* Arr.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC172A710DD100E892FF /* Arr.swift */; };
 		CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC192A710DDA00E892FF /* Finn.swift */; };
+		FF185B442A73AD7B003E766E /* ARKiosk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF185B432A73AD7B003E766E /* ARKiosk.storyboard */; };
+		FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF185B452A73ADA7003E766E /* ARKioskViewController.swift */; };
+		FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */ = {isa = PBXBuildFile; fileRef = FF185B492A73B3FF003E766E /* ARKiosk.scn */; };
+		FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */ = {isa = PBXBuildFile; fileRef = FF185B4B2A73B4AC003E766E /* summerFestival.png */; };
+		FF185B4E2A73B4B0003E766E /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = FF185B4D2A73B4B0003E766E /* camera.png */; };
+		FF185B502A73B56B003E766E /* KioskMainBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */; };
+		FF185B522A73B589003E766E /* KioskMainBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */; };
+		FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */; };
+		FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */; };
+		FFE42A602A73BC2E00752CD7 /* OptionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5F2A73BC2E00752CD7 /* OptionSelectViewController.swift */; };
+		FFE42A622A73BC3C00752CD7 /* OptionSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A612A73BC3C00752CD7 /* OptionSelect.storyboard */; };
+		FFE42A642A73BC4800752CD7 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A632A73BC4800752CD7 /* Payment.storyboard */; };
+		FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +48,6 @@
 		CC57ABEC2A710A4200E892FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC57ABEE2A710A4200E892FF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		CC57ABF02A710A4200E892FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CC57ABF52A710A4300E892FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC57ABF82A710A4300E892FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC57AC032A710AE100E892FF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CC57AC052A710AFA00E892FF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,20 @@
 		CC57AC152A710DC900E892FF /* ARCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCharacter.swift; sourceTree = "<group>"; };
 		CC57AC172A710DD100E892FF /* Arr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arr.swift; sourceTree = "<group>"; };
 		CC57AC192A710DDA00E892FF /* Finn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finn.swift; sourceTree = "<group>"; };
+		FF185B392A739C4F003E766E /* ARKiosk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ARKiosk.usdz; sourceTree = "<group>"; };
+		FF185B432A73AD7B003E766E /* ARKiosk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARKiosk.storyboard; sourceTree = "<group>"; };
+		FF185B452A73ADA7003E766E /* ARKioskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskViewController.swift; sourceTree = "<group>"; };
+		FF185B492A73B3FF003E766E /* ARKiosk.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKiosk.scn; sourceTree = "<group>"; };
+		FF185B4B2A73B4AC003E766E /* summerFestival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summerFestival.png; sourceTree = "<group>"; };
+		FF185B4D2A73B4B0003E766E /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KioskMainBoard.storyboard; sourceTree = "<group>"; };
+		FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardViewController.swift; sourceTree = "<group>"; };
+		FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResource.swift; sourceTree = "<group>"; };
+		FFE42A5F2A73BC2E00752CD7 /* OptionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OptionSelectViewController.swift; path = "Silver Explorer/AR-Kiosk/KioskScreen/Controller/OptionSelectViewController.swift"; sourceTree = SOURCE_ROOT; };
+		FFE42A612A73BC3C00752CD7 /* OptionSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OptionSelect.storyboard; sourceTree = "<group>"; };
+		FFE42A632A73BC4800752CD7 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +121,7 @@
 		CC57ABEB2A710A4200E892FF /* Silver Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				FF185B322A739BF9003E766E /* AR-Kiosk */,
 				CC43524D2A727287000EDAB0 /* Utils */,
 				CC43524A2A7259D0000EDAB0 /* Delegate */,
 				CC57AC0A2A710C4E00E892FF /* AR-UI-Explore */,
@@ -103,8 +129,8 @@
 				CC57ABEC2A710A4200E892FF /* AppDelegate.swift */,
 				CC57ABEE2A710A4200E892FF /* art.scnassets */,
 				CC57ABF02A710A4200E892FF /* ViewController.swift */,
-				CC57ABF52A710A4300E892FF /* Assets.xcassets */,
 				CC57ABF72A710A4300E892FF /* LaunchScreen.storyboard */,
+				FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */,
 			);
 			path = "Silver Explorer";
 			sourceTree = "<group>";
@@ -189,6 +215,90 @@
 			path = ARCharacter;
 			sourceTree = "<group>";
 		};
+		FF185B322A739BF9003E766E /* AR-Kiosk */ = {
+			isa = PBXGroup;
+			children = (
+				FF185B3B2A739CAA003E766E /* KioskScreen */,
+				FFE42A5C2A73BB7700752CD7 /* AR-Kiosk-Modeling */,
+			);
+			path = "AR-Kiosk";
+			sourceTree = "<group>";
+		};
+		FF185B332A739C0B003E766E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF185B4B2A73B4AC003E766E /* summerFestival.png */,
+				FF185B4D2A73B4B0003E766E /* camera.png */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF185B342A739C14003E766E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF185B392A739C4F003E766E /* ARKiosk.usdz */,
+				FF185B492A73B3FF003E766E /* ARKiosk.scn */,
+				FF185B432A73AD7B003E766E /* ARKiosk.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF185B352A739C1A003E766E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF185B452A73ADA7003E766E /* ARKioskViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FF185B3B2A739CAA003E766E /* KioskScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FF185B3F2A739CAA003E766E /* Model */,
+				FF185B402A739CAA003E766E /* View */,
+				FF185B3C2A739CAA003E766E /* Controller */,
+			);
+			path = KioskScreen;
+			sourceTree = "<group>";
+		};
+		FF185B3C2A739CAA003E766E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFE42A5F2A73BC2E00752CD7 /* OptionSelectViewController.swift */,
+				FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */,
+				FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FF185B3F2A739CAA003E766E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF185B402A739CAA003E766E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */,
+				FFE42A612A73BC3C00752CD7 /* OptionSelect.storyboard */,
+				FFE42A632A73BC4800752CD7 /* Payment.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFE42A5C2A73BB7700752CD7 /* AR-Kiosk-Modeling */ = {
+			isa = PBXGroup;
+			children = (
+				FF185B332A739C0B003E766E /* Model */,
+				FF185B342A739C14003E766E /* View */,
+				FF185B352A739C1A003E766E /* Controller */,
+			);
+			path = "AR-Kiosk-Modeling";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,10 +358,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC57ABEF2A710A4200E892FF /* art.scnassets in Resources */,
+				FF185B442A73AD7B003E766E /* ARKiosk.storyboard in Resources */,
 				CC57AC042A710AE100E892FF /* Home.storyboard in Resources */,
+				FFE42A642A73BC4800752CD7 /* Payment.storyboard in Resources */,
+				FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */,
+				FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */,
+				FF185B4E2A73B4B0003E766E /* camera.png in Resources */,
+				FFE42A622A73BC3C00752CD7 /* OptionSelect.storyboard in Resources */,
+				FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */,
 				CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */,
-				CC57ABF62A710A4300E892FF /* Assets.xcassets in Resources */,
 				CC57AC112A710D3700E892FF /* UIExplore.storyboard in Resources */,
+				FF185B502A73B56B003E766E /* KioskMainBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +384,15 @@
 				CC4352472A72506C000EDAB0 /* ARCharacterSelectViewController.swift in Sources */,
 				CC57AC182A710DD100E892FF /* Arr.swift in Sources */,
 				CC57AC132A710D9C00E892FF /* UIExploreResource.swift in Sources */,
+				FF185B522A73B589003E766E /* KioskMainBoardViewController.swift in Sources */,
 				CC43524C2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift in Sources */,
+				FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */,
 				CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */,
 				CC57AC0F2A710D2A00E892FF /* UIExploreViewController.swift in Sources */,
+				FFE42A602A73BC2E00752CD7 /* OptionSelectViewController.swift in Sources */,
 				CC57AC162A710DC900E892FF /* ARCharacter.swift in Sources */,
+				FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */,
+				FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */,
 				CC57AC092A710C0A00E892FF /* HomeResource.swift in Sources */,
 				CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */,
 				CC43524F2A727296000EDAB0 /* CustomizeView.swift in Sources */,
@@ -413,17 +535,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YWNQ4RZBTS;
+				DEVELOPMENT_TEAM = U6NUHA5DNR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,7 +559,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,17 +570,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YWNQ4RZBTS;
+				DEVELOPMENT_TEAM = U6NUHA5DNR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -472,7 +594,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

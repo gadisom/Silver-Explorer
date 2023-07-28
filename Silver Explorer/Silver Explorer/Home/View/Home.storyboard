@@ -41,7 +41,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="arKioskBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="U3a-Ou-hCU"/>
+                                    <action selector="aiExplore:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WoD-gB-vcM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0b-BK-308" userLabel="ARKiosk Button">
@@ -55,7 +55,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="aiExplore:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="14O-3m-twc"/>
+                                    <action selector="arKioskBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ufh-KB-Skc"/>
                                 </connections>
                             </button>
                         </subviews>

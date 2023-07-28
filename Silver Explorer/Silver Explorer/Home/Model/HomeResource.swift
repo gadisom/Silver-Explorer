@@ -13,6 +13,7 @@ enum Content: String {
 
 struct HomeResourse {
     let storyBoardIDs: [Content: String] = [
-        .UIExplore: "ARCharacterSelectViewController"
+        .UIExplore: "ARCharacterSelectViewController",
+        .ARKiosk: "ARKioskViewController"
     ]
 }
