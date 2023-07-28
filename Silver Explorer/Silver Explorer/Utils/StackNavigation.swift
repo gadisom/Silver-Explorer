@@ -25,3 +25,13 @@ func moveToUIExploreVC(vc: UIViewController) {
 func moveBacktoHome(vc: UIViewController) {
     vc.navigationController?.popToRootViewController(animated: true)
 }
+
+
+// Kiosk 관련 이동 프로퍼티
+
+func moveToARKioskVC(vc: UIViewController) {
+    let storyboard = UIStoryboard(name: "ARKiosk", bundle: nil)
+    guard let nextVC = storyboard.instantiateViewController(withIdentifier: "ARKioskViewController") as? ARKioskViewController else { return }
+  
+    vc.navigationController?.pushViewController(nextVC, animated: true)
+}

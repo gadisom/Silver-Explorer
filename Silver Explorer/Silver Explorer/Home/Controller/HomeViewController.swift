@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func arKioskBtnPressed(_ sender: UIButton) {
+        moveToContentVC(homeVC: self, content: .ARKiosk, storyBoardID: storyBoardIDs[.ARKiosk]!)
     }
     
     
