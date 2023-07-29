@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OptionSelectViewController: UIViewController {
+class ProductOptionSelectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -33,8 +33,8 @@
 		FF185B522A73B589003E766E /* KioskMainBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */; };
 		FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */; };
 		FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */; };
-		FFE42A602A73BC2E00752CD7 /* OptionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5F2A73BC2E00752CD7 /* OptionSelectViewController.swift */; };
-		FFE42A622A73BC3C00752CD7 /* OptionSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A612A73BC3C00752CD7 /* OptionSelect.storyboard */; };
+		FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */; };
+		FFE42A622A73BC3C00752CD7 /* ProductOptionSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A612A73BC3C00752CD7 /* ProductOptionSelect.storyboard */; };
 		FFE42A642A73BC4800752CD7 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A632A73BC4800752CD7 /* Payment.storyboard */; };
 		FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */; };
 /* End PBXBuildFile section */
@@ -68,8 +68,8 @@
 		FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardViewController.swift; sourceTree = "<group>"; };
 		FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResource.swift; sourceTree = "<group>"; };
-		FFE42A5F2A73BC2E00752CD7 /* OptionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OptionSelectViewController.swift; path = "Silver Explorer/AR-Kiosk/KioskScreen/Controller/OptionSelectViewController.swift"; sourceTree = SOURCE_ROOT; };
-		FFE42A612A73BC3C00752CD7 /* OptionSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OptionSelect.storyboard; sourceTree = "<group>"; };
+		FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductOptionSelectViewController.swift; path = "Silver Explorer/AR-Kiosk/KioskScreen/Controller/ProductOptionSelectViewController.swift"; sourceTree = SOURCE_ROOT; };
+		FFE42A612A73BC3C00752CD7 /* ProductOptionSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductOptionSelect.storyboard; sourceTree = "<group>"; };
 		FFE42A632A73BC4800752CD7 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,7 +264,7 @@
 		FF185B3C2A739CAA003E766E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FFE42A5F2A73BC2E00752CD7 /* OptionSelectViewController.swift */,
+				FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */,
 				FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */,
 				FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */,
 			);
@@ -283,7 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */,
-				FFE42A612A73BC3C00752CD7 /* OptionSelect.storyboard */,
+				FFE42A612A73BC3C00752CD7 /* ProductOptionSelect.storyboard */,
 				FFE42A632A73BC4800752CD7 /* Payment.storyboard */,
 			);
 			path = View;
@@ -364,7 +364,7 @@
 				FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */,
 				FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */,
 				FF185B4E2A73B4B0003E766E /* camera.png in Resources */,
-				FFE42A622A73BC3C00752CD7 /* OptionSelect.storyboard in Resources */,
+				FFE42A622A73BC3C00752CD7 /* ProductOptionSelect.storyboard in Resources */,
 				FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */,
 				CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */,
 				CC57AC112A710D3700E892FF /* UIExplore.storyboard in Resources */,
@@ -389,7 +389,7 @@
 				FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */,
 				CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */,
 				CC57AC0F2A710D2A00E892FF /* UIExploreViewController.swift in Sources */,
-				FFE42A602A73BC2E00752CD7 /* OptionSelectViewController.swift in Sources */,
+				FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */,
 				CC57AC162A710DC900E892FF /* ARCharacter.swift in Sources */,
 				FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */,
 				FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */,
@@ -535,7 +535,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6NUHA5DNR;
+				DEVELOPMENT_TEAM = YWNQ4RZBTS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -570,7 +570,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6NUHA5DNR;
+				DEVELOPMENT_TEAM = YWNQ4RZBTS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
