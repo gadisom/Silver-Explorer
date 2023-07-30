@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC23C3A52A76A3BA0024C12B /* KioskModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3A42A76A3BA0024C12B /* KioskModalViewController.swift */; };
+		CC23C3A72A76A6110024C12B /* KioskModalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3A62A76A6110024C12B /* KioskModalResource.swift */; };
+		CC23C3A92A76AB8D0024C12B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3A82A76AB8D0024C12B /* Enum.swift */; };
+		CC23C3AB2A76CAC10024C12B /* MembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */; };
+		CC23C3AD2A76CB210024C12B /* PhoneMemberShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */; };
+		CC23C3AF2A76CB380024C12B /* BarcodMembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AE2A76CB380024C12B /* BarcodMembershipViewController.swift */; };
 		CC4352472A72506C000EDAB0 /* ARCharacterSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4352462A72506C000EDAB0 /* ARCharacterSelectViewController.swift */; };
 		CC43524C2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43524B2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift */; };
 		CC43524F2A727296000EDAB0 /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43524E2A727296000EDAB0 /* CustomizeView.swift */; };
@@ -34,12 +40,18 @@
 		FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */; };
 		FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */; };
 		FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */; };
-		FFE42A622A73BC3C00752CD7 /* ProductOptionSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A612A73BC3C00752CD7 /* ProductOptionSelect.storyboard */; };
+		FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A612A73BC3C00752CD7 /* KioskModal.storyboard */; };
 		FFE42A642A73BC4800752CD7 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A632A73BC4800752CD7 /* Payment.storyboard */; };
 		FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC23C3A42A76A3BA0024C12B /* KioskModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskModalViewController.swift; sourceTree = "<group>"; };
+		CC23C3A62A76A6110024C12B /* KioskModalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskModalResource.swift; sourceTree = "<group>"; };
+		CC23C3A82A76AB8D0024C12B /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipViewController.swift; sourceTree = "<group>"; };
+		CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneMemberShipViewController.swift; sourceTree = "<group>"; };
+		CC23C3AE2A76CB380024C12B /* BarcodMembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodMembershipViewController.swift; sourceTree = "<group>"; };
 		CC4352462A72506C000EDAB0 /* ARCharacterSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCharacterSelectViewController.swift; sourceTree = "<group>"; };
 		CC43524B2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCharacterSelectDelegate.swift; sourceTree = "<group>"; };
 		CC43524E2A727296000EDAB0 /* CustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeView.swift; sourceTree = "<group>"; };
@@ -69,7 +81,7 @@
 		FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResource.swift; sourceTree = "<group>"; };
 		FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductOptionSelectViewController.swift; path = "Silver Explorer/AR-Kiosk/KioskScreen/Controller/ProductOptionSelectViewController.swift"; sourceTree = SOURCE_ROOT; };
-		FFE42A612A73BC3C00752CD7 /* ProductOptionSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductOptionSelect.storyboard; sourceTree = "<group>"; };
+		FFE42A612A73BC3C00752CD7 /* KioskModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KioskModal.storyboard; sourceTree = "<group>"; };
 		FFE42A632A73BC4800752CD7 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +110,7 @@
 			children = (
 				CC43524E2A727296000EDAB0 /* CustomizeView.swift */,
 				CC4352502A72841E000EDAB0 /* StackNavigation.swift */,
+				CC23C3A82A76AB8D0024C12B /* Enum.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,6 +280,10 @@
 				FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */,
 				FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */,
 				FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */,
+				CC23C3A42A76A3BA0024C12B /* KioskModalViewController.swift */,
+				CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */,
+				CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */,
+				CC23C3AE2A76CB380024C12B /* BarcodMembershipViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */,
+				CC23C3A62A76A6110024C12B /* KioskModalResource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,7 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */,
-				FFE42A612A73BC3C00752CD7 /* ProductOptionSelect.storyboard */,
+				FFE42A612A73BC3C00752CD7 /* KioskModal.storyboard */,
 				FFE42A632A73BC4800752CD7 /* Payment.storyboard */,
 			);
 			path = View;
@@ -364,7 +382,7 @@
 				FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */,
 				FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */,
 				FF185B4E2A73B4B0003E766E /* camera.png in Resources */,
-				FFE42A622A73BC3C00752CD7 /* ProductOptionSelect.storyboard in Resources */,
+				FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */,
 				FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */,
 				CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */,
 				CC57AC112A710D3700E892FF /* UIExplore.storyboard in Resources */,
@@ -389,12 +407,18 @@
 				FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */,
 				CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */,
 				CC57AC0F2A710D2A00E892FF /* UIExploreViewController.swift in Sources */,
+				CC23C3A52A76A3BA0024C12B /* KioskModalViewController.swift in Sources */,
+				CC23C3A92A76AB8D0024C12B /* Enum.swift in Sources */,
 				FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */,
 				CC57AC162A710DC900E892FF /* ARCharacter.swift in Sources */,
 				FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */,
+				CC23C3AD2A76CB210024C12B /* PhoneMemberShipViewController.swift in Sources */,
 				FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */,
 				CC57AC092A710C0A00E892FF /* HomeResource.swift in Sources */,
 				CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */,
+				CC23C3AB2A76CAC10024C12B /* MembershipViewController.swift in Sources */,
+				CC23C3A72A76A6110024C12B /* KioskModalResource.swift in Sources */,
+				CC23C3AF2A76CB380024C12B /* BarcodMembershipViewController.swift in Sources */,
 				CC43524F2A727296000EDAB0 /* CustomizeView.swift in Sources */,
 				CC57AC062A710AFA00E892FF /* HomeViewController.swift in Sources */,
 			);
