@@ -5,4 +5,11 @@
 //  Created by Jinyoung Yoo on 2023/07/31.
 //
 
-import Foundation
+import UIKit
+
+struct PaymentSelectResource {
+    let paymentImages: [PaymentType: [UIImage]] = [
+        .creditCard: [ #imageLiteral(resourceName: "credit_selected"), #imageLiteral(resourceName: "credit_not")],
+        .barcode: [ #imageLiteral(resourceName: "barcode_selected"), #imageLiteral(resourceName: "barcode_not")]
+    ]
+}
