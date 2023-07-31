@@ -8,6 +8,8 @@
 import UIKit
 
 class PaymentViewController: UIViewController {
+    
+    let resource: PaymentResource = PaymentResource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
