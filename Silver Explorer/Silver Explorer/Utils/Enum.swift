@@ -11,6 +11,14 @@ enum Content: String {
     case UIExplore, ARKiosk, AIExplore
 }
 
+enum ProductType {
+    case coffee, beverage, new
+}
+
+enum PaymentType {
+    case creditCard, barcode
+}
+
 enum KioskModalContent {
     case option, membership, paymentSelect, creditCardPayment, barcodePayment, success
 }
