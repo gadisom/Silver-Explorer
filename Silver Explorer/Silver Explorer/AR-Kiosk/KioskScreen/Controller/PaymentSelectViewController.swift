@@ -1,13 +1,13 @@
 //
-//  PaymentViewController.swift
+//  PaymentSelectViewController.swift
 //  Silver Explorer
 //
-//  Created by Jinyoung Yoo on 2023/07/31.
+//  Created by 유진영 on 2023/07/31.
 //
 
 import UIKit
 
-class PaymentViewController: UIViewController {
+class PaymentSelectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

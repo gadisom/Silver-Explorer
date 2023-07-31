@@ -20,5 +20,9 @@ class KioskModalViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    func appear(sender: UIViewController) {
+        self.modalPresentationStyle = .overFullScreen
+        sender.present(self, animated: false)
+    }
     
 }
