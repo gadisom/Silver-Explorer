@@ -30,6 +30,8 @@
 		CC57AC162A710DC900E892FF /* ARCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC152A710DC900E892FF /* ARCharacter.swift */; };
 		CC57AC182A710DD100E892FF /* Arr.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC172A710DD100E892FF /* Arr.swift */; };
 		CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC192A710DDA00E892FF /* Finn.swift */; };
+		CCB7B4352A777EA900EE46AA /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */; };
+		CCB7B4372A7782FA00EE46AA /* PaymentFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */; };
 		FF185B442A73AD7B003E766E /* ARKiosk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF185B432A73AD7B003E766E /* ARKiosk.storyboard */; };
 		FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF185B452A73ADA7003E766E /* ARKioskViewController.swift */; };
 		FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */ = {isa = PBXBuildFile; fileRef = FF185B492A73B3FF003E766E /* ARKiosk.scn */; };
@@ -42,7 +44,7 @@
 		FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */; };
 		FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A612A73BC3C00752CD7 /* KioskModal.storyboard */; };
 		FFE42A642A73BC4800752CD7 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A632A73BC4800752CD7 /* Payment.storyboard */; };
-		FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */; };
+		FFE42A662A73BC5400752CD7 /* PaymentSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A652A73BC5400752CD7 /* PaymentSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		CC57AC152A710DC900E892FF /* ARCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCharacter.swift; sourceTree = "<group>"; };
 		CC57AC172A710DD100E892FF /* Arr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arr.swift; sourceTree = "<group>"; };
 		CC57AC192A710DDA00E892FF /* Finn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finn.swift; sourceTree = "<group>"; };
+		CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFinishViewController.swift; sourceTree = "<group>"; };
 		FF185B392A739C4F003E766E /* ARKiosk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ARKiosk.usdz; sourceTree = "<group>"; };
 		FF185B432A73AD7B003E766E /* ARKiosk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARKiosk.storyboard; sourceTree = "<group>"; };
 		FF185B452A73ADA7003E766E /* ARKioskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +87,7 @@
 		FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductOptionSelectViewController.swift; path = "Silver Explorer/AR-Kiosk/KioskScreen/Controller/ProductOptionSelectViewController.swift"; sourceTree = SOURCE_ROOT; };
 		FFE42A612A73BC3C00752CD7 /* KioskModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KioskModal.storyboard; sourceTree = "<group>"; };
 		FFE42A632A73BC4800752CD7 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
-		FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		FFE42A652A73BC5400752CD7 /* PaymentSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,11 +283,13 @@
 			children = (
 				FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */,
 				FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */,
-				FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */,
+				FFE42A652A73BC5400752CD7 /* PaymentSelectViewController.swift */,
 				CC23C3A42A76A3BA0024C12B /* KioskModalViewController.swift */,
 				CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */,
 				CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */,
 				CC23C3AE2A76CB380024C12B /* BarcodMembershipViewController.swift */,
+				CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */,
+				CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -404,9 +410,10 @@
 				CC57AC132A710D9C00E892FF /* UIExploreResource.swift in Sources */,
 				FF185B522A73B589003E766E /* KioskMainBoardViewController.swift in Sources */,
 				CC43524C2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift in Sources */,
-				FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */,
+				FFE42A662A73BC5400752CD7 /* PaymentSelectViewController.swift in Sources */,
 				CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */,
 				CC57AC0F2A710D2A00E892FF /* UIExploreViewController.swift in Sources */,
+				CCB7B4372A7782FA00EE46AA /* PaymentFinishViewController.swift in Sources */,
 				CC23C3A52A76A3BA0024C12B /* KioskModalViewController.swift in Sources */,
 				CC23C3A92A76AB8D0024C12B /* Enum.swift in Sources */,
 				FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */,
@@ -414,6 +421,7 @@
 				FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */,
 				CC23C3AD2A76CB210024C12B /* PhoneMemberShipViewController.swift in Sources */,
 				FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */,
+				CCB7B4352A777EA900EE46AA /* PaymentViewController.swift in Sources */,
 				CC57AC092A710C0A00E892FF /* HomeResource.swift in Sources */,
 				CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */,
 				CC23C3AB2A76CAC10024C12B /* MembershipViewController.swift in Sources */,
