@@ -15,6 +15,18 @@ enum ProductType {
     case coffee, beverage, new
 }
 
+enum ProductTemperature {
+    case hot, ice
+}
+
+enum ProductSize {
+    case regular, grande, venti
+}
+
+enum IceQuantity {
+    case less, regular, extra
+}
+
 enum PaymentType {
     case creditCard, barcode
 }
