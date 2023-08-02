@@ -8,22 +8,31 @@
 import UIKit
 
 class MembershipViewController: UIViewController {
-
+    
+    @IBOutlet weak var barcodeMembershipContainerView: UIView!
+    @IBOutlet weak var phoneMembershipContainerView: UIView!
+    @IBOutlet weak var membershipSelectSegmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initialSettingForSegmentControl()
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction func membershipMethodSelected(_ sender: UISegmentedControl) {
+        if (sender.selectedSegmentIndex == 0) {
+            barcodeMembershipContainerView.isHidden = true
+            phoneMembershipContainerView.isHidden = false
+        } else {
+            phoneMembershipContainerView.isHidden = true
+            barcodeMembershipContainerView.isHidden = false
+        }
     }
     
+    func initialSettingForSegmentControl() {
+        barcodeMembershipContainerView.isHidden = true
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        membershipSelectSegmentedControl.setTitleTextAttributes(textAttributes, for: .normal)
     }
-    */
-
 }
