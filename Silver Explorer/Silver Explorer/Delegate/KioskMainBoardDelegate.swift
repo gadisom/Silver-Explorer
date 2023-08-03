@@ -13,4 +13,7 @@ protocol KioskMainBoardDelegate: AnyObject {
     
     // ProductOptionSelectViewController -> KioskMainBoardViewController
     func productForCart(product: Product)
+    
+    // KioskMainBoardViewController -> PaymentSelectViewController
+    func totalPriceForPayment() -> Int
 }
