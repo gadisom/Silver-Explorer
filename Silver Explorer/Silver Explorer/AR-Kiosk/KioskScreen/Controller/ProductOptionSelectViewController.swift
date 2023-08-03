@@ -9,50 +9,74 @@ import UIKit
 
 class ProductOptionSelectViewController: UIViewController {
     
+    // MARK: - IBOutlet Properties
+
+    @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet private weak var productImageView: UIImageView!
     @IBOutlet private weak var numberOfProductLabel: UILabel!
     @IBOutlet private weak var productPriceLabel: UILabel!
     
-    @IBOutlet weak var hotButton: UIButton!
-    @IBOutlet weak var iceButton: UIButton!
+    @IBOutlet private weak var hotButton: UIButton!
+    @IBOutlet private weak var iceButton: UIButton!
     
     @IBOutlet private weak var regularSizeBtnView: UIView!
     @IBOutlet private weak var grandeSizeBtnView: UIView!
     @IBOutlet private weak var ventiSizeBtnView: UIView!
     
-    @IBOutlet weak var iceQuantitySelectView: UIView!
+    @IBOutlet private weak var iceQuantitySelectView: UIView!
     @IBOutlet private weak var lessIceBtnView: UIView!
     @IBOutlet private weak var regularIceBtnView: UIView!
     @IBOutlet private weak var extraIceBtnView: UIView!
     
+    // MARK: Stored Properties
+    
     private let resource: ProductOptionResource = ProductOptionResource()
+    private weak var kioskMenuBoardDelegate: KioskMainBoardDelegate?
     private var selectedSizeBtnView: UIView!
     private var selectedIceBtnView: UIView!
+
+    // MARK: - Computed Properties
+
+    private var productName: String {
+        guard let name = kioskMenuBoardDelegate?.productForSelectingOption().productName else {
+            self.dismiss(animated: false)
+            return ""
+        }
+        return name
+    }
+    private var productType: ProductType {
+        guard let type = kioskMenuBoardDelegate?.productForSelectingOption().productType else {
+            self.dismiss(animated: false)
+            return .none
+        }
+        return type
+    }
+    
+    // MARK: - Property Observers
     
     private var numberOfProduct: Int = 1 {
         didSet {
             numberOfProductLabel.text = "\(numberOfProduct)"
         }
     }
-
-    private var price: Int = 4800 {
+    private var singlePrice: Int = 0 {
         didSet {
-            finalPrice = price * numberOfProduct
+            finalPrice = singlePrice * numberOfProduct
         }
     }
     private var sizeOptionPrice: Int = 0 {
         didSet {
-            price -= oldValue
-            price += sizeOptionPrice
+            singlePrice -= oldValue
+            singlePrice += sizeOptionPrice
         }
     }
     private var iceOptionPrice: Int = 0 {
         didSet {
-            price -= oldValue
-            price += iceOptionPrice
+            singlePrice -= oldValue
+            singlePrice += iceOptionPrice
         }
     }
-    var finalPrice: Int = 0 {
+    private var finalPrice: Int = 0 {
         didSet {
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .decimal
@@ -60,11 +84,13 @@ class ProductOptionSelectViewController: UIViewController {
             productPriceLabel.text = "₩ \(formattedPrice!)"
         }
     }
+    
+    // MARK: - Instance Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        renderDefaultSelectButtons()
+
+        initialSettingForSelectingOption()
     }
     
     func appear(sender: UIViewController) {
@@ -74,28 +100,28 @@ class ProductOptionSelectViewController: UIViewController {
     
     // MARK: - IBAction Methods
     
-    @IBAction func minusButtonPressed(_ sender: UIButton) {
+    @IBAction private func minusButtonPressed(_ sender: UIButton) {
         if (numberOfProduct > 1) {
             numberOfProduct -= 1
-            finalPrice = price * numberOfProduct
+            finalPrice = singlePrice * numberOfProduct
         }
     }
     
-    @IBAction func plusButtonPressed(_ sender: UIButton) {
+    @IBAction private func plusButtonPressed(_ sender: UIButton) {
         if (numberOfProduct < 5) {
             numberOfProduct += 1
-            finalPrice = price * numberOfProduct
+            finalPrice = singlePrice * numberOfProduct
         }
     }
     
-    @IBAction func hotButtonPressed(_ sender: UIButton) {
+    @IBAction private func hotButtonPressed(_ sender: UIButton) {
         renderSelectedTempButton(temp: .hot)
         renderNotSelectedTempButton(temp: .ice)
         iceQuantitySelectView.isHidden = true
         iceOptionPrice = 0
     }
     
-    @IBAction func iceButtonPressed(_ sender: UIButton) {
+    @IBAction private func iceButtonPressed(_ sender: UIButton) {
         renderDefaultIceQuantitySelectButton(isFirst: false)
         renderSelectedTempButton(temp: .ice)
         renderNotSelectedTempButton(temp: .hot)
@@ -103,54 +129,74 @@ class ProductOptionSelectViewController: UIViewController {
         iceOptionPrice = 500
     }
 
-    @IBAction func regularSizeBtnPressed(_ sender: UIButton) {
+    @IBAction private func regularSizeBtnPressed(_ sender: UIButton) {
         renderSelectedSizeButton(size: .regular)
         sizeOptionPrice = 0
     }
     
-    @IBAction func grandeSizeBtnPressed(_ sender: UIButton) {
+    @IBAction private func grandeSizeBtnPressed(_ sender: UIButton) {
         renderSelectedSizeButton(size: .grande)
         sizeOptionPrice = 500
     }
     
-    @IBAction func ventiSizeBtnPressed(_ sender: UIButton) {
+    @IBAction private func ventiSizeBtnPressed(_ sender: UIButton) {
         renderSelectedSizeButton(size: .venti)
         sizeOptionPrice = 1000
     }
     
     
-    @IBAction func lessIceBtnPressed(_ sender: UIButton) {
+    @IBAction private func lessIceBtnPressed(_ sender: UIButton) {
         renderSelectedIceQuantityButton(quantity: .less)
     }
     
-    @IBAction func regularIceBtnPressed(_ sender: UIButton) {
+    @IBAction private func regularIceBtnPressed(_ sender: UIButton) {
         renderSelectedIceQuantityButton(quantity: .regular)
     }
     
-    @IBAction func extraIceBtnPressed(_ sender: UIButton) {
+    @IBAction private func extraIceBtnPressed(_ sender: UIButton) {
         renderSelectedIceQuantityButton(quantity: .extra)
+    }
+    
+    @IBAction private func cancelBtnPressed(_ sender: UIButton) {
+        self.dismiss(animated: false)
+    }
+    
+    @IBAction private func addCartBtnPressed(_ sender: UIButton) {
+        let product = Product(productName: productName, singleProductPrice: singlePrice, totalProductPrice: finalPrice)
+        kioskMenuBoardDelegate?.productForCart(product: product)
+        
+        self.dismiss(animated: false)
     }
 }
 
 
 extension ProductOptionSelectViewController {
-    // MARK: - Feature Methods
+    // MARK: - Initial Setting Method
     
-    func renderDefaultSelectButtons() {
+    private func initialSettingForSelectingOption() {
+        guard let price = kioskMenuBoardDelegate?.productForSelectingOption().singleProductPrice else {
+            self.dismiss(animated: false)
+            return
+        }
+        singlePrice = price
+        
+        productNameLabel.text = productName
+        productImageView.image = resource.productImages[productType]!
+        
         renderDefaultTempSelectButton()
         renderDefaultSizeSelectButton()
         renderDefaultIceQuantitySelectButton(isFirst: true)
     }
     
-    // MARK: - Product Temperature Feature Methods
+    // MARK: - Product Temperature Option Feature Methods
     
-    func renderDefaultTempSelectButton() {
+    private func renderDefaultTempSelectButton() {
         renderSelectedTempButton(temp: .hot)
         renderNotSelectedTempButton(temp: .ice)
         iceQuantitySelectView.isHidden = true
     }
     
-    func renderSelectedTempButton(temp: ProductTemperature) {
+    private func renderSelectedTempButton(temp: ProductTemperature) {
         var tempButton: UIButton!
         
         switch temp {
@@ -166,7 +212,7 @@ extension ProductOptionSelectViewController {
         tempButton.layer.cornerRadius = 10
     }
     
-    func renderNotSelectedTempButton(temp: ProductTemperature) {
+    private func renderNotSelectedTempButton(temp: ProductTemperature) {
         var tempButton: UIButton!
 
         switch temp {
@@ -185,16 +231,16 @@ extension ProductOptionSelectViewController {
         tempButton.layer.cornerRadius = 10
     }
     
-    // MARK: - Product Size Feature Methods
+    // MARK: - Product Size Option Feature Methods
     
-    func renderDefaultSizeSelectButton() {
+    private func renderDefaultSizeSelectButton() {
         regularSizeBtnView.backgroundColor = .clear
         regularSizeBtnView.layer.borderWidth = 3.0
         regularSizeBtnView.layer.borderColor = UIColor(hex: "#699FFE").cgColor
         selectedSizeBtnView = regularSizeBtnView
     }
     
-    func renderSelectedSizeButton(size: ProductSize) {
+    private func renderSelectedSizeButton(size: ProductSize) {
         
         // 이전에 선택되었던 selectedSizeBtnView를 선택 안된 모습으로 변경
         selectedSizeBtnView.backgroundColor = UIColor(hex: "#D9D9D9")
@@ -220,9 +266,9 @@ extension ProductOptionSelectViewController {
         selectedSizeBtnView = sizeButtonView
     }
     
-    // MARK: - Product Ice Quantity Feature Methods
+    // MARK: - Product Ice Quantity Option Feature Methods
     
-    func renderDefaultIceQuantitySelectButton(isFirst: Bool) {
+    private func renderDefaultIceQuantitySelectButton(isFirst: Bool) {
         
         if (isFirst == false) {
             selectedIceBtnView.backgroundColor = UIColor(hex: "#D9D9D9")
@@ -236,7 +282,7 @@ extension ProductOptionSelectViewController {
         selectedIceBtnView = regularIceBtnView
     }
     
-    func renderSelectedIceQuantityButton(quantity: IceQuantity) {
+    private func renderSelectedIceQuantityButton(quantity: IceQuantity) {
         
         selectedIceBtnView.backgroundColor = UIColor(hex: "#D9D9D9")
         selectedIceBtnView.layer.borderWidth = 0.0
@@ -265,6 +311,5 @@ extension ProductOptionSelectViewController {
         
         selectedIceBtnView = iceQuantityButtonView
     }
-    
     
 }
