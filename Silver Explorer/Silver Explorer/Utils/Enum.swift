@@ -28,7 +28,7 @@ enum IceQuantity {
 }
 
 enum PaymentType {
-    case creditCard, barcode
+    case creditCard, barcode, none
 }
 
 enum KioskModalContent {
