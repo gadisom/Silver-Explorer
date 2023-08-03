@@ -1479,6 +1479,9 @@ in the location below)</string>
                                                                                                                 </constraints>
                                                                                                                 <state key="normal" title="Button"/>
                                                                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                                                                <connections>
+                                                                                                                    <action selector="creditCardSelected:" destination="EXs-oj-nIV" eventType="touchUpInside" id="exU-eG-UYQ"/>
+                                                                                                                </connections>
                                                                                                             </button>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit_selected" translatesAutoresizingMaskIntoConstraints="NO" id="6ZV-aY-WTT">
                                                                                                                 <rect key="frame" x="20.000000000000007" y="20" width="117.66666666666669" height="112"/>
@@ -1514,6 +1517,9 @@ in the location below)</string>
                                                                                                                 </constraints>
                                                                                                                 <state key="normal" title="Button"/>
                                                                                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                                                                <connections>
+                                                                                                                    <action selector="barcodeSelected:" destination="EXs-oj-nIV" eventType="touchUpInside" id="YPD-DG-i8A"/>
+                                                                                                                </connections>
                                                                                                             </button>
                                                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barcode_not" translatesAutoresizingMaskIntoConstraints="NO" id="JbT-gX-vsg">
                                                                                                                 <rect key="frame" x="19.999999999999993" y="20" width="117.33333333333331" height="112"/>
@@ -1597,6 +1603,9 @@ in the location below)</string>
                                                                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                                                             <color key="baseBackgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="previousBtnPressed:" destination="EXs-oj-nIV" eventType="touchUpInside" id="YKU-f1-tj1"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -1615,6 +1624,9 @@ in the location below)</string>
                                                                                         <buttonConfiguration key="configuration" style="filled" title="결제하기">
                                                                                             <color key="baseBackgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="paymentBtnPressed:" destination="EXs-oj-nIV" eventType="touchUpInside" id="9nn-qA-ksK"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -1674,6 +1686,11 @@ in the location below)</string>
                             <constraint firstItem="Cmi-gv-Tku" firstAttribute="trailing" secondItem="b6l-Ma-63g" secondAttribute="trailing" id="rBc-e5-fTW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barcodeImageView" destination="JbT-gX-vsg" id="sWJ-JI-fcf"/>
+                        <outlet property="creditCardImageView" destination="6ZV-aY-WTT" id="fyN-pD-eci"/>
+                        <outlet property="totalPriceTextField" destination="oNG-vX-QeO" id="XVg-GN-xje"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGB-1x-qHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1807,6 +1824,9 @@ in the location below)</string>
                                                                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                                                             <color key="baseBackgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="previousBtnPressed:" destination="HVq-y6-Zzn" eventType="touchUpInside" id="8MG-JJ-5uj"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -1822,9 +1842,12 @@ in the location below)</string>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5D-0q-DNf">
                                                                                         <rect key="frame" x="19.999999999999993" y="30" width="117.33333333333331" height="40"/>
                                                                                         <state key="normal" title="Button"/>
-                                                                                        <buttonConfiguration key="configuration" style="filled" title="결제하기">
-                                                                                            <color key="baseBackgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        <buttonConfiguration key="configuration" style="filled" title="AR 체험">
+                                                                                            <color key="baseBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="arExperienceBtnPressed:" destination="HVq-y6-Zzn" eventType="touchUpInside" id="x9L-gh-q9l"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -1884,6 +1907,10 @@ in the location below)</string>
                             <constraint firstItem="aHT-jP-ZVz" firstAttribute="top" secondItem="QS7-9W-cFP" secondAttribute="top" id="yCb-16-Kzg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="LHy-Hy-ICZ" id="76z-S2-myK"/>
+                        <outlet property="paymentImageView" destination="XST-NR-QoW" id="o5R-l4-eey"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srl-Fd-tQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
