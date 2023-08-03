@@ -7,12 +7,16 @@
 
 import Foundation
 
+// MARK: - Home Enum
+
 enum Content: String {
     case UIExplore, ARKiosk, AIExplore
 }
 
+// MARK: - AR-Kiosk Enum
+
 enum ProductType {
-    case coffee, beverage, new
+    case coffee, beverage, new, none
 }
 
 enum ProductTemperature {
@@ -29,8 +33,4 @@ enum IceQuantity {
 
 enum PaymentType {
     case creditCard, barcode, none
-}
-
-enum KioskModalContent {
-    case option, membership, paymentSelect, creditCardPayment, barcodePayment, success
 }

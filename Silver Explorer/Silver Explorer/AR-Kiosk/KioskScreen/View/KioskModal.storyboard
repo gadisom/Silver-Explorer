@@ -540,6 +540,9 @@
                                                                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                                                             <color key="baseBackgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="cancelBtnPressed:" destination="99I-vw-IqV" eventType="touchUpInside" id="fho-yL-WpX"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -558,6 +561,9 @@
                                                                                         <buttonConfiguration key="configuration" style="filled" title="담기">
                                                                                             <color key="baseBackgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="addCartBtnPressed:" destination="99I-vw-IqV" eventType="touchUpInside" id="7xF-iY-aLl"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -626,6 +632,7 @@
                         <outlet property="lessIceBtnView" destination="CDV-Jz-ns8" id="pYI-1o-zaK"/>
                         <outlet property="numberOfProductLabel" destination="pSW-lA-0xT" id="Cp5-tw-oFN"/>
                         <outlet property="productImageView" destination="nxz-yH-AMw" id="HeH-Wk-wNS"/>
+                        <outlet property="productNameLabel" destination="mnL-2b-Sr6" id="qeq-Sh-Uj8"/>
                         <outlet property="productPriceLabel" destination="slB-Yx-eaL" id="2Wl-22-ble"/>
                         <outlet property="regularIceBtnView" destination="pxg-sc-j9A" id="OYU-97-KgS"/>
                         <outlet property="regularSizeBtnView" destination="xWK-9U-Djn" id="VPx-jX-qdU"/>
