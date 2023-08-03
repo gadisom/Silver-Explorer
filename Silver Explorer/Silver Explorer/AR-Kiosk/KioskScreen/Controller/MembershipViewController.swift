@@ -13,10 +13,16 @@ class MembershipViewController: UIViewController {
     @IBOutlet weak var phoneMembershipContainerView: UIView!
     @IBOutlet weak var membershipSelectSegmentedControl: UISegmentedControl!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initialSettingForSegmentControl()
+    }
+    
+    func appear(sender: UIViewController) {
+        self.modalPresentationStyle = .overFullScreen
+        sender.present(self, animated: false)
     }
 
     @IBAction func membershipMethodSelected(_ sender: UISegmentedControl) {
