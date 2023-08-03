@@ -9,7 +9,6 @@ import UIKit
 
 class ProductOptionSelectViewController: UIViewController {
     
-    
     @IBOutlet private weak var productImageView: UIImageView!
     @IBOutlet private weak var numberOfProductLabel: UILabel!
     @IBOutlet private weak var productPriceLabel: UILabel!
@@ -66,6 +65,11 @@ class ProductOptionSelectViewController: UIViewController {
         super.viewDidLoad()
         
         renderDefaultSelectButtons()
+    }
+    
+    func appear(sender: UIViewController) {
+        self.modalPresentationStyle = .overFullScreen
+        sender.present(self, animated: false)
     }
     
     // MARK: - IBAction Methods
@@ -261,4 +265,6 @@ extension ProductOptionSelectViewController {
         
         selectedIceBtnView = iceQuantityButtonView
     }
+    
+    
 }
