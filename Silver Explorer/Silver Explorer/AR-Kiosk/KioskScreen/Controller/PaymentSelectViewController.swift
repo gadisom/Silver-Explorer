@@ -14,6 +14,16 @@ class PaymentSelectViewController: UIViewController, SelectedPaymentTypeDelegate
     @IBOutlet weak var barcodeImageView: UIImageView!
     
     let resource: PaymentSelectResource = PaymentSelectResource()
+    weak var kioskMainBoardDelegate: KioskMainBoardDelegate?
+
+    var totalPrice: Int {
+        guard let price = kioskMainBoardDelegate?.totalPriceForPayment() else {
+            self.dismiss(animated: false)
+            return 0
+        }
+        
+        return price
+    }
     var creditCardImages: [UIImage] {
         return resource.paymentImages[.creditCard]!
     }
@@ -24,8 +34,6 @@ class PaymentSelectViewController: UIViewController, SelectedPaymentTypeDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 총 주문 금액 Delegate로 받아와야 함!!!!!!!
         
         initialSettingForTextField()
     }
@@ -66,6 +74,11 @@ class PaymentSelectViewController: UIViewController, SelectedPaymentTypeDelegate
         totalPriceTextField.layer.borderWidth = 1.0
         totalPriceTextField.layer.cornerRadius = 10.0
         totalPriceTextField.backgroundColor = .clear
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let formattedPrice = numberFormatter.string(from: NSNumber(value: totalPrice))
+        totalPriceTextField.text = "₩ \(formattedPrice!)"
     }
     
     func paymentType() -> PaymentType {
