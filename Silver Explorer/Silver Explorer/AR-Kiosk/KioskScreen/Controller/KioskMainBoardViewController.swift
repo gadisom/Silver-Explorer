@@ -8,11 +8,23 @@
 import UIKit
 
 class KioskMainBoardViewController: UIViewController {
-
+    
+    
+    weak var delegate : ButtonSelectionDelegate?
+    @IBAction func takeoutButton(_ sender: Any) {
+        delegate?.didSelectButton(1)
+    }
+    @IBAction func eatInStoreButton(_ sender: Any) {
+        delegate?.didSelectButton(2)
+        moveToMenuSelection(vc: self)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        
     }
     
 }
+
