@@ -58,7 +58,7 @@ class PaymentSelectViewController: UIViewController, SelectedPaymentTypeDelegate
     }
     
     @IBAction func previousBtnPressed(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        self.dismiss(animated: false)
     }
     
     @IBAction func paymentBtnPressed(_ sender: UIButton) {
