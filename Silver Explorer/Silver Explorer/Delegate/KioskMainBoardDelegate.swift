@@ -16,4 +16,7 @@ protocol KioskMainBoardDelegate: AnyObject {
     
     // KioskMainBoardViewController -> PaymentSelectViewController
     func totalPriceForPayment() -> Int
+    
+    // PaymentFinishViewController -> KioskMainBoardViewController
+    func backToMainScreen()
 }

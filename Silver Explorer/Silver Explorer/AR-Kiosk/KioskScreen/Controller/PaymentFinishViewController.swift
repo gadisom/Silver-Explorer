@@ -9,21 +9,37 @@ import UIKit
 
 class PaymentFinishViewController: UIViewController {
 
+    @IBOutlet weak var countDownLabel: UILabel!
+    @IBOutlet weak var waitingNumberLabel: UILabel!
+    
+    var count = 3
+    var timer: Timer?
+    weak var kioskMainBoardDelegate: KioskMainBoardDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        waitingNumberLabel.text = "\(Int.random(in: 10...90))"
+        startCountdown()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func appear(sender: UIViewController) {
+        self.modalPresentationStyle = .overFullScreen
+        sender.present(self, animated: false)
     }
-    */
+    
+    func startCountdown() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCountdown), userInfo: nil, repeats: true)
+    }
 
+    @objc func updateCountdown() {
+        if count > 1 {
+            count -= 1
+            countDownLabel.text = "\(count)"
+        } else {
+            timer?.invalidate()
+            kioskMainBoardDelegate?.backToMainScreen()
+            self.dismiss(animated: false)
+        }
+    }
 }
