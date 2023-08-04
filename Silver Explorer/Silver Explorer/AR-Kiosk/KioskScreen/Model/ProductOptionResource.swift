@@ -18,6 +18,7 @@ struct ProductOptionResource {
 struct Product {
     let productName: String
     let productType: ProductType
+    let numberOfProduct: Int
     let singleProductPrice: Int
     let totalProductPrice: Int
     
@@ -27,12 +28,14 @@ struct Product {
         self.productType = productType
         self.singleProductPrice = price
         self.totalProductPrice = 0
+        self.numberOfProduct = 1
     }
     
     // ProductOptionSelect에서 넘겨줄 때 사용할 이니셜라이저
-    init(productName: String, singleProductPrice: Int, totalProductPrice: Int) {
+    init(productName: String, numberOfProduct: Int, singleProductPrice: Int, totalProductPrice: Int) {
         self.productName = productName
         self.productType = .none
+        self.numberOfProduct = numberOfProduct
         self.singleProductPrice = singleProductPrice
         self.totalProductPrice = totalProductPrice
     }

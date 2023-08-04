@@ -162,7 +162,7 @@ class ProductOptionSelectViewController: UIViewController {
     }
     
     @IBAction private func addCartBtnPressed(_ sender: UIButton) {
-        let product = Product(productName: productName, singleProductPrice: singlePrice, totalProductPrice: finalPrice)
+        let product = Product(productName: productName, numberOfProduct: numberOfProduct, singleProductPrice: singlePrice, totalProductPrice: finalPrice)
         kioskMenuBoardDelegate?.productForCart(product: product)
         
         self.dismiss(animated: false)
