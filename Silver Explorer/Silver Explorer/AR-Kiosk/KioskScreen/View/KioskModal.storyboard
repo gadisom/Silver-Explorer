@@ -1093,7 +1093,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXY-MK-x0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="-264"/>
+            <point key="canvasLocation" x="2140" y="-304"/>
         </scene>
         <!--Barcod Membership View Controller-->
         <scene sceneID="JCg-Jc-U4W">
@@ -1303,6 +1303,9 @@ in the location below)</string>
                                                                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                                                             <color key="baseBackgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="noMembershipBtnPressed:" destination="qgD-ko-Mfx" eventType="touchUpInside" id="g2o-pq-RLp"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
@@ -1315,17 +1318,35 @@ in the location below)</string>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDn-qr-ahg">
                                                                                 <rect key="frame" x="157.66666666666663" y="0.0" width="157.33333333333337" height="100"/>
                                                                                 <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp4-3h-DJ7">
+                                                                                        <rect key="frame" x="19.999999999999993" y="30" width="117.33333333333331" height="40"/>
+                                                                                        <state key="normal" title="Button"/>
+                                                                                        <buttonConfiguration key="configuration" style="filled" title="AR 체험">
+                                                                                            <color key="baseBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="arExperienceBtnPressed:" destination="qgD-ko-Mfx" eventType="touchUpInside" id="bWX-uK-Ilq"/>
+                                                                                            <action selector="arExperienceBtnPressed:" destination="HVq-y6-Zzn" eventType="touchUpInside" id="eFM-Rp-Pds"/>
+                                                                                        </connections>
+                                                                                    </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDY-ER-0PH">
                                                                                         <rect key="frame" x="19.999999999999993" y="30" width="117.33333333333331" height="40"/>
                                                                                         <state key="normal" title="Button"/>
                                                                                         <buttonConfiguration key="configuration" style="filled" title="적립">
                                                                                             <color key="baseBackgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="memberShipBtnPressed:" destination="qgD-ko-Mfx" eventType="touchUpInside" id="vxm-0W-RcD"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <constraints>
+                                                                                    <constraint firstItem="Kp4-3h-DJ7" firstAttribute="leading" secondItem="EDn-qr-ahg" secondAttribute="leading" constant="20" id="069-Vw-cVE"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="rDY-ER-0PH" secondAttribute="bottom" constant="30" id="4BM-Sb-uJt"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="Kp4-3h-DJ7" secondAttribute="bottom" constant="30" id="748-mZ-wEB"/>
                                                                                     <constraint firstItem="rDY-ER-0PH" firstAttribute="leading" secondItem="EDn-qr-ahg" secondAttribute="leading" constant="20" id="EMU-vS-bzz"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="Kp4-3h-DJ7" secondAttribute="trailing" constant="20" id="baB-6t-Vi6"/>
+                                                                                    <constraint firstItem="Kp4-3h-DJ7" firstAttribute="top" secondItem="EDn-qr-ahg" secondAttribute="top" constant="30" id="cP3-rM-tje"/>
                                                                                     <constraint firstAttribute="trailing" secondItem="rDY-ER-0PH" secondAttribute="trailing" constant="20" id="pM8-8s-msu"/>
                                                                                     <constraint firstItem="rDY-ER-0PH" firstAttribute="top" secondItem="EDn-qr-ahg" secondAttribute="top" constant="30" id="woF-rk-tEI"/>
                                                                                 </constraints>
@@ -1381,7 +1402,9 @@ in the location below)</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arExperienceButton" destination="Kp4-3h-DJ7" id="eqb-zE-pHW"/>
                         <outlet property="barcodeMembershipContainerView" destination="9wv-7d-6JP" id="Uqy-ks-4iD"/>
+                        <outlet property="membershipButton" destination="rDY-ER-0PH" id="ZcA-dC-RWP"/>
                         <outlet property="membershipSelectSegmentedControl" destination="cdi-n7-QC2" id="vPb-G0-XSE"/>
                         <outlet property="phoneMembershipContainerView" destination="O7W-39-j3A" id="kTv-5d-6tL"/>
                     </connections>
