@@ -19,4 +19,7 @@ protocol KioskMainBoardDelegate: AnyObject {
     
     // PaymentFinishViewController -> KioskMainBoardViewController
     func backToMainScreen()
+    
+    // MembershipViewController -> KioskMainBoardViewController
+    func didMembershipVCFinish()
 }
