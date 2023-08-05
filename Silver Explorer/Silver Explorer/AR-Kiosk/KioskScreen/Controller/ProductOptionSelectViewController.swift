@@ -117,31 +117,29 @@ class ProductOptionSelectViewController: UIViewController {
     @IBAction private func hotButtonPressed(_ sender: UIButton) {
         renderSelectedTempButton(temp: .hot)
         renderNotSelectedTempButton(temp: .ice)
-        iceQuantitySelectView.isHidden = true
         iceOptionPrice = 0
     }
     
     @IBAction private func iceButtonPressed(_ sender: UIButton) {
+        if (productType == .new) {
+            return // 신메뉴는 무조건 ice이다.
+        }
         renderDefaultIceQuantitySelectButton(isFirst: false)
         renderSelectedTempButton(temp: .ice)
         renderNotSelectedTempButton(temp: .hot)
-        iceQuantitySelectView.isHidden = false
         iceOptionPrice = 500
     }
 
     @IBAction private func regularSizeBtnPressed(_ sender: UIButton) {
         renderSelectedSizeButton(size: .regular)
-        sizeOptionPrice = 0
     }
     
     @IBAction private func grandeSizeBtnPressed(_ sender: UIButton) {
         renderSelectedSizeButton(size: .grande)
-        sizeOptionPrice = 500
     }
     
     @IBAction private func ventiSizeBtnPressed(_ sender: UIButton) {
         renderSelectedSizeButton(size: .venti)
-        sizeOptionPrice = 1000
     }
     
     
@@ -191,9 +189,13 @@ extension ProductOptionSelectViewController {
     // MARK: - Product Temperature Option Feature Methods
     
     private func renderDefaultTempSelectButton() {
-        renderSelectedTempButton(temp: .hot)
-        renderNotSelectedTempButton(temp: .ice)
-        iceQuantitySelectView.isHidden = true
+        if (productType == .new) {
+            hotButton.isHidden = false
+            renderSelectedTempButton(temp: .ice)
+        } else {
+            renderSelectedTempButton(temp: .hot)
+            renderNotSelectedTempButton(temp: .ice)
+        }
     }
     
     private func renderSelectedTempButton(temp: ProductTemperature) {
@@ -203,9 +205,11 @@ extension ProductOptionSelectViewController {
         case .hot:
             tempButton = hotButton
             tempButton.layer.backgroundColor = UIColor(hex: "#FF0000").cgColor
+            iceQuantitySelectView.isHidden = true
         case .ice:
             tempButton = iceButton
             tempButton.layer.backgroundColor = UIColor(hex: "#0047FF").cgColor
+            iceQuantitySelectView.isHidden = false
         }
         
         tempButton.tintColor = .white
@@ -253,10 +257,13 @@ extension ProductOptionSelectViewController {
         switch size {
         case .regular:
             sizeButtonView = regularSizeBtnView
+            sizeOptionPrice = 0
         case .grande:
             sizeButtonView = grandeSizeBtnView
+            sizeOptionPrice = 500
         case .venti:
             sizeButtonView = ventiSizeBtnView
+            sizeOptionPrice = 1000
         }
         
         sizeButtonView.backgroundColor = .clear
