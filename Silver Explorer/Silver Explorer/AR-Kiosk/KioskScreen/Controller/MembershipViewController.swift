@@ -38,7 +38,6 @@ class MembershipViewController: UIViewController {
     }
     
     @IBAction private func noMembershipBtnPressed(_ sender: UIButton) {
-       
         self.dismiss(animated: false)
         kioskMainBoardDelegate?.didMembershipVCFinish()
     }
@@ -46,8 +45,6 @@ class MembershipViewController: UIViewController {
     @IBAction private func memberShipBtnPressed(_ sender: UIButton) {
 
         // 스탬프 적립 알림창 띄우기
-
-        
         self.dismiss(animated: false)
         kioskMainBoardDelegate?.didMembershipVCFinish()
     }
