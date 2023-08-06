@@ -15,8 +15,8 @@ func moveToContentVC(homeVC: UIViewController, content: Content, storyBoardID: S
 }
 
 func moveToUIExploreVC(vc: UIViewController) {
-    let storyboard = UIStoryboard(name: "UIExplore", bundle: nil)
-    guard let nextVC = storyboard.instantiateViewController(withIdentifier: "UIExploreViewController") as? UIExploreViewController else { return }
+    let storyboard = UIStoryboard(name: Content.UIExplore.rawValue, bundle: nil)
+    guard let nextVC = storyboard.instantiateViewController(withIdentifier: String(describing: UIExploreViewController.self)) as? UIExploreViewController else { return }
     
     nextVC.arCharacterDelegate = vc as! ARCharacterSelectViewController
     vc.navigationController?.pushViewController(nextVC, animated: true)
