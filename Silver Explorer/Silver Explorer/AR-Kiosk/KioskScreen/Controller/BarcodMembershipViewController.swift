@@ -1,13 +1,13 @@
 //
-//  OptionSelectViewController.swift
+//  BarcodMembershipViewController.swift
 //  Silver Explorer
 //
-//  Created by 김정원 on 2023/07/28.
+//  Created by Jinyoung Yoo on 2023/07/31.
 //
 
 import UIKit
 
-class OptionSelectViewController: UIViewController {
+class BarcodMembershipViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

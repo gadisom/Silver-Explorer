@@ -57,9 +57,9 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
             swipeDirection: self.swipeDirection
         )
 
-        makeCornerRoundShape(targetView: titleView, cornerRadius: 20)
-        makeCornerRoundShape(targetView: previousBtnView, cornerRadius: 20)
-        makeCornerRoundShape(targetView: nextBtnView, cornerRadius: 20)
+        makeCornerRoundShape(targetView: titleView, cornerRadius: 10)
+        makeCornerRoundShape(targetView: previousBtnView, cornerRadius: 10)
+        makeCornerRoundShape(targetView: nextBtnView, cornerRadius: 10)
         makeCornerRoundShape(targetView: stageDescriptionView, cornerRadius: 40)
 //        makeCornerRoundShape(targetView: directionBtnView, cornerRadius: 50)
 //        directionBtnView.isHidden = true
@@ -71,6 +71,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARImageTrackingConfiguration()
         
         guard let trackingImage = ARReferenceImage.referenceImages(inGroupNamed: "Explore Ticket", bundle: Bundle.main) else {
+            print("HI")
             return
         }
         

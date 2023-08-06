@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum Content: String {
-    case UIExplore, ARKiosk, AIExplore
-}
-
 struct HomeResourse {
     let storyBoardIDs: [Content: String] = [
         .UIExplore: "ARCharacterSelectViewController",
