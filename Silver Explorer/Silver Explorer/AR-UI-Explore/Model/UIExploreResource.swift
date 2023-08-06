@@ -8,10 +8,6 @@
 import ARKit
 import SceneKit
 
-enum Stage: Int {
-    case shortTap = 0, longTap, swipe, drag, pinch, rotate
-}
-
 struct UIExploreResource {
     var stageTitles: [String] {
         return [
