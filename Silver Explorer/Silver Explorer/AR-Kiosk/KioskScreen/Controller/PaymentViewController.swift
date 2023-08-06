@@ -2,28 +2,51 @@
 //  PaymentViewController.swift
 //  Silver Explorer
 //
-//  Created by 김정원 on 2023/07/28.
+//  Created by Jinyoung Yoo on 2023/07/31.
 //
 
 import UIKit
 
 class PaymentViewController: UIViewController {
+    
+    @IBOutlet weak var paymentImageView: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    let resource: PaymentResource = PaymentResource()
+    weak var paymentTypeDelegate: SelectedPaymentTypeDelegate?
+    var paymentType: PaymentType {
+        guard let payment = paymentTypeDelegate?.paymentType() else {
+            self.dismiss(animated: false)
+            return .none
+        }
+        return payment
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        chooseDescriptionLabel()
+        choosePaymentImage()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func appear(sender: UIViewController) {
+        self.modalPresentationStyle = .overFullScreen
+        sender.present(self, animated: false)
     }
-    */
 
+    @IBAction func previousBtnPressed(_ sender: UIButton) {
+        self.dismiss(animated: false)
+    }
+    
+    @IBAction func arExperienceBtnPressed(_ sender: UIButton) {
+        // AR로 키오스크 띄우기!!!!!!!!!!!
+    }
+    
+    func chooseDescriptionLabel() {
+        descriptionLabel.text = resource.paymentDescriptionText[paymentType]!
+    }
+
+    func choosePaymentImage() {
+        paymentImageView.image = resource.paymentDescriptionImages[paymentType]!
+    }
 }

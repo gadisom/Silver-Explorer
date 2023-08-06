@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC23C3A92A76AB8D0024C12B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3A82A76AB8D0024C12B /* Enum.swift */; };
+		CC23C3AB2A76CAC10024C12B /* MembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */; };
+		CC23C3AD2A76CB210024C12B /* PhoneMemberShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */; };
+		CC23C3AF2A76CB380024C12B /* BarcodMembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AE2A76CB380024C12B /* BarcodMembershipViewController.swift */; };
+		CC291D6C2A77FD1700C363DF /* ProductOptionResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC291D6B2A77FD1700C363DF /* ProductOptionResource.swift */; };
+		CC291D6E2A77FEAF00C363DF /* PaymentSelectResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC291D6D2A77FEAF00C363DF /* PaymentSelectResource.swift */; };
+		CC291D702A77FFA800C363DF /* PaymentResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC291D6F2A77FFA800C363DF /* PaymentResource.swift */; };
 		CC4352472A72506C000EDAB0 /* ARCharacterSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4352462A72506C000EDAB0 /* ARCharacterSelectViewController.swift */; };
 		CC43524C2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43524B2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift */; };
 		CC43524F2A727296000EDAB0 /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43524E2A727296000EDAB0 /* CustomizeView.swift */; };
@@ -24,6 +31,11 @@
 		CC57AC162A710DC900E892FF /* ARCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC152A710DC900E892FF /* ARCharacter.swift */; };
 		CC57AC182A710DD100E892FF /* Arr.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC172A710DD100E892FF /* Arr.swift */; };
 		CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57AC192A710DDA00E892FF /* Finn.swift */; };
+		CCB04B302A7A31060035483C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB04B2F2A7A31060035483C /* Extension.swift */; };
+		CCB7B4352A777EA900EE46AA /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */; };
+		CCB7B4372A7782FA00EE46AA /* PaymentFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */; };
+		CCFE1C9B2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE1C9A2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift */; };
+		CCFE1C9D2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE1C9C2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift */; };
 		FF185B442A73AD7B003E766E /* ARKiosk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF185B432A73AD7B003E766E /* ARKiosk.storyboard */; };
 		FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF185B452A73ADA7003E766E /* ARKioskViewController.swift */; };
 		FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */ = {isa = PBXBuildFile; fileRef = FF185B492A73B3FF003E766E /* ARKiosk.scn */; };
@@ -31,15 +43,26 @@
 		FF185B4E2A73B4B0003E766E /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = FF185B4D2A73B4B0003E766E /* camera.png */; };
 		FF185B502A73B56B003E766E /* KioskMainBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */; };
 		FF185B522A73B589003E766E /* KioskMainBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */; };
+		FF464C7A2A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF464C792A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift */; };
+		FFE1D1642A7B6D8300E4E049 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1D1632A7B6D8300E4E049 /* MenuCollectionViewCell.swift */; };
+		FFE1D1662A7B733A00E4E049 /* MenuSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */; };
 		FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */; };
 		FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */; };
-		FFE42A602A73BC2E00752CD7 /* OptionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5F2A73BC2E00752CD7 /* OptionSelectViewController.swift */; };
-		FFE42A622A73BC3C00752CD7 /* OptionSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A612A73BC3C00752CD7 /* OptionSelect.storyboard */; };
+		FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */; };
+		FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A612A73BC3C00752CD7 /* KioskModal.storyboard */; };
 		FFE42A642A73BC4800752CD7 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A632A73BC4800752CD7 /* Payment.storyboard */; };
-		FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */; };
+		FFE42A662A73BC5400752CD7 /* PaymentSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE42A652A73BC5400752CD7 /* PaymentSelectViewController.swift */; };
+		FFF221A12A7E7D9700F8D727 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF221A02A7E7D9700F8D727 /* MainMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC23C3A82A76AB8D0024C12B /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipViewController.swift; sourceTree = "<group>"; };
+		CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneMemberShipViewController.swift; sourceTree = "<group>"; };
+		CC23C3AE2A76CB380024C12B /* BarcodMembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodMembershipViewController.swift; sourceTree = "<group>"; };
+		CC291D6B2A77FD1700C363DF /* ProductOptionResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOptionResource.swift; sourceTree = "<group>"; };
+		CC291D6D2A77FEAF00C363DF /* PaymentSelectResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectResource.swift; sourceTree = "<group>"; };
+		CC291D6F2A77FFA800C363DF /* PaymentResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResource.swift; sourceTree = "<group>"; };
 		CC4352462A72506C000EDAB0 /* ARCharacterSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCharacterSelectViewController.swift; sourceTree = "<group>"; };
 		CC43524B2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCharacterSelectDelegate.swift; sourceTree = "<group>"; };
 		CC43524E2A727296000EDAB0 /* CustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeView.swift; sourceTree = "<group>"; };
@@ -58,6 +81,11 @@
 		CC57AC152A710DC900E892FF /* ARCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCharacter.swift; sourceTree = "<group>"; };
 		CC57AC172A710DD100E892FF /* Arr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arr.swift; sourceTree = "<group>"; };
 		CC57AC192A710DDA00E892FF /* Finn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finn.swift; sourceTree = "<group>"; };
+		CCB04B2F2A7A31060035483C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFinishViewController.swift; sourceTree = "<group>"; };
+		CCFE1C9A2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPaymentTypeDelegate.swift; sourceTree = "<group>"; };
+		CCFE1C9C2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardDelegate.swift; sourceTree = "<group>"; };
 		FF185B392A739C4F003E766E /* ARKiosk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ARKiosk.usdz; sourceTree = "<group>"; };
 		FF185B432A73AD7B003E766E /* ARKiosk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARKiosk.storyboard; sourceTree = "<group>"; };
 		FF185B452A73ADA7003E766E /* ARKioskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskViewController.swift; sourceTree = "<group>"; };
@@ -66,12 +94,16 @@
 		FF185B4D2A73B4B0003E766E /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KioskMainBoard.storyboard; sourceTree = "<group>"; };
 		FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardViewController.swift; sourceTree = "<group>"; };
+		FF464C792A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		FFE1D1632A7B6D8300E4E049 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionViewController.swift; sourceTree = "<group>"; };
 		FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResource.swift; sourceTree = "<group>"; };
-		FFE42A5F2A73BC2E00752CD7 /* OptionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OptionSelectViewController.swift; path = "Silver Explorer/AR-Kiosk/KioskScreen/Controller/OptionSelectViewController.swift"; sourceTree = SOURCE_ROOT; };
-		FFE42A612A73BC3C00752CD7 /* OptionSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OptionSelect.storyboard; sourceTree = "<group>"; };
+		FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductOptionSelectViewController.swift; path = "Silver Explorer/AR-Kiosk/KioskScreen/Controller/ProductOptionSelectViewController.swift"; sourceTree = SOURCE_ROOT; };
+		FFE42A612A73BC3C00752CD7 /* KioskModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KioskModal.storyboard; sourceTree = "<group>"; };
 		FFE42A632A73BC4800752CD7 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
-		FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		FFE42A652A73BC5400752CD7 /* PaymentSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectViewController.swift; sourceTree = "<group>"; };
+		FFF221A02A7E7D9700F8D727 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				CC43524B2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift */,
+				CCFE1C9A2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift */,
+				CCFE1C9C2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -98,6 +132,8 @@
 			children = (
 				CC43524E2A727296000EDAB0 /* CustomizeView.swift */,
 				CC4352502A72841E000EDAB0 /* StackNavigation.swift */,
+				CC23C3A82A76AB8D0024C12B /* Enum.swift */,
+				CCB04B2F2A7A31060035483C /* Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -107,6 +143,7 @@
 			children = (
 				CC57ABEB2A710A4200E892FF /* Silver Explorer */,
 				CC57ABEA2A710A4200E892FF /* Products */,
+				FF1241F42A7D4CF400B4C78C /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +252,13 @@
 			path = ARCharacter;
 			sourceTree = "<group>";
 		};
+		FF1241F42A7D4CF400B4C78C /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		FF185B322A739BF9003E766E /* AR-Kiosk */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,9 +308,16 @@
 		FF185B3C2A739CAA003E766E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FFE42A5F2A73BC2E00752CD7 /* OptionSelectViewController.swift */,
 				FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */,
-				FFE42A652A73BC5400752CD7 /* PaymentViewController.swift */,
+				FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */,
+				FFF221A02A7E7D9700F8D727 /* MainMenuViewController.swift */,
+				FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */,
+				FFE42A652A73BC5400752CD7 /* PaymentSelectViewController.swift */,
+				CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */,
+				CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */,
+				CC23C3AE2A76CB380024C12B /* BarcodMembershipViewController.swift */,
+				CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */,
+				CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +326,9 @@
 			isa = PBXGroup;
 			children = (
 				FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */,
+				CC291D6B2A77FD1700C363DF /* ProductOptionResource.swift */,
+				CC291D6D2A77FEAF00C363DF /* PaymentSelectResource.swift */,
+				CC291D6F2A77FFA800C363DF /* PaymentResource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,8 +337,10 @@
 			isa = PBXGroup;
 			children = (
 				FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */,
-				FFE42A612A73BC3C00752CD7 /* OptionSelect.storyboard */,
+				FFE42A612A73BC3C00752CD7 /* KioskModal.storyboard */,
 				FFE42A632A73BC4800752CD7 /* Payment.storyboard */,
+				FFE1D1632A7B6D8300E4E049 /* MenuCollectionViewCell.swift */,
+				FF464C792A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,7 +420,7 @@
 				FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */,
 				FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */,
 				FF185B4E2A73B4B0003E766E /* camera.png in Resources */,
-				FFE42A622A73BC3C00752CD7 /* OptionSelect.storyboard in Resources */,
+				FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */,
 				FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */,
 				CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */,
 				CC57AC112A710D3700E892FF /* UIExplore.storyboard in Resources */,
@@ -386,17 +442,33 @@
 				CC57AC132A710D9C00E892FF /* UIExploreResource.swift in Sources */,
 				FF185B522A73B589003E766E /* KioskMainBoardViewController.swift in Sources */,
 				CC43524C2A725A06000EDAB0 /* ARCharacterSelectDelegate.swift in Sources */,
-				FFE42A662A73BC5400752CD7 /* PaymentViewController.swift in Sources */,
+				FFE42A662A73BC5400752CD7 /* PaymentSelectViewController.swift in Sources */,
+				FFE1D1662A7B733A00E4E049 /* MenuSelectionViewController.swift in Sources */,
 				CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */,
 				CC57AC0F2A710D2A00E892FF /* UIExploreViewController.swift in Sources */,
-				FFE42A602A73BC2E00752CD7 /* OptionSelectViewController.swift in Sources */,
+				CCB7B4372A7782FA00EE46AA /* PaymentFinishViewController.swift in Sources */,
+				CC291D6E2A77FEAF00C363DF /* PaymentSelectResource.swift in Sources */,
+				CC23C3A92A76AB8D0024C12B /* Enum.swift in Sources */,
+				CCFE1C9B2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift in Sources */,
+				FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */,
+				CCFE1C9D2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift in Sources */,
+				CCB04B302A7A31060035483C /* Extension.swift in Sources */,
 				CC57AC162A710DC900E892FF /* ARCharacter.swift in Sources */,
 				FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */,
+				CC23C3AD2A76CB210024C12B /* PhoneMemberShipViewController.swift in Sources */,
+				CC291D702A77FFA800C363DF /* PaymentResource.swift in Sources */,
+				CC291D6C2A77FD1700C363DF /* ProductOptionResource.swift in Sources */,
 				FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */,
+				CCB7B4352A777EA900EE46AA /* PaymentViewController.swift in Sources */,
+				FF464C7A2A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift in Sources */,
 				CC57AC092A710C0A00E892FF /* HomeResource.swift in Sources */,
 				CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */,
+				FFF221A12A7E7D9700F8D727 /* MainMenuViewController.swift in Sources */,
+				CC23C3AB2A76CAC10024C12B /* MembershipViewController.swift in Sources */,
+				CC23C3AF2A76CB380024C12B /* BarcodMembershipViewController.swift in Sources */,
 				CC43524F2A727296000EDAB0 /* CustomizeView.swift in Sources */,
 				CC57AC062A710AFA00E892FF /* HomeViewController.swift in Sources */,
+				FFE1D1642A7B6D8300E4E049 /* MenuCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

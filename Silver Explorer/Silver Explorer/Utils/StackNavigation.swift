@@ -35,3 +35,9 @@ func moveToARKioskVC(vc: UIViewController) {
   
     vc.navigationController?.pushViewController(nextVC, animated: true)
 }
+func moveToMenuSelection(vc: UIViewController) {
+    let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
+    let viewController = storyboard.instantiateViewController(withIdentifier: "MenuSelectionViewController")
+    viewController.modalPresentationStyle = .fullScreen
+    vc.present(viewController, animated: true, completion: nil)
+}
