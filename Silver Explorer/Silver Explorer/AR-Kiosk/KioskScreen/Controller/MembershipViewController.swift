@@ -38,16 +38,18 @@ class MembershipViewController: UIViewController {
     }
     
     @IBAction private func noMembershipBtnPressed(_ sender: UIButton) {
-        kioskMainBoardDelegate?.didMembershipVCFinish()
+       
         self.dismiss(animated: false)
+        kioskMainBoardDelegate?.didMembershipVCFinish()
     }
     
     @IBAction private func memberShipBtnPressed(_ sender: UIButton) {
 
         // 스탬프 적립 알림창 띄우기
 
-        kioskMainBoardDelegate?.didMembershipVCFinish()
+        
         self.dismiss(animated: false)
+        kioskMainBoardDelegate?.didMembershipVCFinish()
     }
 
     @IBAction private func arExperienceBtnPressed(_ sender: UIButton) {

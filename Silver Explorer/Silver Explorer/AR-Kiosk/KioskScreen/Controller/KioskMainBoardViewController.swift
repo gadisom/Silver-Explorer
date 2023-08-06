@@ -8,16 +8,15 @@
 import UIKit
 
 class KioskMainBoardViewController: UIViewController {
-    
-    
-    weak var delegate : ButtonSelectionDelegate?
-    @IBAction func takeoutButton(_ sender: Any) {
-        delegate?.didSelectButton(1)
+    func appear(sender: UIViewController) {
+        self.modalPresentationStyle = .overFullScreen
+        sender.present(self, animated: true)
     }
-    @IBAction func eatInStoreButton(_ sender: Any) {
-        delegate?.didSelectButton(2)
-        moveToMenuSelection(vc: self)
-        
+    
+    @IBAction func moveToMenuSelection(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MenuSelectionViewController") as! MenuSelectionViewController
+        vc.appear(sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

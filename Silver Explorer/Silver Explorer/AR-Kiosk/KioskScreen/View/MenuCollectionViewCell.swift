@@ -7,13 +7,29 @@
 
 import UIKit
 
-class MenuCollectionViewCell: UICollectionViewCell {
-    
+class MenuCollectionViewCell: UICollectionViewCell
+{
+//    func productForSelectingOption() -> Product {
+//        let product : Product = currentInfo!
+//        return product
+//    }
+//    func productForCart(product: Product) {
+//
+//    }
+//    func totalPriceForPayment() -> Int {
+//        return 1
+//    }
+//    func backToMainScreen() {
+//
+//    }
     @IBOutlet weak var menuImage: UIImageView!
     @IBOutlet weak var menuName: UILabel!
-    
+    private var currentInfo: Product?
+        
+   
     override func awakeFromNib() {
-         super.awakeFromNib()
+        super.awakeFromNib()
+        
         
     }
     func configure (_ info : menuInfo)
@@ -21,6 +37,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
         menuName.text = info.name
         menuImage.image = UIImage(named: info.imageName)
         menuName.numberOfLines = 0
-        //menuName.lineBreakMode = .byWordWrapping
+        currentInfo = Product(productName: info.name, productType: info.type, price: info.price)
+        
     }
 }

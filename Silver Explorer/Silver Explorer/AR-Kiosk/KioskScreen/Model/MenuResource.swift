@@ -6,62 +6,71 @@
 //
 
 import UIKit
+
 struct selectionInfo : Hashable {
     let menuName : String
     let numberOfItems: Int
     var menuList : [selectionInfo] = []
+    
 }
 extension selectionInfo {
     static let menuList : [selectionInfo] = []
 }
 struct menuInfo: Hashable {
     let name: String
-    let price: String
-    let imageName: String
+    let price: Int
+    let imageName : String
+    let type : ProductType
 }
 extension menuInfo {
-    static let list = [
-        menuInfo(name: "아메리카노", price: "4,500", imageName: "coffeeButton"),
-        menuInfo(name: "카페라떼", price: "5,000", imageName: "coffeeButton"),
-        menuInfo(name: "카푸치노", price: "5,000", imageName: "coffeeButton"),
-        menuInfo(name: "바닐라라떼", price: "5,500", imageName: "coffeeButton"),
-        menuInfo(name: "카라멜마끼아또", price: "5,500", imageName: "coffeeButton"),
-        menuInfo(name: "카페모카", price: "5,500", imageName: "coffeeButton"),
-        menuInfo(name: "민트모카", price: "5,500", imageName: "coffeeButton"),
-        menuInfo(name: "화이트모카", price: "5,500", imageName: "coffeeButton"),
-        menuInfo(name: "연유라떼", price: "5,500", imageName: "coffeeButton"),
-        menuInfo(name: "아인슈페너", price: "5,500", imageName: "coffeeButton"),
-        menuInfo(name: "아포카토", price: "5,500", imageName: "coffeeButton"),
-        menuInfo(name: "콜드브루", price: "5,500", imageName: "coffeeButton")
-        
+    static let baverageList = [
+        menuInfo(name: "녹차라떼", price: 4500, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "밀크티", price: 5000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "초콜릿라떼", price: 15000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "민트초코라떼", price: 5000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "화이트초코라떼", price: 5000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "유자차", price: 5000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "자몽차", price: 5000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "레몬차", price: 5000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "녹차", price: 5000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "얼그레이", price: 5000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "루이보스", price: 5000, imageName: "coffeeButton",type: .beverage),
+        menuInfo(name: "레몬에이드", price: 5000, imageName: "coffeeButton",type: .beverage)
+    ]
+    static let coffeeList = [
+        menuInfo(name: "아메리카노", price: 4000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "카페라떼", price: 4500, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "카푸치노", price: 5000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "바닐라라떼", price: 5000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "카라멜마끼아또", price: 5000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "카페모카", price: 5000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "민트모카", price: 5000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "화이트모카", price: 5000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "연유라떼", price: 5000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "아인슈페너", price: 5000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "아포카토", price: 5000, imageName: "coffeeButton",type: .coffee),
+        menuInfo(name: "콜드브루", price: 5000, imageName: "coffeeButton",type: .coffee)
+    ]
+    static let newList = [
+        menuInfo(name: "수박주스", price: 5000, imageName: "coffeeButton",type: .new),
+        menuInfo(name: "토마토주스", price: 5000, imageName: "coffeeButton",type: .new),
+        menuInfo(name: "망고 요거트 라떼", price: 5000, imageName: "coffeeButton",type: .new),
+        menuInfo(name: "코코넛 커피 쉐이크", price: 5000, imageName: "coffeeButton",type: .new),
+        menuInfo(name: "팥빙수", price: 5000, imageName: "coffeeButton",type: .new),
+        menuInfo(name: "망고빙수", price: 5000, imageName: "coffeeButton",type: .new)
     ]
 }
 
 func itemLayout() -> UICollectionViewCompositionalLayout{
-//    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0))
-//    let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//    item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 4)
-//    let horizontalGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5))
-//    let horizontalGroup = NSCollectionLayoutGroup.horizontal(layoutSize: horizontalGroupSize, subitem: item, count: 4)
-//
-//    let verticalGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-//    let verticalGroup = NSCollectionLayoutGroup.vertical(layoutSize: verticalGroupSize, subitem: horizontalGroup, count: 2)
-//
-//    let section = NSCollectionLayoutSection(group: verticalGroup)
-//    //section.interGroupSpacing = 10
-//
-//    let layout = UICollectionViewCompositionalLayout(section: section)
-//
-//    return layout
-    let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(114), heightDimension: .absolute(114))
-       let item = NSCollectionLayoutItem(layoutSize: itemSize)
-       item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 2, trailing: 3)
-       
-       let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(228)) // 여기서는 228이 2개의 아이템 높이(각각 114)와 인셋(5*2)를 합한 것입니다.
-       let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 4) // 한 줄에 2개의 아이템을 배치합니다.
-
-       let section = NSCollectionLayoutSection(group: group)
-       let layout = UICollectionViewCompositionalLayout(section: section)
-       
-       return layout
+    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.3))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            
+            let section = NSCollectionLayoutSection(group: group)
+            
+            let layout = UICollectionViewCompositionalLayout(section: section)
+            return layout
 }

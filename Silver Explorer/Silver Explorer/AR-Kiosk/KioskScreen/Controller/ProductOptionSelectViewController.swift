@@ -31,7 +31,7 @@ class ProductOptionSelectViewController: UIViewController {
     // MARK: Stored Properties
     
     private let resource: ProductOptionResource = ProductOptionResource()
-    private weak var kioskMenuBoardDelegate: KioskMainBoardDelegate?
+    weak var kioskMenuBoardDelegate: KioskMainBoardDelegate?
     private var selectedSizeBtnView: UIView!
     private var selectedIceBtnView: UIView!
 
