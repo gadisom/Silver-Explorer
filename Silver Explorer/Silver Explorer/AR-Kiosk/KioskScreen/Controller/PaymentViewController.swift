@@ -39,7 +39,7 @@ class PaymentViewController: UIViewController {
     }
     
     @IBAction func arExperienceBtnPressed(_ sender: UIButton) {
-        // AR로 키오스크 띄우기!!!!!!!!!!!
+        moveToARKioskVC(vc: self)
     }
     
     func chooseDescriptionLabel() {

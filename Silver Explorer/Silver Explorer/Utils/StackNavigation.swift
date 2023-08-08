@@ -32,12 +32,19 @@ func moveBacktoHome(vc: UIViewController) {
 func moveToARKioskVC(vc: UIViewController) {
     let storyboard = UIStoryboard(name: "ARKiosk", bundle: nil)
     guard let nextVC = storyboard.instantiateViewController(withIdentifier: "ARKioskViewController") as? ARKioskViewController else { return }
+    vc.present(nextVC, animated: true)
+//    vc.navigationController?.pushViewController(nextVC, animated: true)
+}
+func moveToKioskHomeVC (vc : UIViewController)
+{
+    let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
+    guard let nextVC = storyboard.instantiateViewController(withIdentifier: "KioskMainBoardViewController") as? KioskMainBoardViewController else { return }
   
     vc.navigationController?.pushViewController(nextVC, animated: true)
 }
+
 func moveToMenuSelection(vc: UIViewController) {
     let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
-    let viewController = storyboard.instantiateViewController(withIdentifier: "MenuSelectionViewController")
-    viewController.modalPresentationStyle = .fullScreen
-    vc.present(viewController, animated: true, completion: nil)
+    guard let nextVC = storyboard.instantiateViewController(withIdentifier: "MenuSelectionViewController") as? MenuSelectionViewController else { return }
+    vc.navigationController?.pushViewController(nextVC, animated: true)
 }

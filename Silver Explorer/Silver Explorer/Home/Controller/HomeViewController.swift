@@ -25,11 +25,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func arKioskBtnPressed(_ sender: UIButton) {
-        //moveToContentVC(homeVC: self, content: .ARKiosk, storyBoardID: storyBoardIDs[.ARKiosk]!)
-        let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "KioskMainBoardViewController")
-        viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: true, completion: nil)
+        moveToKioskHomeVC(vc: self)
 
     }
     

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,49 +14,12 @@
             <objects>
                 <viewController storyboardIdentifier="ARKioskViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ARKioskViewController" customModule="Silver_Explorer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NKk-D1-5nM">
-                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEI-Xy-cAl">
-                                <rect key="frame" x="0.0" y="0.0" width="820" height="1160"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                             </arscnView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5q-Wp-YYj">
-                                <rect key="frame" x="611" y="0.0" width="209" height="373"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bV-lB-bEB">
-                                        <rect key="frame" x="0.0" y="0.0" width="209" height="373"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" subtitle="" cornerStyle="dynamic">
-                                            <imageReference key="image" image="arrowshape.right.fill" catalog="system" symbolScale="default" variableValue="1"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="93" scale="large" weight="semibold"/>
-                                            <attributedString key="attributedTitle"/>
-                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VXM-wM-mJX"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출발!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mh6-aS-Xea">
-                                        <rect key="frame" x="82.5" y="173.5" width="44.5" height="26.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="6bV-lB-bEB" secondAttribute="trailing" id="5xA-j2-GQa"/>
-                                    <constraint firstAttribute="height" constant="373" id="8EL-LL-FAa"/>
-                                    <constraint firstItem="Mh6-aS-Xea" firstAttribute="centerX" secondItem="6bV-lB-bEB" secondAttribute="centerX" id="DGi-6h-Qoa"/>
-                                    <constraint firstItem="Mh6-aS-Xea" firstAttribute="centerY" secondItem="6bV-lB-bEB" secondAttribute="centerY" id="Kbg-C1-S55"/>
-                                    <constraint firstAttribute="width" constant="209" id="L24-Wl-Wfi"/>
-                                    <constraint firstAttribute="bottom" secondItem="6bV-lB-bEB" secondAttribute="bottom" id="L4I-Cb-GXs"/>
-                                    <constraint firstItem="6bV-lB-bEB" firstAttribute="leading" secondItem="F5q-Wp-YYj" secondAttribute="leading" id="Xz1-25-BCT"/>
-                                    <constraint firstItem="6bV-lB-bEB" firstAttribute="top" secondItem="F5q-Wp-YYj" secondAttribute="top" id="bpw-b6-Ky9"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MX5-V0-7fk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,14 +27,11 @@
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="bottom" secondItem="MX5-V0-7fk" secondAttribute="bottom" id="35N-no-CdT"/>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="trailing" secondItem="MX5-V0-7fk" secondAttribute="trailing" id="3Rc-Uc-XCI"/>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="leading" secondItem="MX5-V0-7fk" secondAttribute="leading" id="LG0-ci-XEA"/>
-                            <constraint firstItem="F5q-Wp-YYj" firstAttribute="top" secondItem="hEI-Xy-cAl" secondAttribute="top" id="aJC-V9-byi"/>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="top" secondItem="NKk-D1-5nM" secondAttribute="top" id="aY3-rI-83R"/>
-                            <constraint firstItem="F5q-Wp-YYj" firstAttribute="trailing" secondItem="hEI-Xy-cAl" secondAttribute="trailing" id="tI2-fU-EEm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="hEI-Xy-cAl" id="Pbt-n1-wvf"/>
-                        <outlet property="vwContainer" destination="F5q-Wp-YYj" id="Mey-Sd-RxG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -81,12 +40,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

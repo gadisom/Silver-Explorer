@@ -12,36 +12,36 @@ import ARKit
 class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     
     
-    @IBOutlet weak var vwContainer: UIView!
-    @IBAction func buttonTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "KioskMainBoardViewController")
-        let nav = UINavigationController(rootViewController: viewController)
-        self.present(nav, animated: true, completion: nil)
-
-    }
+//    @IBOutlet weak var vwContainer: UIView!
+//    @IBAction func buttonTapped(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "KioskMainBoardViewController")
+//        let nav = UINavigationController(rootViewController: viewController)
+//        self.present(nav, animated: true, completion: nil)
+//
+//    }
     @IBOutlet var sceneView: ARSCNView!
     var pokeNode : SCNNode?
     
     // 버튼 콘테이너 애니메이션 관련 프로퍼티
-    func animateButton ()
-    {
-        DispatchQueue.main.async {
-            self.vwContainer.alpha = 0.0
-            self.vwContainer.isHidden = false
-            UIView.animate(withDuration: 1.5, delay: 0.5,options: .curveEaseIn, animations: {
-                self.vwContainer.alpha = 1.0
-            })
-        }
-        
-    }
+//    func animateButton ()
+//    {
+//        DispatchQueue.main.async {
+//            self.vwContainer.alpha = 0.0
+//            self.vwContainer.isHidden = false
+//            UIView.animate(withDuration: 1.5, delay: 0.5,options: .curveEaseIn, animations: {
+//                self.vwContainer.alpha = 1.0
+//            })
+//        }
+//
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sceneView.delegate = self
         sceneView.showsStatistics = true
         sceneView.autoenablesDefaultLighting = true
-        self.vwContainer.isHidden = true
+        //self.vwContainer.isHidden = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -80,7 +80,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
                   self.pokeNode = pokeNode
                   planeNode.addChildNode(pokeNode)
                   pokeNode.eulerAngles.x = .pi/3
-                  animateButton()
+                 // animateButton()
               }
 
             }
