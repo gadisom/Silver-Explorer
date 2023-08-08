@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD9F67E32A824F1B0056696E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9F67E22A824F1B0056696E /* Main.storyboard */; };
+		AD9F67E52A824F200056696E /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67E42A824F200056696E /* ScannerViewController.swift */; };
+		AD9F67E72A824F3D0056696E /* Reader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9F67E62A824F3D0056696E /* Reader.storyboard */; };
+		AD9F67EA2A824F470056696E /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67E82A824F470056696E /* ReaderViewController.swift */; };
+		AD9F67EB2A824F470056696E /* NavigationBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67E92A824F470056696E /* NavigationBarButtons.swift */; };
+		AD9F67F02A824F540056696E /* ImageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67EC2A824F540056696E /* ImageDetector.swift */; };
+		AD9F67F12A824F540056696E /* TextRecognitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67ED2A824F540056696E /* TextRecognitionModel.swift */; };
+		AD9F67F22A824F540056696E /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67EE2A824F540056696E /* TTSManager.swift */; };
+		AD9F67F32A824F540056696E /* NewsPaperTextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67EF2A824F540056696E /* NewsPaperTextRecognizer.swift */; };
+		AD9F67F52A824F5C0056696E /* DocumentDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67F42A824F5C0056696E /* DocumentDataDelegate.swift */; };
 		CC23C3A92A76AB8D0024C12B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3A82A76AB8D0024C12B /* Enum.swift */; };
 		CC23C3AB2A76CAC10024C12B /* MembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */; };
 		CC23C3AD2A76CB210024C12B /* PhoneMemberShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */; };
@@ -56,6 +66,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD9F67E22A824F1B0056696E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AD9F67E42A824F200056696E /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		AD9F67E62A824F3D0056696E /* Reader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reader.storyboard; sourceTree = "<group>"; };
+		AD9F67E82A824F470056696E /* ReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
+		AD9F67E92A824F470056696E /* NavigationBarButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarButtons.swift; sourceTree = "<group>"; };
+		AD9F67EC2A824F540056696E /* ImageDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetector.swift; sourceTree = "<group>"; };
+		AD9F67ED2A824F540056696E /* TextRecognitionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextRecognitionModel.swift; sourceTree = "<group>"; };
+		AD9F67EE2A824F540056696E /* TTSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSManager.swift; sourceTree = "<group>"; };
+		AD9F67EF2A824F540056696E /* NewsPaperTextRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsPaperTextRecognizer.swift; sourceTree = "<group>"; };
+		AD9F67F42A824F5C0056696E /* DocumentDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentDataDelegate.swift; sourceTree = "<group>"; };
 		CC23C3A82A76AB8D0024C12B /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipViewController.swift; sourceTree = "<group>"; };
 		CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneMemberShipViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +137,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD9F67D72A824D5B0056696E /* AI-Explore */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F67DB2A824E220056696E /* Scanner */,
+				AD9F67DA2A824E1C0056696E /* Reader */,
+				AD9F67D92A824E130056696E /* Utils */,
+				AD9F67D82A824E010056696E /* Delegates */,
+			);
+			path = "AI-Explore";
+			sourceTree = "<group>";
+		};
+		AD9F67D82A824E010056696E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F67F42A824F5C0056696E /* DocumentDataDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		AD9F67D92A824E130056696E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F67EC2A824F540056696E /* ImageDetector.swift */,
+				AD9F67EF2A824F540056696E /* NewsPaperTextRecognizer.swift */,
+				AD9F67ED2A824F540056696E /* TextRecognitionModel.swift */,
+				AD9F67EE2A824F540056696E /* TTSManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AD9F67DA2A824E1C0056696E /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F67E12A824E560056696E /* Model */,
+				AD9F67E02A824E500056696E /* View */,
+				AD9F67DF2A824E490056696E /* Controller */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
+		AD9F67DB2A824E220056696E /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F67DD2A824E310056696E /* View */,
+				AD9F67DC2A824E290056696E /* Controller */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		AD9F67DC2A824E290056696E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F67E42A824F200056696E /* ScannerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD9F67DD2A824E310056696E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F67E22A824F1B0056696E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD9F67DF2A824E490056696E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F67E92A824F470056696E /* NavigationBarButtons.swift */,
+				AD9F67E82A824F470056696E /* ReaderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD9F67E02A824E500056696E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD9F67E62A824F3D0056696E /* Reader.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD9F67E12A824E560056696E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CC43524A2A7259D0000EDAB0 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +267,7 @@
 		CC57ABEB2A710A4200E892FF /* Silver Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				AD9F67D72A824D5B0056696E /* AI-Explore */,
 				FF185B322A739BF9003E766E /* AR-Kiosk */,
 				CC43524D2A727287000EDAB0 /* Utils */,
 				CC43524A2A7259D0000EDAB0 /* Delegate */,
@@ -416,10 +526,12 @@
 				CC57ABEF2A710A4200E892FF /* art.scnassets in Resources */,
 				FF185B442A73AD7B003E766E /* ARKiosk.storyboard in Resources */,
 				CC57AC042A710AE100E892FF /* Home.storyboard in Resources */,
+				AD9F67E72A824F3D0056696E /* Reader.storyboard in Resources */,
 				FFE42A642A73BC4800752CD7 /* Payment.storyboard in Resources */,
 				FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */,
 				FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */,
 				FF185B4E2A73B4B0003E766E /* camera.png in Resources */,
+				AD9F67E32A824F1B0056696E /* Main.storyboard in Resources */,
 				FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */,
 				FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */,
 				CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */,
@@ -446,21 +558,29 @@
 				FFE1D1662A7B733A00E4E049 /* MenuSelectionViewController.swift in Sources */,
 				CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */,
 				CC57AC0F2A710D2A00E892FF /* UIExploreViewController.swift in Sources */,
+				AD9F67F32A824F540056696E /* NewsPaperTextRecognizer.swift in Sources */,
 				CCB7B4372A7782FA00EE46AA /* PaymentFinishViewController.swift in Sources */,
 				CC291D6E2A77FEAF00C363DF /* PaymentSelectResource.swift in Sources */,
 				CC23C3A92A76AB8D0024C12B /* Enum.swift in Sources */,
 				CCFE1C9B2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift in Sources */,
 				FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */,
 				CCFE1C9D2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift in Sources */,
+				AD9F67F22A824F540056696E /* TTSManager.swift in Sources */,
 				CCB04B302A7A31060035483C /* Extension.swift in Sources */,
 				CC57AC162A710DC900E892FF /* ARCharacter.swift in Sources */,
+				AD9F67F52A824F5C0056696E /* DocumentDataDelegate.swift in Sources */,
 				FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */,
 				CC23C3AD2A76CB210024C12B /* PhoneMemberShipViewController.swift in Sources */,
+				AD9F67F02A824F540056696E /* ImageDetector.swift in Sources */,
+				AD9F67F12A824F540056696E /* TextRecognitionModel.swift in Sources */,
 				CC291D702A77FFA800C363DF /* PaymentResource.swift in Sources */,
 				CC291D6C2A77FD1700C363DF /* ProductOptionResource.swift in Sources */,
+				AD9F67EA2A824F470056696E /* ReaderViewController.swift in Sources */,
 				FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */,
 				CCB7B4352A777EA900EE46AA /* PaymentViewController.swift in Sources */,
+				AD9F67E52A824F200056696E /* ScannerViewController.swift in Sources */,
 				FF464C7A2A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift in Sources */,
+				AD9F67EB2A824F470056696E /* NavigationBarButtons.swift in Sources */,
 				CC57AC092A710C0A00E892FF /* HomeResource.swift in Sources */,
 				CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */,
 				FFF221A12A7E7D9700F8D727 /* MainMenuViewController.swift in Sources */,
