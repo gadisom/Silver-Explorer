@@ -24,18 +24,18 @@ struct menuInfo: Hashable {
 }
 extension menuInfo {
     static let baverageList = [
-        menuInfo(name: "녹차라떼", price: 4500, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "밀크티", price: 5000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "초콜릿라떼", price: 15000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "민트초코라떼", price: 5000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "화이트초코라떼", price: 5000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "유자차", price: 5000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "자몽차", price: 5000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "레몬차", price: 5000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "녹차", price: 5000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "얼그레이", price: 5000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "루이보스", price: 5000, imageName: "coffeeButton",type: .beverage),
-        menuInfo(name: "레몬에이드", price: 5000, imageName: "coffeeButton",type: .beverage)
+        menuInfo(name: "녹차라떼", price: 4500, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "밀크티", price: 5000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "초콜릿라떼", price: 15000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "민트초코라떼", price: 5000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "화이트초코라떼", price: 5000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "유자차", price: 5000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "자몽차", price: 5000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "레몬차", price: 5000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "녹차", price: 5000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "얼그레이", price: 5000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "루이보스", price: 5000, imageName: "beverageButton",type: .beverage),
+        menuInfo(name: "레몬에이드", price: 5000, imageName: "beverageButton",type: .beverage)
     ]
     static let coffeeList = [
         menuInfo(name: "아메리카노", price: 4000, imageName: "coffeeButton",type: .coffee),
@@ -52,12 +52,12 @@ extension menuInfo {
         menuInfo(name: "콜드브루", price: 5000, imageName: "coffeeButton",type: .coffee)
     ]
     static let newList = [
-        menuInfo(name: "수박주스", price: 5000, imageName: "coffeeButton",type: .new),
-        menuInfo(name: "토마토주스", price: 5000, imageName: "coffeeButton",type: .new),
-        menuInfo(name: "망고 요거트 라떼", price: 5000, imageName: "coffeeButton",type: .new),
-        menuInfo(name: "코코넛 커피 쉐이크", price: 5000, imageName: "coffeeButton",type: .new),
-        menuInfo(name: "팥빙수", price: 5000, imageName: "coffeeButton",type: .new),
-        menuInfo(name: "망고빙수", price: 5000, imageName: "coffeeButton",type: .new)
+        menuInfo(name: "수박주스", price: 5000, imageName: "newButton",type: .new),
+        menuInfo(name: "토마토주스", price: 5000, imageName: "newButton",type: .new),
+        menuInfo(name: "망고 요거트 라떼", price: 5000, imageName: "newButton",type: .new),
+        menuInfo(name: "코코넛 커피 쉐이크", price: 5000, imageName: "newButton",type: .new),
+        menuInfo(name: "팥빙수", price: 5000, imageName: "newButton",type: .new),
+        menuInfo(name: "망고빙수", price: 5000, imageName: "newButton",type: .new)
     ]
 }
 
@@ -70,7 +70,6 @@ func itemLayout() -> UICollectionViewCompositionalLayout{
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
             
             let section = NSCollectionLayoutSection(group: group)
-            
             let layout = UICollectionViewCompositionalLayout(section: section)
             return layout
 }

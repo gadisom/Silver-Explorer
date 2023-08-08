@@ -9,19 +9,7 @@ import UIKit
 
 class MenuCollectionViewCell: UICollectionViewCell
 {
-//    func productForSelectingOption() -> Product {
-//        let product : Product = currentInfo!
-//        return product
-//    }
-//    func productForCart(product: Product) {
-//
-//    }
-//    func totalPriceForPayment() -> Int {
-//        return 1
-//    }
-//    func backToMainScreen() {
-//
-//    }
+
     @IBOutlet weak var menuImage: UIImageView!
     @IBOutlet weak var menuName: UILabel!
     private var currentInfo: Product?

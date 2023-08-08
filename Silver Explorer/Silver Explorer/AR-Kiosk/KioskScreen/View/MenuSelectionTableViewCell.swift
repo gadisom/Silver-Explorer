@@ -9,26 +9,32 @@ import UIKit
 
 class MenuSelectionTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var itemLabel: UILabel!
     var numberOfItems : Int = 0
     @IBOutlet weak var numberOfItemsLabel: UILabel!
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        switch sender.tag {
-        case -1 :
-            numberOfItems = numberOfItems - 1
-        case 0 :
-            numberOfItems = 0
-        case 1 :
-            numberOfItems = numberOfItems + 1
-        default :
-            break
-        }
-        numberOfItemsLabel.text = "\(numberOfItems)"
+    func configure(_ product: Product) {
+        itemLabel.text = product.productName
+        numberOfItemsLabel.text = "\(product.numberOfProduct)"
     }
-   
-    @IBOutlet weak var menuNameLabel: UILabel!
+    weak var delegate: MenuSelectionTableViewCellDelegate?
+    
+        @IBAction func buttonTapped(_ sender: UIButton) {
+            switch sender.tag {
+            case -1 :
+                delegate?.didDecreaseQuantity(cell: self)
+            case 0 :
+                delegate?.didRemoveProduct(cell: self)
+            case 1 :
+                delegate?.didIncreaseQuantity(cell: self)
+            default :
+                break
+            }
+            delegate?.updateTotalPrice()
+        }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
