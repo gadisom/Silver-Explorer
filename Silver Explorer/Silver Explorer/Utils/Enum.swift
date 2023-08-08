@@ -34,3 +34,9 @@ enum IceQuantity {
 enum PaymentType {
     case creditCard, barcode, none
 }
+
+// MARK: - AR-UI-Explore Enum
+
+enum Stage: Int {
+    case shortTap = 0, longTap, swipe, drag, pinch, rotate
+}
