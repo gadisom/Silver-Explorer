@@ -18,7 +18,7 @@ struct ProductOptionResource {
 struct Product {
     let productName: String
     let productType: ProductType
-    let numberOfProduct: Int
+    var numberOfProduct: Int
     let singleProductPrice: Int
     let totalProductPrice: Int
     
