@@ -80,6 +80,18 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
         
     }
    
+    func itemLayout() -> UICollectionViewCompositionalLayout{
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(1))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 0, trailing: 5)
+                
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.3))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                
+                let section = NSCollectionLayoutSection(group: group)
+                let layout = UICollectionViewCompositionalLayout(section: section)
+                return layout
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
