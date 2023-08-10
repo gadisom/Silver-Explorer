@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Home Enum
 
 enum Content: String {
-    case UIExplore, ARKiosk, AIExplore
+    case UIExplore, ARKiosk, AIExplore, none
 }
 
 // MARK: - AR-Kiosk Enum
