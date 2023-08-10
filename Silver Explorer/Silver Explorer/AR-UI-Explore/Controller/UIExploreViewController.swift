@@ -11,32 +11,32 @@ import ARKit
 
 class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     
-    @IBOutlet var sceneView: ARSCNView!
-    @IBOutlet var stageTitleLabel: UILabel!
-    @IBOutlet weak var stageDescriptionView: UIVisualEffectView!
-    @IBOutlet weak var stageDescriptionLabel: UILabel!
-    @IBOutlet weak var titleView: UIView!
-    @IBOutlet weak var previousBtnView: UIView!
-    @IBOutlet weak var nextBtnView: UIView!
-    @IBOutlet weak var stageImageView: UIImageView!
+    @IBOutlet private var sceneView: ARSCNView!
+    @IBOutlet private var stageTitleLabel: UILabel!
+    @IBOutlet private weak var stageDescriptionView: UIVisualEffectView!
+    @IBOutlet private weak var stageDescriptionLabel: UILabel!
+    @IBOutlet private weak var titleView: UIView!
+    @IBOutlet private weak var previousBtnView: UIView!
+    @IBOutlet private weak var nextBtnView: UIView!
+    @IBOutlet private weak var stageImageView: UIImageView!
     
-    var stage: Stage = .shortTap
-    var swipeDirection: UISwipeGestureRecognizer.Direction = .right
+    private var stage: Stage = .shortTap
+    private var swipeDirection: UISwipeGestureRecognizer.Direction = .right
     
     // 선택된 AR 캐릭터 관련 프로퍼티
     weak var arCharacterDelegate: ARCharacterDelegate?
-    var arCharacter: ARCharacter!
+    private var arCharacter: ARCharacter!
     
     // UIExplorer 리소스 관련 프로퍼티
-    var uiExplorer: UIExploreResource = UIExploreResource()
-    var stageTitleList: [String] {
+    private var uiExplorer: UIExploreResource = UIExploreResource()
+    private var stageTitleList: [String] {
         return uiExplorer
             .stageTitles
     }
-    var stageImages: [Stage: UIImage] {
+    private var stageImages: [Stage: UIImage] {
         return uiExplorer.stageImages
     }
-    var stageDescriptionList: [Stage: String] {
+    private var stageDescriptionList: [Stage: String] {
         return uiExplorer.stageDescriptions
     }
     
@@ -61,8 +61,6 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         makeCornerRoundShape(targetView: previousBtnView, cornerRadius: 10)
         makeCornerRoundShape(targetView: nextBtnView, cornerRadius: 10)
         makeCornerRoundShape(targetView: stageDescriptionView, cornerRadius: 40)
-//        makeCornerRoundShape(targetView: directionBtnView, cornerRadius: 50)
-//        directionBtnView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -89,7 +87,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     
     // MARK: - ARSCNViewDelegate
    
-   func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
        guard let imageAnchor = anchor as? ARImageAnchor else {
            return nil
        }
@@ -103,7 +101,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     
     // MARK: - Move Stage IBAction Methods
     
-    @IBAction func moveNextStage(_ sender: UIButton) {
+    @IBAction private func moveNextStage(_ sender: UIButton) {
         if (stage == .rotate) {
             self.navigationController?.popViewController(animated: true)
         } else {
@@ -113,7 +111,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         }
     }
 
-    @IBAction func moveBackStage(_ sender: UIButton) {
+    @IBAction private func moveBackStage(_ sender: UIButton) {
         if (stage == .shortTap) {
             self.navigationController?.popViewController(animated: true)
         } else {
@@ -123,41 +121,15 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    // MARK: - Direction Button IBAction Methods
-    
-//    @IBAction func leftBtnPressed(_ sender: UIButton) {
-//        self.swipeDirection = .left
-////        self.directionLabel.text = "왼쪽"
-//        updateGestureRecognizer()
-//    }
-//
-//    @IBAction func rightBtnPressed(_ sender: UIButton) {
-//        self.swipeDirection = .right
-////        self.directionLabel.text = "오른쪽"
-//        updateGestureRecognizer()
-//    }
-    
-//    @IBAction func upBtnPressed(_ sender: UIButton) {
-//        self.swipeDirection = .up
-////        self.directionLabel.text = "위"
-//        updateGestureRecognizer()
-//    }
-//
-//    @IBAction func downBtnPressed(_ sender: UIButton) {
-//        self.swipeDirection = .down
-////        self.directionLabel.text = "아래"
-//        updateGestureRecognizer()
-//    }
-    
     // MARK: - Description View Gesture Recognizer Method
     
-    @IBAction func descriptionViewTouched(_ sender: UITapGestureRecognizer) {
+    @IBAction private func descriptionViewTouched(_ sender: UITapGestureRecognizer) {
         self.stageDescriptionView.isHidden = true
     }
     
     // MARK: - Feature Methods
     
-    func setARCharacter() {
+    private func setARCharacter() {
         guard let character = arCharacterDelegate?.selectedARCharacter() else {
 //            return moveBacktoHome(vc: self)
             return
@@ -166,7 +138,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         self.arCharacter.setSceneView(sceneView: sceneView)
     }
     
-    func resetARCharacter() {
+    private func resetARCharacter() {
         if (stage == .swipe || stage == .rotate) {
             if (arCharacter is Finn) {
                 let finnBodyNode = (arCharacter as! Finn).bodyNode
@@ -179,7 +151,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         }
     }
             
-    func moveStage(isNext: Bool) {
+    private func moveStage(isNext: Bool) {
         uiExplorer.removeGestureRecognizer(sceneView: sceneView, stage: stage)
     
         switch stage {

@@ -7,11 +7,36 @@
 
 import UIKit
 
-func moveToContentVC(homeVC: UIViewController, content: Content, storyBoardID: String) {
-    let storyboard = UIStoryboard(name: content.rawValue, bundle: nil)
-    let nextVC = storyboard.instantiateViewController(withIdentifier: storyBoardID)
+func moveBacktoHome(vc: UIViewController) {
+    vc.navigationController?.popToRootViewController(animated: true)
+}
+
+func moveToContentDescriptionVC(homeVC: UIViewController) {
+    let storyboard = UIStoryboard(name: "ContentDescription", bundle: nil)
+    let nextVC = storyboard.instantiateViewController(withIdentifier: String(describing: ContentDescriptionViewController.self)) as! ContentDescriptionViewController
     
+    nextVC.homeDelegate = homeVC as! HomeViewController
     homeVC.navigationController?.pushViewController(nextVC, animated: true)
+}
+
+func moveToContentVC(vc: UIViewController, content: Content) {
+    var contentVC: UIViewController!
+
+    switch content {
+    case .UIExplore:
+        let storyboard = UIStoryboard(name: content.rawValue, bundle: nil)
+        contentVC = storyboard.instantiateViewController(withIdentifier: String(describing: ARCharacterSelectViewController.self))
+    case .ARKiosk:
+        let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
+        contentVC = storyboard.instantiateViewController(withIdentifier: String(describing: KioskMainBoardViewController.self))
+    case .AIExplore:
+        let storyboard = UIStoryboard(name: "Scanner", bundle: nil)
+        contentVC = storyboard.instantiateViewController(withIdentifier: String(describing: ScannerViewController.self))
+    default:
+        return
+    }
+    
+    vc.navigationController?.pushViewController(contentVC, animated: true)
 }
 
 func moveToUIExploreVC(vc: UIViewController) {
@@ -22,19 +47,13 @@ func moveToUIExploreVC(vc: UIViewController) {
     vc.navigationController?.pushViewController(nextVC, animated: true)
 }
 
-func moveBacktoHome(vc: UIViewController) {
-    vc.navigationController?.popToRootViewController(animated: true)
-}
-
-
-// Kiosk 관련 이동 프로퍼티
-
 func moveToARKioskVC(vc: UIViewController) {
     let storyboard = UIStoryboard(name: "ARKiosk", bundle: nil)
     guard let nextVC = storyboard.instantiateViewController(withIdentifier: "ARKioskViewController") as? ARKioskViewController else { return }
     vc.present(nextVC, animated: true)
 //    vc.navigationController?.pushViewController(nextVC, animated: true)
 }
+
 func moveToKioskHomeVC (vc : UIViewController)
 {
     let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
