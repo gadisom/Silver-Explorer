@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController storyboardIdentifier="ARCharacterSelectViewController" id="NIJ-tm-LWH" customClass="ARCharacterSelectViewController" customModule="Silver_Explorer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAT-zr-ZHB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background" translatesAutoresizingMaskIntoConstraints="NO" id="W59-Fa-unf">
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="50" width="375" height="728"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARb-SX-0NC">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="242.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="290.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR 캐릭터 선택하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWJ-kb-cAb">
                                                 <rect key="frame" x="31" y="97.333333333333343" width="313" height="48"/>
@@ -55,13 +55,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arU-pX-5Ez">
-                                        <rect key="frame" x="0.0" y="242.66666666666669" width="375" height="242.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="290.66666666666663" width="393" height="277.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3iG-04-05d">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="242.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="277.66666666666669"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAi-Ht-WGK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="242.66666666666666"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAi-Ht-WGK" userLabel="Tommy Button View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="277.66666666666669"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hvf-Q0-Gcd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="242.66666666666666"/>
@@ -118,8 +118,8 @@
                                                             <constraint firstItem="hvf-Q0-Gcd" firstAttribute="leading" secondItem="eAi-Ht-WGK" secondAttribute="leading" id="yc8-e7-qsv"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozA-MD-UGg">
-                                                        <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="242.66666666666666"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozA-MD-UGg" userLabel="Fin Button View">
+                                                        <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="277.66666666666669"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sHU-8f-M5t">
                                                                 <rect key="frame" x="0.0" y="0.0" width="187.33333333333334" height="242.66666666666666"/>
@@ -188,6 +188,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="3iG-04-05d" secondAttribute="trailing" id="2uq-no-1mA"/>
                                             <constraint firstAttribute="bottom" secondItem="3iG-04-05d" secondAttribute="bottom" id="9QR-Iy-Avc"/>
+                                            <constraint firstAttribute="width" secondItem="arU-pX-5Ez" secondAttribute="height" multiplier="75:53" id="Bwb-Vu-zub"/>
                                             <constraint firstItem="3iG-04-05d" firstAttribute="leading" secondItem="arU-pX-5Ez" secondAttribute="leading" id="nor-1m-ao6"/>
                                             <constraint firstItem="3iG-04-05d" firstAttribute="top" secondItem="arU-pX-5Ez" secondAttribute="top" id="s6T-uf-48P"/>
                                         </constraints>
@@ -233,14 +234,14 @@
             <objects>
                 <viewController storyboardIdentifier="UIExploreViewController" id="hdn-ML-XXb" customClass="UIExploreViewController" customModule="Silver_Explorer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mQa-mj-nau">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uH9-wK-mCF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </arscnView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u94-uA-0YS" userLabel="Next Button Visual Effect View">
-                                <rect key="frame" x="294" y="67" width="65" height="40"/>
+                                <rect key="frame" x="312" y="76" width="65" height="40"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="d38-Gt-CA5">
                                     <rect key="frame" x="0.0" y="0.0" width="65" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,7 +267,7 @@
                                 <blurEffect style="systemThinMaterialDark"/>
                             </visualEffectView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qF7-I1-0Ua" userLabel="Previous Button Visual Effect View">
-                                <rect key="frame" x="16" y="67" width="65" height="40"/>
+                                <rect key="frame" x="16" y="76" width="65" height="40"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tEU-tc-Rm9">
                                     <rect key="frame" x="0.0" y="0.0" width="65" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,13 +293,13 @@
                                 <blurEffect style="systemThinMaterialDark"/>
                             </visualEffectView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8H-M3-R1A" userLabel="Stage Titile Visual Effect View">
-                                <rect key="frame" x="96" y="67" width="183" height="40"/>
+                                <rect key="frame" x="96" y="76" width="201" height="40"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Urc-Dc-zWW">
-                                    <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="201" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="탭하기 - 짧게" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzU-11-VMO">
-                                            <rect key="frame" x="46.666666666666657" y="9.9999999999999982" width="90" height="20.333333333333329"/>
+                                            <rect key="frame" x="55.666666666666657" y="9.9999999999999982" width="90" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -315,19 +316,19 @@
                                 <blurEffect style="systemThinMaterialDark"/>
                             </visualEffectView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAd-hK-oci">
-                                <rect key="frame" x="30" y="207" width="315" height="471"/>
+                                <rect key="frame" x="30" y="216" width="333" height="502"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6hq-Tm-xpo">
-                                    <rect key="frame" x="0.0" y="0.0" width="315" height="471"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="333" height="502"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qhl-ad-6hH">
-                                            <rect key="frame" x="0.0" y="0.0" width="315" height="471"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="502"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7r-yc-AJf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="157"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="167.33333333333334"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tap" translatesAutoresizingMaskIntoConstraints="NO" id="zXP-Nj-rWG">
-                                                            <rect key="frame" x="0.0" y="30" width="315" height="127"/>
+                                                            <rect key="frame" x="0.0" y="30" width="333" height="137.33333333333334"/>
                                                         </imageView>
                                                     </subviews>
                                                     <constraints>
@@ -338,10 +339,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shi-1L-evm">
-                                                    <rect key="frame" x="0.0" y="157" width="315" height="157"/>
+                                                    <rect key="frame" x="0.0" y="167.33333333333331" width="333" height="167.33333333333331"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6c-HF-hqt">
-                                                            <rect key="frame" x="33.333333333333329" y="53.333333333333314" width="248.33333333333337" height="50.333333333333343"/>
+                                                            <rect key="frame" x="42.333333333333329" y="58.666666666666686" width="248.33333333333337" height="50.333333333333343"/>
                                                             <string key="text">한 손가락을 사용해 
 AR 캐릭터를 짧게 탭해보세요!</string>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
@@ -355,10 +356,10 @@ AR 캐릭터를 짧게 탭해보세요!</string>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrO-BT-WQk">
-                                                    <rect key="frame" x="0.0" y="314" width="315" height="157"/>
+                                                    <rect key="frame" x="0.0" y="334.66666666666663" width="333" height="167.33333333333337"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="터치하여 시작하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSj-gx-2Ej">
-                                                            <rect key="frame" x="68.333333333333329" y="63.666666666666629" width="178.66666666666669" height="30"/>
+                                                            <rect key="frame" x="77.333333333333329" y="68.666666666666742" width="178.66666666666669" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -427,7 +428,6 @@ AR 캐릭터를 짧게 탭해보세요!</string>
             <point key="canvasLocation" x="954" y="-89"/>
         </scene>
     </scenes>
-    <resources>
         <image name="arr" width="129" height="182"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
@@ -435,6 +435,7 @@ AR 캐릭터를 짧게 탭해보세요!</string>
         <image name="fin" width="95" height="255"/>
         <image name="main_background" width="390" height="844"/>
         <image name="tap" width="79.333335876464844" height="98.666664123535156"/>
+        <image name="tommy" width="129" height="182"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
