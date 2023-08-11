@@ -7,29 +7,30 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
-    let resource: HomeResourse = HomeResourse()
-    var storyBoardIDs: [Content: String] {
-        return resource.storyBoardIDs
-    }
+class HomeViewController: UIViewController, HomeDelegate {
+
+    private var selectedContent: Content = .none
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    
     @IBAction func uiExploreBtnPressed(_ sender: UIButton) {
-        moveToContentVC(homeVC: self, content: .UIExplore, storyBoardID: storyBoardIDs[.UIExplore]!)
+        selectedContent = .UIExplore
+        moveToContentDescriptionVC(homeVC: self)
     }
-    
-    
-    @IBAction func arKioskBtnPressed(_ sender: UIButton) {
-        moveToKioskHomeVC(vc: self)
 
+    @IBAction func arKioskBtnPressed(_ sender: UIButton) {
+        selectedContent = .ARKiosk
+        moveToContentDescriptionVC(homeVC: self)
     }
-    
-    
+
     @IBAction func aiExplore(_ sender: UIButton) {
+        selectedContent = .AIExplore
+        moveToContentDescriptionVC(homeVC: self)
+    }
+
+    func content() -> Content {
+        return selectedContent
     }
 }

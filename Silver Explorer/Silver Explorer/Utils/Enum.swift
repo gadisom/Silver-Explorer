@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Home Enum
 
 enum Content: String {
-    case UIExplore, ARKiosk, AIExplore
+    case UIExplore, ARKiosk, AIExplore, none
 }
 
 // MARK: - AR-Kiosk Enum
@@ -36,6 +36,10 @@ enum PaymentType {
 }
 
 // MARK: - AR-UI-Explore Enum
+
+enum Character {
+    case Arr, Finn, none
+}
 
 enum Stage: Int {
     case shortTap = 0, longTap, swipe, drag, pinch, rotate
