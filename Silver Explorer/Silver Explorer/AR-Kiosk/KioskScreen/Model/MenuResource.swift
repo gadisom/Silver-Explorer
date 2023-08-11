@@ -24,52 +24,40 @@ struct menuInfo: Hashable {
 }
 extension menuInfo {
     static let baverageList = [
-        menuInfo(name: "녹차라떼", price: 4500, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "밀크티", price: 5000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "초콜릿라떼", price: 15000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "민트초코라떼", price: 5000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "화이트초코라떼", price: 5000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "유자차", price: 5000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "자몽차", price: 5000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "레몬차", price: 5000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "녹차", price: 5000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "얼그레이", price: 5000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "루이보스", price: 5000, imageName: "beverageButton",type: .beverage),
-        menuInfo(name: "레몬에이드", price: 5000, imageName: "beverageButton",type: .beverage)
+        menuInfo(name: "로얄밀크티", price: 5500, imageName: "로얄밀크티",type: .beverage),
+        menuInfo(name: "그린티 라떼", price: 5200, imageName: "그린티라떼",type: .beverage),
+        menuInfo(name: "유자 레몬티", price: 5500, imageName: "유자레몬티",type: .beverage),
+        menuInfo(name: "애플민트티", price: 5500, imageName: "애플민트티",type: .beverage),
+        menuInfo(name: "쑥 라떼", price: 5500, imageName: "쑥라떼",type: .beverage),
+        menuInfo(name: "고구마 라떼", price: 5000, imageName: "고구마라떼",type: .beverage),
+        menuInfo(name: "애플망고주스", price: 6300, imageName: "애플망고주스",type: .beverage),
+        menuInfo(name: "오렌지에이드", price: 5000, imageName: "오렌지에이드",type: .beverage),
+        menuInfo(name: "말차 프라페", price: 5800, imageName: "제주말차프라페",type: .beverage),
+        menuInfo(name: "요거트 프라페", price: 5000, imageName: "요거트프라페",type: .beverage),
+        menuInfo(name: "망고 프라페", price: 5000, imageName: "망고프라페",type: .beverage),
+        menuInfo(name: "초콜릿 라떼", price: 5000, imageName: "초콜릿라떼",type: .beverage)
     ]
     static let coffeeList = [
-        menuInfo(name: "아메리카노", price: 4000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "카페라떼", price: 4500, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "카푸치노", price: 5000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "바닐라라떼", price: 5000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "카라멜마끼아또", price: 5000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "카페모카", price: 5000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "민트모카", price: 5000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "화이트모카", price: 5000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "연유라떼", price: 5000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "아인슈페너", price: 5000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "아포카토", price: 5000, imageName: "coffeeButton",type: .coffee),
-        menuInfo(name: "콜드브루", price: 5000, imageName: "coffeeButton",type: .coffee)
+        menuInfo(name: "아메리카노", price: 4500, imageName: "아메리카노",type: .coffee),
+        menuInfo(name: "카페라떼", price: 5000, imageName: "카페라떼",type: .coffee),
+        menuInfo(name: "카푸치노", price: 5000, imageName: "카푸치노",type: .coffee),
+        menuInfo(name: "바닐라라떼", price: 5500, imageName: "바닐라라떼",type: .coffee),
+        menuInfo(name: "카페모카", price: 5500, imageName: "카페모카",type: .coffee),
+        menuInfo(name: "숏 라떼", price: 5000, imageName: "숏라떼",type: .coffee),
+        menuInfo(name: "롱 블랙", price: 4500, imageName: "롱블랙",type: .coffee),
+        menuInfo(name: "달고나 라떼", price: 6000, imageName: "달고나라떼",type: .coffee),
+        menuInfo(name: "흑임자 라떼", price: 6100, imageName: "흑임자라떼",type: .coffee),
+        menuInfo(name: "콜드브루", price: 4900, imageName: "콜드브루",type: .coffee),
+        menuInfo(name: "콜드브루 라떼", price: 5400, imageName: "콜드브루라떼",type: .coffee),
     ]
     static let newList = [
-        menuInfo(name: "수박주스", price: 5000, imageName: "newButton",type: .new),
-        menuInfo(name: "토마토주스", price: 5000, imageName: "newButton",type: .new),
-        menuInfo(name: "망고 요거트 라떼", price: 5000, imageName: "newButton",type: .new),
-        menuInfo(name: "코코넛 커피 쉐이크", price: 5000, imageName: "newButton",type: .new),
-        menuInfo(name: "팥빙수", price: 5000, imageName: "newButton",type: .new),
-        menuInfo(name: "망고빙수", price: 5000, imageName: "newButton",type: .new)
+        menuInfo(name: "수박주스", price: 6300, imageName: "수박주스",type: .new),
+        menuInfo(name: "자몽 에이드", price: 5800, imageName: "자몽에이드",type: .new),
+        menuInfo(name: "망고 프라페", price: 6000, imageName: "망고프라페",type: .new),
+        menuInfo(name: "딸기 파르페", price: 6500, imageName: "딸기파르페",type: .new),
+        menuInfo(name: "복숭아 에이드", price: 5800, imageName: "복숭아에이드",type: .new),
+        menuInfo(name: "청귤 스파클링", price: 6300, imageName: "청귤스파클링",type: .new),
+        menuInfo(name: "애플망고주스", price: 6300, imageName: "애플망고주스",type: .new),
     ]
 }
 
-func itemLayout() -> UICollectionViewCompositionalLayout{
-    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(1.0))
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
-            
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.3))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-            
-            let section = NSCollectionLayoutSection(group: group)
-            let layout = UICollectionViewCompositionalLayout(section: section)
-            return layout
-}
