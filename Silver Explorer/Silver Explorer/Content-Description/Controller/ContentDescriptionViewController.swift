@@ -28,6 +28,11 @@ class ContentDescriptionViewController: UIViewController {
         initialSettingForContentDescription()
     }
     
+    
+    @IBAction func moveBackBtnPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction private func exploreStartBtnPressed(_ sender: UIButton) {
         moveToContentVC(vc: self, content: content)
     }

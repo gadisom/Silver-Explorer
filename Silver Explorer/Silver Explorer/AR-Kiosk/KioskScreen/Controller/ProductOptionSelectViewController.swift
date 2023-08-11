@@ -115,6 +115,9 @@ class ProductOptionSelectViewController: UIViewController {
     }
     
     @IBAction private func hotButtonPressed(_ sender: UIButton) {
+        if (productType == .new) {
+            return // 신메뉴는 무조건 ice이다.
+        }
         renderSelectedTempButton(temp: .hot)
         renderNotSelectedTempButton(temp: .ice)
         iceOptionPrice = 0
