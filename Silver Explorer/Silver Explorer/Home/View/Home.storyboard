@@ -58,7 +58,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3P-vH-rPp">
                                                         <rect key="frame" x="0.0" y="0.0" width="363" height="130"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="device UI explorer"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="touch gesture explorer"/>
                                                         <connections>
                                                             <action selector="uiExploreBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="G81-Dq-X4w"/>
                                                         </connections>
@@ -129,8 +129,8 @@
     </scenes>
     <resources>
         <image name="ai explorer" width="339" height="116"/>
-        <image name="device UI explorer" width="339" height="116"/>
         <image name="kiosk explorer" width="339" height="116"/>
         <image name="main_background" width="390" height="844"/>
+        <image name="touch gesture explorer" width="339" height="116"/>
     </resources>
 </document>

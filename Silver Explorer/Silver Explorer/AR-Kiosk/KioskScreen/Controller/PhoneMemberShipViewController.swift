@@ -28,7 +28,7 @@ class PhoneMemberShipViewController: UIViewController {
         if (sender.tag == -1) {
             erasePhoneNumber()
         } else if (sender.tag == 10) {
-            // all clear!!!
+            phoneNumber = "010"
         } else {
             addPhoneNumber(number: sender.tag)
         }
