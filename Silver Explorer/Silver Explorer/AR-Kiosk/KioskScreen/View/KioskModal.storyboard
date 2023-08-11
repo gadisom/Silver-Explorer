@@ -980,7 +980,7 @@
                                                                                             <action selector="phoneNumberBtnPressed:" destination="L5G-QU-HuC" eventType="touchUpInside" id="0vq-rR-rXK"/>
                                                                                         </connections>
                                                                                     </button>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button010" translatesAutoresizingMaskIntoConstraints="NO" id="j8z-Ze-4AW">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonCLR" translatesAutoresizingMaskIntoConstraints="NO" id="j8z-Ze-4AW">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="49"/>
                                                                                     </imageView>
                                                                                 </subviews>
@@ -2164,7 +2164,6 @@ Please check your ticket number)</string>
         <image name="barcodePaymentImg" width="304" height="260"/>
         <image name="barcode_not" width="120" height="120"/>
         <image name="button0" width="50" height="50"/>
-        <image name="button010" width="50" height="50"/>
         <image name="button1" width="50" height="50"/>
         <image name="button2" width="50" height="50"/>
         <image name="button3" width="50" height="50"/>
@@ -2175,6 +2174,7 @@ Please check your ticket number)</string>
         <image name="button8" width="50" height="50"/>
         <image name="button9" width="50" height="50"/>
         <image name="buttonBack" width="50" height="50"/>
+        <image name="buttonCLR" width="50" height="50"/>
         <image name="coffeeOptionImg" width="134" height="134"/>
         <image name="creditPaymentImg" width="304" height="260"/>
         <image name="credit_selected" width="120" height="120"/>

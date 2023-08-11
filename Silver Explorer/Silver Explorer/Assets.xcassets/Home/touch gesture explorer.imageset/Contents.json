@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "device UI explorer.png",
+      "filename" : "touch gesture explorer.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "device UI explorer@2x.png",
+      "filename" : "touch gesture explorer@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "device UI explorer@3x.png",
+      "filename" : "touch gesture explorer@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

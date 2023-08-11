@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Finn.png",
+      "filename" : "buttonCLR.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Finn@2x.png",
+      "filename" : "buttonCLR@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Finn@3x.png",
+      "filename" : "buttonCLR@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

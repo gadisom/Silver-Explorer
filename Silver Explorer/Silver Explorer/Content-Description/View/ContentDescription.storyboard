@@ -25,6 +25,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWA-UU-1tQ" userLabel="Title View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDL-dL-uh6">
+                                                <rect key="frame" x="20" y="10" width="70" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="0Rn-Wf-nhJ"/>
+                                                    <constraint firstAttribute="width" constant="70" id="t7d-fB-HJs"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title="이전" cornerStyle="large">
+                                                    <color key="baseBackgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="moveBackBtnPressed:" destination="7LA-bS-PMA" eventType="touchUpInside" id="pBy-9Q-9to"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="터치 제스처 탐험하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-Q1-3VS">
                                                 <rect key="frame" x="64.333333333333329" y="77" width="246.66666666666669" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
@@ -34,6 +48,8 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GWA-UU-1tQ" secondAttribute="height" multiplier="375:190" id="2Yt-nr-qgC"/>
+                                            <constraint firstItem="fDL-dL-uh6" firstAttribute="leading" secondItem="GWA-UU-1tQ" secondAttribute="leading" constant="20" id="b8D-L0-ugC"/>
+                                            <constraint firstItem="fDL-dL-uh6" firstAttribute="top" secondItem="GWA-UU-1tQ" secondAttribute="top" constant="10" id="gb8-22-HWR"/>
                                             <constraint firstItem="Zcf-Q1-3VS" firstAttribute="centerY" secondItem="GWA-UU-1tQ" secondAttribute="centerY" id="iVB-ah-Kri"/>
                                             <constraint firstItem="Zcf-Q1-3VS" firstAttribute="centerX" secondItem="GWA-UU-1tQ" secondAttribute="centerX" id="j88-6G-ttF"/>
                                         </constraints>
@@ -75,18 +91,27 @@ AR 캐릭터와 함께 재밌게 배워보고
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWS-CL-gsf">
                                                         <rect key="frame" x="0.0" y="380.66666666666663" width="375" height="157.33333333333337"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKC-8c-E3v">
-                                                                <rect key="frame" x="6" y="13.666666666666742" width="363" height="130"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfC-UD-7Dj">
+                                                                <rect key="frame" x="70" y="39.999999999999993" width="235" height="77.333333333333314"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="explore-start"/>
+                                                                <buttonConfiguration key="configuration" style="plain"/>
                                                                 <connections>
-                                                                    <action selector="exploreStartBtnPressed:" destination="7LA-bS-PMA" eventType="touchUpInside" id="bvF-A7-7CP"/>
+                                                                    <action selector="exploreStartBtnPressed:" destination="7LA-bS-PMA" eventType="touchUpInside" id="CeK-Dv-buA"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explore-start" translatesAutoresizingMaskIntoConstraints="NO" id="iQc-5x-02m">
+                                                                <rect key="frame" x="50" y="39.999999999999993" width="275" height="77.333333333333314"/>
+                                                            </imageView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="bKC-8c-E3v" firstAttribute="centerX" secondItem="jWS-CL-gsf" secondAttribute="centerX" id="5OM-fC-8Oy"/>
-                                                            <constraint firstItem="bKC-8c-E3v" firstAttribute="centerY" secondItem="jWS-CL-gsf" secondAttribute="centerY" id="IGN-KJ-gBU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="iQc-5x-02m" secondAttribute="trailing" constant="50" id="7Ko-Os-xge"/>
+                                                            <constraint firstItem="iQc-5x-02m" firstAttribute="leading" secondItem="jWS-CL-gsf" secondAttribute="leading" constant="50" id="Ivz-OT-7Fs"/>
+                                                            <constraint firstItem="iQc-5x-02m" firstAttribute="top" secondItem="jWS-CL-gsf" secondAttribute="top" constant="40" id="LJB-cS-xTQ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="iQc-5x-02m" secondAttribute="bottom" constant="40" id="QYC-rD-2YH"/>
+                                                            <constraint firstItem="NfC-UD-7Dj" firstAttribute="leading" secondItem="jWS-CL-gsf" secondAttribute="leading" constant="70" id="Ugq-aP-hug"/>
+                                                            <constraint firstAttribute="trailing" secondItem="NfC-UD-7Dj" secondAttribute="trailing" constant="70" id="ZcM-mc-BcI"/>
+                                                            <constraint firstItem="NfC-UD-7Dj" firstAttribute="top" secondItem="jWS-CL-gsf" secondAttribute="top" constant="40" id="rdx-wa-ETW"/>
+                                                            <constraint firstAttribute="bottom" secondItem="NfC-UD-7Dj" secondAttribute="bottom" constant="40" id="w4A-TE-Ldt"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -127,6 +152,7 @@ AR 캐릭터와 함께 재밌게 배워보고
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="explore-start" width="339" height="116"/>
         <image name="main_background" width="390" height="844"/>
         <image name="messageBox" width="302" height="278"/>
