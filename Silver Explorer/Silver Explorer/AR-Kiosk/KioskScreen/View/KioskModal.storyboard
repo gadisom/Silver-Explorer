@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7J-qx-DU2" userLabel="Background View">
-                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tj-fc-n9y" userLabel="Kioskl Modal View">
-                                        <rect key="frame" x="30" y="70" width="315" height="588"/>
+                                        <rect key="frame" x="30" y="120" width="315" height="588"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="b5e-Zb-zlT">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="588"/>
@@ -609,18 +609,18 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.79669391550000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="8tj-fc-n9y" firstAttribute="leading" secondItem="h7J-qx-DU2" secondAttribute="leading" constant="30" id="1s2-Ta-RyE"/>
-                                    <constraint firstAttribute="bottom" secondItem="8tj-fc-n9y" secondAttribute="bottom" constant="70" id="4sm-xC-T8F"/>
-                                    <constraint firstItem="8tj-fc-n9y" firstAttribute="top" secondItem="h7J-qx-DU2" secondAttribute="top" constant="70" id="jws-cd-Stm"/>
+                                    <constraint firstAttribute="bottom" secondItem="8tj-fc-n9y" secondAttribute="bottom" constant="104" id="4sm-xC-T8F"/>
+                                    <constraint firstItem="8tj-fc-n9y" firstAttribute="top" secondItem="h7J-qx-DU2" secondAttribute="top" constant="120" id="jws-cd-Stm"/>
                                     <constraint firstAttribute="trailing" secondItem="8tj-fc-n9y" secondAttribute="trailing" constant="30" id="lM3-h4-d8V"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fID-yv-lm3"/>
                         <constraints>
-                            <constraint firstItem="h7J-qx-DU2" firstAttribute="top" secondItem="fID-yv-lm3" secondAttribute="top" id="7F1-L4-BLx"/>
+                            <constraint firstItem="h7J-qx-DU2" firstAttribute="top" secondItem="mOj-SQ-ohp" secondAttribute="top" id="7F1-L4-BLx"/>
                             <constraint firstItem="fID-yv-lm3" firstAttribute="trailing" secondItem="h7J-qx-DU2" secondAttribute="trailing" id="I1u-IN-08B"/>
                             <constraint firstItem="h7J-qx-DU2" firstAttribute="leading" secondItem="fID-yv-lm3" secondAttribute="leading" id="OGm-dm-bFT"/>
-                            <constraint firstItem="fID-yv-lm3" firstAttribute="bottom" secondItem="h7J-qx-DU2" secondAttribute="bottom" id="mmA-hQ-egM"/>
+                            <constraint firstAttribute="bottom" secondItem="h7J-qx-DU2" secondAttribute="bottom" id="mmA-hQ-egM"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1170,10 +1170,10 @@ in the location below)</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXr-Hu-dxO" userLabel="Background View">
-                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEK-j4-lga" userLabel="Kioskl Modal View">
-                                        <rect key="frame" x="30" y="70" width="315" height="588"/>
+                                        <rect key="frame" x="30" y="120" width="315" height="588"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="HE3-5Z-sOC">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="588"/>
@@ -1386,18 +1386,18 @@ in the location below)</string>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.79669391550000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="CEK-j4-lga" firstAttribute="top" secondItem="VXr-Hu-dxO" secondAttribute="top" constant="70" id="Fxn-q1-bCQ"/>
+                                    <constraint firstItem="CEK-j4-lga" firstAttribute="top" secondItem="VXr-Hu-dxO" secondAttribute="top" constant="120" id="Fxn-q1-bCQ"/>
                                     <constraint firstItem="CEK-j4-lga" firstAttribute="leading" secondItem="VXr-Hu-dxO" secondAttribute="leading" constant="30" id="MXA-rA-pDt"/>
-                                    <constraint firstAttribute="bottom" secondItem="CEK-j4-lga" secondAttribute="bottom" constant="70" id="UKQ-0w-OSM"/>
+                                    <constraint firstAttribute="bottom" secondItem="CEK-j4-lga" secondAttribute="bottom" constant="104" id="UKQ-0w-OSM"/>
                                     <constraint firstAttribute="trailing" secondItem="CEK-j4-lga" secondAttribute="trailing" constant="30" id="bqh-sq-9zR"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9wv-fr-vTA"/>
                         <constraints>
-                            <constraint firstItem="VXr-Hu-dxO" firstAttribute="top" secondItem="9wv-fr-vTA" secondAttribute="top" id="2qh-H4-SFE"/>
+                            <constraint firstItem="VXr-Hu-dxO" firstAttribute="top" secondItem="Qdp-tF-9W6" secondAttribute="top" id="2qh-H4-SFE"/>
                             <constraint firstItem="9wv-fr-vTA" firstAttribute="trailing" secondItem="VXr-Hu-dxO" secondAttribute="trailing" id="Rtc-yC-7a7"/>
-                            <constraint firstItem="9wv-fr-vTA" firstAttribute="bottom" secondItem="VXr-Hu-dxO" secondAttribute="bottom" id="f6v-9u-y3e"/>
+                            <constraint firstAttribute="bottom" secondItem="VXr-Hu-dxO" secondAttribute="bottom" id="f6v-9u-y3e"/>
                             <constraint firstItem="VXr-Hu-dxO" firstAttribute="leading" secondItem="9wv-fr-vTA" secondAttribute="leading" id="yy7-gf-j2l"/>
                         </constraints>
                     </view>
@@ -1422,10 +1422,10 @@ in the location below)</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6l-Ma-63g" userLabel="Background View">
-                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ej-IM-vNB" userLabel="Kioskl Modal View">
-                                        <rect key="frame" x="30" y="70" width="315" height="588"/>
+                                        <rect key="frame" x="30" y="120" width="315" height="588"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-ba-fCL">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="588"/>
@@ -1702,17 +1702,17 @@ in the location below)</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.79669391550000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5ej-IM-vNB" secondAttribute="trailing" constant="30" id="WVz-dH-pA1"/>
-                                    <constraint firstItem="5ej-IM-vNB" firstAttribute="top" secondItem="b6l-Ma-63g" secondAttribute="top" constant="70" id="fUp-fi-G2d"/>
+                                    <constraint firstItem="5ej-IM-vNB" firstAttribute="top" secondItem="b6l-Ma-63g" secondAttribute="top" constant="120" id="fUp-fi-G2d"/>
                                     <constraint firstItem="5ej-IM-vNB" firstAttribute="leading" secondItem="b6l-Ma-63g" secondAttribute="leading" constant="30" id="zWO-RY-tKq"/>
-                                    <constraint firstAttribute="bottom" secondItem="5ej-IM-vNB" secondAttribute="bottom" constant="70" id="zkL-J4-zr7"/>
+                                    <constraint firstAttribute="bottom" secondItem="5ej-IM-vNB" secondAttribute="bottom" constant="104" id="zkL-J4-zr7"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cmi-gv-Tku"/>
                         <constraints>
-                            <constraint firstItem="b6l-Ma-63g" firstAttribute="top" secondItem="Cmi-gv-Tku" secondAttribute="top" id="GO8-FX-ra3"/>
+                            <constraint firstItem="b6l-Ma-63g" firstAttribute="top" secondItem="wQv-Y6-4c6" secondAttribute="top" id="GO8-FX-ra3"/>
                             <constraint firstItem="b6l-Ma-63g" firstAttribute="leading" secondItem="Cmi-gv-Tku" secondAttribute="leading" id="Kld-J7-Zam"/>
-                            <constraint firstItem="Cmi-gv-Tku" firstAttribute="bottom" secondItem="b6l-Ma-63g" secondAttribute="bottom" id="MRK-yA-gs5"/>
+                            <constraint firstAttribute="bottom" secondItem="b6l-Ma-63g" secondAttribute="bottom" id="MRK-yA-gs5"/>
                             <constraint firstItem="Cmi-gv-Tku" firstAttribute="trailing" secondItem="b6l-Ma-63g" secondAttribute="trailing" id="rBc-e5-fTW"/>
                         </constraints>
                     </view>
@@ -1735,10 +1735,10 @@ in the location below)</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHT-jP-ZVz" userLabel="Background View">
-                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttg-sS-Fqe" userLabel="Kioskl Modal View">
-                                        <rect key="frame" x="30" y="70" width="315" height="588"/>
+                                        <rect key="frame" x="30" y="120" width="315" height="588"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="hvr-k5-fS4">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="588"/>
@@ -1779,8 +1779,8 @@ in the location below)</string>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goW-UJ-wN8" userLabel="Description View">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="136"/>
                                                                                         <subviews>
-                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-Hy-ICZ">
-                                                                                                <rect key="frame" x="30" y="20" width="255" height="96"/>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-Hy-ICZ">
+                                                                                                <rect key="frame" x="0.0" y="15" width="315" height="106"/>
                                                                                                 <string key="text">결제하실 신용카드를
 아래 그림의 위치에 넣어주세요
 
@@ -1792,10 +1792,10 @@ in the location below)</string>
                                                                                             </label>
                                                                                         </subviews>
                                                                                         <constraints>
-                                                                                            <constraint firstItem="LHy-Hy-ICZ" firstAttribute="leading" secondItem="goW-UJ-wN8" secondAttribute="leading" constant="30" id="8nX-MB-7xK"/>
-                                                                                            <constraint firstAttribute="bottom" secondItem="LHy-Hy-ICZ" secondAttribute="bottom" constant="20" id="IC1-RR-Su5"/>
-                                                                                            <constraint firstItem="LHy-Hy-ICZ" firstAttribute="top" secondItem="goW-UJ-wN8" secondAttribute="top" constant="20" id="PsT-5V-cGH"/>
-                                                                                            <constraint firstAttribute="trailing" secondItem="LHy-Hy-ICZ" secondAttribute="trailing" constant="30" id="qoV-GX-Nhj"/>
+                                                                                            <constraint firstItem="LHy-Hy-ICZ" firstAttribute="leading" secondItem="goW-UJ-wN8" secondAttribute="leading" id="8nX-MB-7xK"/>
+                                                                                            <constraint firstAttribute="bottom" secondItem="LHy-Hy-ICZ" secondAttribute="bottom" constant="15" id="IC1-RR-Su5"/>
+                                                                                            <constraint firstItem="LHy-Hy-ICZ" firstAttribute="top" secondItem="goW-UJ-wN8" secondAttribute="top" constant="15" id="PsT-5V-cGH"/>
+                                                                                            <constraint firstAttribute="trailing" secondItem="LHy-Hy-ICZ" secondAttribute="trailing" id="qoV-GX-Nhj"/>
                                                                                             <constraint firstAttribute="width" secondItem="goW-UJ-wN8" secondAttribute="height" multiplier="315:136" id="uEY-70-co4"/>
                                                                                         </constraints>
                                                                                     </view>
@@ -1923,8 +1923,8 @@ in the location below)</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.79669391550000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ttg-sS-Fqe" firstAttribute="leading" secondItem="aHT-jP-ZVz" secondAttribute="leading" constant="30" id="DEx-Ip-WeU"/>
-                                    <constraint firstItem="ttg-sS-Fqe" firstAttribute="top" secondItem="aHT-jP-ZVz" secondAttribute="top" constant="70" id="IvS-4I-vii"/>
-                                    <constraint firstAttribute="bottom" secondItem="ttg-sS-Fqe" secondAttribute="bottom" constant="70" id="kxe-Cx-XNE"/>
+                                    <constraint firstItem="ttg-sS-Fqe" firstAttribute="top" secondItem="aHT-jP-ZVz" secondAttribute="top" constant="120" id="IvS-4I-vii"/>
+                                    <constraint firstAttribute="bottom" secondItem="ttg-sS-Fqe" secondAttribute="bottom" constant="104" id="kxe-Cx-XNE"/>
                                     <constraint firstAttribute="trailing" secondItem="ttg-sS-Fqe" secondAttribute="trailing" constant="30" id="nDz-3d-Cbp"/>
                                 </constraints>
                             </view>
@@ -1932,9 +1932,9 @@ in the location below)</string>
                         <viewLayoutGuide key="safeArea" id="QS7-9W-cFP"/>
                         <constraints>
                             <constraint firstItem="QS7-9W-cFP" firstAttribute="trailing" secondItem="aHT-jP-ZVz" secondAttribute="trailing" id="42i-AA-4DP"/>
-                            <constraint firstItem="QS7-9W-cFP" firstAttribute="bottom" secondItem="aHT-jP-ZVz" secondAttribute="bottom" id="AWy-uj-uN2"/>
+                            <constraint firstAttribute="bottom" secondItem="aHT-jP-ZVz" secondAttribute="bottom" id="AWy-uj-uN2"/>
                             <constraint firstItem="aHT-jP-ZVz" firstAttribute="leading" secondItem="QS7-9W-cFP" secondAttribute="leading" id="HzE-bH-fa0"/>
-                            <constraint firstItem="aHT-jP-ZVz" firstAttribute="top" secondItem="QS7-9W-cFP" secondAttribute="top" id="yCb-16-Kzg"/>
+                            <constraint firstItem="aHT-jP-ZVz" firstAttribute="top" secondItem="92c-CW-rCS" secondAttribute="top" id="yCb-16-Kzg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1955,10 +1955,10 @@ in the location below)</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9N-uF-IRq" userLabel="Background View">
-                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8w-qd-8q4" userLabel="Kioskl Modal View">
-                                        <rect key="frame" x="30" y="70" width="315" height="588"/>
+                                        <rect key="frame" x="30" y="120" width="315" height="588"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5TD-WU-DDG" userLabel="First View">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="588"/>
@@ -2136,16 +2136,16 @@ Please check your ticket number)</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.79669391550000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="q8w-qd-8q4" firstAttribute="leading" secondItem="s9N-uF-IRq" secondAttribute="leading" constant="30" id="Agb-r8-oax"/>
-                                    <constraint firstItem="q8w-qd-8q4" firstAttribute="top" secondItem="s9N-uF-IRq" secondAttribute="top" constant="70" id="PA5-XG-83j"/>
+                                    <constraint firstItem="q8w-qd-8q4" firstAttribute="top" secondItem="s9N-uF-IRq" secondAttribute="top" constant="120" id="PA5-XG-83j"/>
                                     <constraint firstAttribute="trailing" secondItem="q8w-qd-8q4" secondAttribute="trailing" constant="30" id="goG-GF-pib"/>
-                                    <constraint firstAttribute="bottom" secondItem="q8w-qd-8q4" secondAttribute="bottom" constant="70" id="yOl-vo-blo"/>
+                                    <constraint firstAttribute="bottom" secondItem="q8w-qd-8q4" secondAttribute="bottom" constant="104" id="yOl-vo-blo"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6zP-4X-LxH"/>
                         <constraints>
-                            <constraint firstItem="s9N-uF-IRq" firstAttribute="top" secondItem="6zP-4X-LxH" secondAttribute="top" id="338-Ud-Fpb"/>
-                            <constraint firstItem="6zP-4X-LxH" firstAttribute="bottom" secondItem="s9N-uF-IRq" secondAttribute="bottom" id="Gda-MA-5eF"/>
+                            <constraint firstItem="s9N-uF-IRq" firstAttribute="top" secondItem="tgc-0Y-yL3" secondAttribute="top" id="338-Ud-Fpb"/>
+                            <constraint firstAttribute="bottom" secondItem="s9N-uF-IRq" secondAttribute="bottom" id="Gda-MA-5eF"/>
                             <constraint firstItem="s9N-uF-IRq" firstAttribute="leading" secondItem="6zP-4X-LxH" secondAttribute="leading" id="n33-hj-KA6"/>
                             <constraint firstItem="6zP-4X-LxH" firstAttribute="trailing" secondItem="s9N-uF-IRq" secondAttribute="trailing" id="pGO-d1-9KD"/>
                         </constraints>
