@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import AVFAudio
 
 class ReaderViewController: UIViewController {
     
+    @IBOutlet weak var ttsButton: UIButton!
+    @IBOutlet weak var fontSizeButton: UIButton!
     @IBOutlet weak var scrollViewSub: UIView!
     @IBOutlet weak var labelBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -18,15 +21,31 @@ class ReaderViewController: UIViewController {
     weak var documentDataDelegate: DocumentDataDelegate?
     var documentTexts: [String] = []
     var documentImages: [[CIImage]] = []
+    let readerResource: ReaderResource = ReaderResource()
+    
+    
+    var fontSize: FontSizeType = .Normal {
+        willSet {
+//            fontSizeButton.titleLabel?.text = readerResource.fontButtonText[newValue]!
+            fontSizeButton.setTitle(readerResource.fontButtonText[newValue], for: .normal)
+            fontSizeButton.titleLabel?.font = readerResource.buttonFont
+            textLabel.font = UIFont.systemFont(ofSize: readerResource.fontSize[newValue]!)
+        }
+    }
+    
+    var ttsStatus: TTSStatusType = .Off {
+        willSet {
+            ttsButton.titleLabel?.text = readerResource.ttsButtonText[newValue]
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let playTTS = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playVoice(_:)))
-        navigationItem.rightBarButtonItems = [playTTS]
-        
         loadDocumentData()
         textLabel.text = documentTexts.first
+        TTSManager.shared.setText(text: textLabel.text)
+        TTSManager.shared.setDelegate(readerVC: self)
         showImages()
     }
     
@@ -41,8 +60,6 @@ class ReaderViewController: UIViewController {
             documentTexts.append(textRecognizer.texts)
             documentImages.append(imageDetector.correctedImages)
         }
-        
-        print(documentImages[0].count)
     }
     
     private func showImages() {
@@ -54,9 +71,8 @@ class ReaderViewController: UIViewController {
             self.uiImageViews.append(imageView)
         }
         
-        var xOffset: CGFloat = 0
+        let xOffset: CGFloat = 0
         var yOffset: CGFloat = textLabel.frame.maxY + 10
-        print("label maxY: \(yOffset)")
         
         for imageView in uiImageViews {
             let imageWidth = imageView.image!.size.width
@@ -67,7 +83,6 @@ class ReaderViewController: UIViewController {
             
             imageView.frame = CGRect(x: xOffset, y: yOffset, width: imageViewWidth, height: imageViewHeight)
             scrollViewSub.addSubview(imageView)
-            print("yOFF: \(yOffset), Height: \(imageViewHeight)")
             
             yOffset += imageViewHeight
         }
@@ -81,8 +96,6 @@ class ReaderViewController: UIViewController {
 //                scrollView.heightAnchor.constraint(equalToConstant: yOffset)
 //            ])
             labelBottomConstraint.constant += yOffset - textLabel.frame.height
-            
-            print("sv height: \(scrollViewSub.frame.height)")
             
             var imageViewIterator = uiImageViews.makeIterator()
             var currentImageView = imageViewIterator.next()
@@ -101,7 +114,6 @@ class ReaderViewController: UIViewController {
                     currentImageView!.trailingAnchor.constraint(equalTo: scrollViewSub.trailingAnchor),
                     nextImageView.topAnchor.constraint(equalTo: currentImageView!.bottomAnchor)
                 ])
-                print("img minY: \(currentImageView!.frame.minY)")
                 currentImageView = nextImageView
             }
 //
@@ -110,8 +122,39 @@ class ReaderViewController: UIViewController {
 //                currentImageView!.widthAnchor.constraint(equalToConstant: scrollViewSub.frame.width),
 ////                scrollViewSub.bottomAnchor.constraint(equalTo: currentImageView!.bottomAnchor)
 //            ])
-            
-            print("sv height: \(scrollViewSub.frame.maxY)")
         }
+    }
+    
+    
+    @IBAction func clickFontSizeButton(_ sender: Any) {
+        if fontSize == .Normal {
+            fontSize = .Large
+        }
+        else {
+            fontSize = .Normal
+        }
+    }
+    
+    
+    @IBAction func clickTTSButton(_ sender: Any) {
+        TTSManager.shared.goTTS(ttsState: self.ttsStatus)
+    }
+}
+
+extension ReaderViewController: AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        ttsStatus = .On
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didContinue utterance: AVSpeechUtterance) {
+        ttsStatus = .On
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        ttsStatus = .Off
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didPause utterance: AVSpeechUtterance) {
+        ttsStatus = .Paused
     }
 }

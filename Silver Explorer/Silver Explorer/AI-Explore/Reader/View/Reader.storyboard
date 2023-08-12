@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,81 +12,145 @@
         <!--Reader View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="ReaderViewController" id="Y6W-OH-hqX" customClass="ReaderViewController" customModule="MLTextAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReaderViewController" id="Y6W-OH-hqX" customClass="ReaderViewController" customModule="Silver_Explorer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4Y-Gg-TgK">
-                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2wx-cz-y4O">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXE-2L-nS8">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="4006.5"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4Y-Gg-TgK">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04d-Y7-anF">
-                                                <rect key="frame" x="10" y="10" width="748" height="3976.5"/>
-                                                <string key="text">The standard Lorem Ipsum passage, used since the 1500s
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-
-1914 translation by H. Rackham
-"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
-
-Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
-
-1914 translation by H. Rackham
-"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                                <color key="textColor" systemColor="tintColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXE-2L-nS8">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04d-Y7-anF">
+                                                        <rect key="frame" x="10" y="10" width="373" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="04d-Y7-anF" secondAttribute="trailing" constant="10" id="7RH-uz-8s1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="04d-Y7-anF" secondAttribute="bottom" constant="20" identifier="bottom" id="Qvh-5r-Zix"/>
+                                                    <constraint firstItem="04d-Y7-anF" firstAttribute="leading" secondItem="nXE-2L-nS8" secondAttribute="leading" constant="10" id="XfY-wa-lTa"/>
+                                                    <constraint firstItem="04d-Y7-anF" firstAttribute="top" secondItem="nXE-2L-nS8" secondAttribute="top" constant="10" id="yM8-R7-yqv"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="04d-Y7-anF" secondAttribute="trailing" constant="10" id="7RH-uz-8s1"/>
-                                            <constraint firstAttribute="bottom" secondItem="04d-Y7-anF" secondAttribute="bottom" constant="20" identifier="bottom" id="Qvh-5r-Zix"/>
-                                            <constraint firstItem="04d-Y7-anF" firstAttribute="leading" secondItem="nXE-2L-nS8" secondAttribute="leading" constant="10" id="XfY-wa-lTa"/>
-                                            <constraint firstItem="04d-Y7-anF" firstAttribute="top" secondItem="nXE-2L-nS8" secondAttribute="top" constant="10" id="yM8-R7-yqv"/>
+                                            <constraint firstItem="nXE-2L-nS8" firstAttribute="width" secondItem="o9h-Uw-j6p" secondAttribute="width" id="05z-Fz-iZD"/>
+                                            <constraint firstItem="nXE-2L-nS8" firstAttribute="trailing" secondItem="KG2-Z4-Vph" secondAttribute="trailing" id="K6K-Mp-ea0"/>
+                                            <constraint firstItem="nXE-2L-nS8" firstAttribute="top" secondItem="KG2-Z4-Vph" secondAttribute="top" id="Nmm-Lr-chL"/>
+                                            <constraint firstItem="nXE-2L-nS8" firstAttribute="leading" secondItem="KG2-Z4-Vph" secondAttribute="leading" id="Ojw-g6-WOo"/>
+                                            <constraint firstItem="nXE-2L-nS8" firstAttribute="bottom" secondItem="KG2-Z4-Vph" secondAttribute="bottom" id="VPc-Tp-ACI"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="KG2-Z4-Vph"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="o9h-Uw-j6p"/>
+                                    </scrollView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anO-qz-9S8">
+                                        <rect key="frame" x="0.0" y="663" width="393" height="130"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X0O-4r-2Gm">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMt-Mc-b7o">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHK-Xz-RTN">
+                                                                <rect key="frame" x="30" y="34" width="136.66666666666666" height="62"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="글씨 키우기" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="baseBackgroundColor" red="0.89019608500000003" green="0.92156863209999995" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="clickFontSizeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3Q6-he-rwA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="sHK-Xz-RTN" secondAttribute="bottom" constant="34" id="FJy-Wy-Ki6"/>
+                                                            <constraint firstItem="sHK-Xz-RTN" firstAttribute="leading" secondItem="sMt-Mc-b7o" secondAttribute="leading" constant="30" id="GH2-sJ-MHL"/>
+                                                            <constraint firstAttribute="trailing" secondItem="sHK-Xz-RTN" secondAttribute="trailing" constant="30" id="PyL-Kt-iuW"/>
+                                                            <constraint firstItem="sHK-Xz-RTN" firstAttribute="top" secondItem="sMt-Mc-b7o" secondAttribute="top" constant="34" id="iLY-hV-j68"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpp-DL-1ku">
+                                                        <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BT7-30-XQP">
+                                                                <rect key="frame" x="30" y="34" width="136.33333333333334" height="62"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="읽어주기" cornerStyle="large">
+                                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="baseBackgroundColor" red="0.89019608500000003" green="0.92156863209999995" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="clickTTSButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ySv-Wd-eV2"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="BT7-30-XQP" secondAttribute="bottom" constant="34" id="RiZ-ur-zna"/>
+                                                            <constraint firstItem="BT7-30-XQP" firstAttribute="leading" secondItem="tpp-DL-1ku" secondAttribute="leading" constant="30" id="YK8-CU-fI7"/>
+                                                            <constraint firstAttribute="trailing" secondItem="BT7-30-XQP" secondAttribute="trailing" constant="30" id="gQq-NV-vpj"/>
+                                                            <constraint firstItem="BT7-30-XQP" firstAttribute="top" secondItem="tpp-DL-1ku" secondAttribute="top" constant="34" id="veS-2C-DQQ"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.41176470588235292" green="0.62352941176470589" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="X0O-4r-2Gm" firstAttribute="leading" secondItem="anO-qz-9S8" secondAttribute="leading" id="7h0-oS-KCA"/>
+                                            <constraint firstAttribute="height" constant="130" id="Ybc-d2-tgc"/>
+                                            <constraint firstItem="X0O-4r-2Gm" firstAttribute="top" secondItem="anO-qz-9S8" secondAttribute="top" id="fQ5-NM-kdj"/>
+                                            <constraint firstAttribute="bottom" secondItem="X0O-4r-2Gm" secondAttribute="bottom" id="gwX-K5-K1z"/>
+                                            <constraint firstAttribute="trailing" secondItem="X0O-4r-2Gm" secondAttribute="trailing" id="yZb-1w-agB"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="nXE-2L-nS8" firstAttribute="width" secondItem="o9h-Uw-j6p" secondAttribute="width" id="05z-Fz-iZD"/>
-                                    <constraint firstItem="nXE-2L-nS8" firstAttribute="trailing" secondItem="KG2-Z4-Vph" secondAttribute="trailing" id="K6K-Mp-ea0"/>
-                                    <constraint firstItem="nXE-2L-nS8" firstAttribute="top" secondItem="KG2-Z4-Vph" secondAttribute="top" id="Nmm-Lr-chL"/>
-                                    <constraint firstItem="nXE-2L-nS8" firstAttribute="leading" secondItem="KG2-Z4-Vph" secondAttribute="leading" id="Ojw-g6-WOo"/>
-                                    <constraint firstItem="nXE-2L-nS8" firstAttribute="bottom" secondItem="KG2-Z4-Vph" secondAttribute="bottom" id="VPc-Tp-ACI"/>
+                                    <constraint firstAttribute="trailing" secondItem="anO-qz-9S8" secondAttribute="trailing" id="Srx-R8-0WK"/>
+                                    <constraint firstItem="anO-qz-9S8" firstAttribute="leading" secondItem="2wx-cz-y4O" secondAttribute="leading" id="cof-Wr-l7M"/>
+                                    <constraint firstItem="anO-qz-9S8" firstAttribute="top" secondItem="q4Y-Gg-TgK" secondAttribute="bottom" id="q6k-F9-Qua"/>
+                                    <constraint firstAttribute="bottom" secondItem="anO-qz-9S8" secondAttribute="bottom" id="xPv-NJ-VHD"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="KG2-Z4-Vph"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="o9h-Uw-j6p"/>
-                            </scrollView>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.15500711220683472" green="0.15500711220683472" blue="0.15500711220683472" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="q4Y-Gg-TgK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="TK5-9s-P1N"/>
-                            <constraint firstItem="q4Y-Gg-TgK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZGx-gt-EG2"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="q4Y-Gg-TgK" secondAttribute="trailing" id="hjz-vb-2PW"/>
-                            <constraint firstAttribute="bottom" secondItem="q4Y-Gg-TgK" secondAttribute="bottom" id="jbt-nX-vJz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2wx-cz-y4O" secondAttribute="trailing" id="9uy-Va-WVj"/>
+                            <constraint firstItem="2wx-cz-y4O" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="B5x-A5-mfJ"/>
+                            <constraint firstAttribute="bottom" secondItem="2wx-cz-y4O" secondAttribute="bottom" id="BvZ-x4-roC"/>
+                            <constraint firstItem="2wx-cz-y4O" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Gw0-96-ueD"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fontSizeButton" destination="sHK-Xz-RTN" id="cA4-Cw-x38"/>
                         <outlet property="labelBottomConstraint" destination="Qvh-5r-Zix" id="mGO-7e-XXa"/>
                         <outlet property="scrollView" destination="q4Y-Gg-TgK" id="4v3-2O-gVk"/>
                         <outlet property="scrollViewSub" destination="nXE-2L-nS8" id="PKU-v7-hls"/>
                         <outlet property="textLabel" destination="04d-Y7-anF" id="6Ct-sS-Bmx"/>
+                        <outlet property="ttsButton" destination="BT7-30-XQP" id="6vX-XL-Ckj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.25" y="-34.5703125"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-35.211267605633807"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
