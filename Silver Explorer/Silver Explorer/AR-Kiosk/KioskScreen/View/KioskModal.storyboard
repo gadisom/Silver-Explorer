@@ -1161,6 +1161,82 @@ in the location below)</string>
             </objects>
             <point key="canvasLocation" x="2140" y="99"/>
         </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="r1m-xA-O8i">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewController" id="xXJ-1A-MRr" customClass="AlertViewController" customModule="Silver_Explorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VRB-nz-YTR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apz-9L-aQw">
+                                <rect key="frame" x="52.666666666666657" y="321" width="270" height="170"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M11-PK-Fkz">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bK8-Rr-5vH">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="은빛 탐험 카페" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7C-T7-2zN">
+                                                        <rect key="frame" x="86.333333333333343" y="5" width="97" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="270" id="6Ek-Y0-ddk"/>
+                                                    <constraint firstAttribute="height" constant="30" id="IWH-C2-2bs"/>
+                                                    <constraint firstItem="l7C-T7-2zN" firstAttribute="centerY" secondItem="bK8-Rr-5vH" secondAttribute="centerY" id="Mii-6E-p1J"/>
+                                                    <constraint firstItem="l7C-T7-2zN" firstAttribute="centerX" secondItem="bK8-Rr-5vH" secondAttribute="centerX" id="iYr-7L-4Ru"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEa-C8-byh">
+                                                <rect key="frame" x="0.0" y="30" width="270" height="140"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스탬프가 적립되었습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqP-oB-fE2">
+                                                        <rect key="frame" x="34.666666666666671" y="53" width="200.33333333333331" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="sqP-oB-fE2" firstAttribute="centerX" secondItem="XEa-C8-byh" secondAttribute="centerX" id="Plo-D9-eOd"/>
+                                                    <constraint firstItem="sqP-oB-fE2" firstAttribute="centerY" secondItem="XEa-C8-byh" secondAttribute="centerY" constant="-5" id="cLT-c5-vgB"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="M11-PK-Fkz" firstAttribute="top" secondItem="apz-9L-aQw" secondAttribute="top" id="4bd-bF-pRe"/>
+                                    <constraint firstAttribute="height" constant="170" id="4mC-ls-0ge"/>
+                                    <constraint firstAttribute="trailing" secondItem="M11-PK-Fkz" secondAttribute="trailing" id="Gp8-WE-tuK"/>
+                                    <constraint firstItem="M11-PK-Fkz" firstAttribute="leading" secondItem="apz-9L-aQw" secondAttribute="leading" id="aeD-9W-ibi"/>
+                                    <constraint firstAttribute="width" constant="270" id="hz6-uo-TvP"/>
+                                    <constraint firstAttribute="bottom" secondItem="M11-PK-Fkz" secondAttribute="bottom" id="pRu-al-P00"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D0e-ja-d1J"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.79669391550000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="apz-9L-aQw" firstAttribute="centerX" secondItem="VRB-nz-YTR" secondAttribute="centerX" id="9nJ-dY-W8y"/>
+                            <constraint firstItem="apz-9L-aQw" firstAttribute="centerY" secondItem="VRB-nz-YTR" secondAttribute="centerY" id="Bfa-eR-CR1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertLabel" destination="sqP-oB-fE2" id="Vk6-iu-esf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXx-bf-uvI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2216.8000000000002" y="691.62561576354688"/>
+        </scene>
         <!--Membership View Controller-->
         <scene sceneID="Ilc-xD-zmN">
             <objects>

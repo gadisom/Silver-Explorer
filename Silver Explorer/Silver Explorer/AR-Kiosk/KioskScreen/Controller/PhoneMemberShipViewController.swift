@@ -7,11 +7,11 @@
 
 import UIKit
 
-class PhoneMemberShipViewController: UIViewController {
+class PhoneMemberShipViewController: UIViewController, PhoneNumberMembershipDelegate {
 
-    @IBOutlet weak var phoneNumberTextField: UITextField!
-    
-    var phoneNumber: String = "010" {
+    @IBOutlet private weak var phoneNumberTextField: UITextField!
+
+    private var phoneNumber: String = "010" {
         didSet {
             phoneNumberTextField.text = phoneNumber
         }
@@ -24,7 +24,7 @@ class PhoneMemberShipViewController: UIViewController {
     }
     
     
-    @IBAction func phoneNumberBtnPressed(_ sender: UIButton) {
+    @IBAction private func phoneNumberBtnPressed(_ sender: UIButton) {
         if (sender.tag == -1) {
             erasePhoneNumber()
         } else if (sender.tag == 10) {
@@ -34,7 +34,7 @@ class PhoneMemberShipViewController: UIViewController {
         }
     }
     
-    func erasePhoneNumber() {
+    private func erasePhoneNumber() {
         if (phoneNumber.count == 3) {
             return
         }
@@ -47,7 +47,7 @@ class PhoneMemberShipViewController: UIViewController {
         }
     }
     
-    func addPhoneNumber(number: Int) {
+    private func addPhoneNumber(number: Int) {
         if (phoneNumber.count == 13) {
             return
         }
@@ -59,7 +59,7 @@ class PhoneMemberShipViewController: UIViewController {
         phoneNumber += "\(number)"
     }
     
-    func initialSettingForPhoneNumberTextField() {
+    private func initialSettingForPhoneNumberTextField() {
         phoneNumberTextField.borderStyle = .none
         phoneNumberTextField.layer.borderColor = UIColor(hex: "#D9D9D9").cgColor
         phoneNumberTextField.layer.borderWidth = 1.0
@@ -67,4 +67,10 @@ class PhoneMemberShipViewController: UIViewController {
         phoneNumberTextField.backgroundColor = .clear
     }
     
+    func isValidPhoneNumber() -> Bool {
+        if (phoneNumber.count == 13) {
+            return true
+        }
+        return false
+    }
 }

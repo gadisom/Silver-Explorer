@@ -38,8 +38,9 @@ class PaymentFinishViewController: UIViewController {
             countDownLabel.text = "\(count)"
         } else {
             timer?.invalidate()
-            self.dismiss(animated: false)
-            kioskMainBoardDelegate?.backToMainScreen()
+            self.dismiss(animated: false) {
+                self.kioskMainBoardDelegate?.backToMainScreen()                
+            }
         }
     }
 }
