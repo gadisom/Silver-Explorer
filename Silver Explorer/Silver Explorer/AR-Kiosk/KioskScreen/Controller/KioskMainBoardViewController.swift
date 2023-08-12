@@ -9,6 +9,9 @@ import UIKit
 
 class KioskMainBoardViewController: UIViewController {
     
+    @IBAction func moveToMainButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     @IBAction func moveToMenuSelectionButton(_ sender: UIButton) {
         moveToMenuSelection(vc: self)
     }

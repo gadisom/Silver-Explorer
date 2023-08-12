@@ -30,11 +30,7 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
            updateDataSource()
     }
     @IBAction func resetButton(_ sender: Any) {
-        cartItems.removeAll()
-        updateTotalPrice()
-        menuSelectionTableView.reloadData()
-        totalPriceLabel.text = " "
-
+        navigationController?.popViewController(animated: true)
     }
     
 
@@ -57,10 +53,13 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
         datasource.apply(snapshot, animatingDifferences: true)
     }
     @IBAction func moveToMemebershipView(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MembershipViewController") as! MembershipViewController
-        vc.kioskMainBoardDelegate = self
-        vc.appear(sender: self)
+       
+        if !cartItems.isEmpty{
+            let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MembershipViewController") as! MembershipViewController
+            vc.kioskMainBoardDelegate = self
+            vc.appear(sender: self)
+        }
     }
    
     func appear(sender: UIViewController) {
@@ -70,14 +69,15 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
     
     // cell 선택시 동작 프로퍼티
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let product = list[indexPath.item]
-        selectedProduct = Product(productName: product.name, productType: product.type, price: product.price)
-        
-        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ProductOptionSelectViewController") as! ProductOptionSelectViewController
-        vc.kioskMenuBoardDelegate = self
-        vc.appear(sender: self)
-        
+        if cartItems.count < 5 {
+            let product = list[indexPath.item]
+            selectedProduct = Product(productName: product.name, productType: product.type, price: product.price)
+            
+            let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ProductOptionSelectViewController") as! ProductOptionSelectViewController
+            vc.kioskMenuBoardDelegate = self
+            vc.appear(sender: self)
+        }
     }
    
     func itemLayout() -> UICollectionViewCompositionalLayout{
