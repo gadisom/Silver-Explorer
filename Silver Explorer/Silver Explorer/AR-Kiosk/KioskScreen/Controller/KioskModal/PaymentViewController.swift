@@ -32,7 +32,9 @@ class PaymentViewController: UIViewController {
     }
 
     @IBAction func previousBtnPressed(_ sender: UIButton) {
-        self.dismiss(animated: false)
+        self.dismiss(animated: false) {
+            self.kioskMainBoardDelegate?.moveToPreviousModalVC(content: .payment)
+        }
     }
     
     @IBAction func arExperienceBtnPressed(_ sender: UIButton) {

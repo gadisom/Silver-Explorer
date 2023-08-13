@@ -89,7 +89,6 @@
 		CC291D6B2A77FD1700C363DF /* ProductOptionResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOptionResource.swift; sourceTree = "<group>"; };
 		CC291D6D2A77FEAF00C363DF /* PaymentSelectResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectResource.swift; sourceTree = "<group>"; };
 		CC291D6F2A77FFA800C363DF /* PaymentResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResource.swift; sourceTree = "<group>"; };
-		CC38F8A72A876750008A9C22 /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silver Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC38F8A82A87697F008A9C22 /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
 		CC38F8AD2A877570008A9C22 /* PhoneNumberMembershipDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberMembershipDelegate.swift; sourceTree = "<group>"; };
 		CC4352462A72506C000EDAB0 /* ARCharacterSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCharacterSelectViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +117,7 @@
 		CCB04B2F2A7A31060035483C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFinishViewController.swift; sourceTree = "<group>"; };
+		CCC860EE2A88FCA100AC854A /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silver Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFE1C9A2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPaymentTypeDelegate.swift; sourceTree = "<group>"; };
 		CCFE1C9C2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardDelegate.swift; sourceTree = "<group>"; };
 		FF185B392A739C4F003E766E /* ARKiosk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ARKiosk.usdz; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionViewController.swift; sourceTree = "<group>"; };
 		FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFE42A5D2A73BBEC00752CD7 /* MenuResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuResource.swift; sourceTree = "<group>"; };
-		FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductOptionSelectViewController.swift; path = "Silver Explorer/AR-Kiosk/KioskScreen/Controller/ProductOptionSelectViewController.swift"; sourceTree = SOURCE_ROOT; };
+		FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductOptionSelectViewController.swift; path = "Silver Explorer/AR-Kiosk/KioskScreen/Controller/KioskModal/ProductOptionSelectViewController.swift"; sourceTree = SOURCE_ROOT; };
 		FFE42A612A73BC3C00752CD7 /* KioskModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KioskModal.storyboard; sourceTree = "<group>"; };
 		FFE42A652A73BC5400752CD7 /* PaymentSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -302,7 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				CC57ABEB2A710A4200E892FF /* Silver Explorer */,
-				CC38F8A72A876750008A9C22 /* Silver Explorer.app */,
+				CCC860EE2A88FCA100AC854A /* Silver Explorer.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -395,6 +395,30 @@
 			path = ARCharacter;
 			sourceTree = "<group>";
 		};
+		CC9846582A88FB6300E212AF /* KioskModal */ = {
+			isa = PBXGroup;
+			children = (
+				FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */,
+				FFE42A652A73BC5400752CD7 /* PaymentSelectViewController.swift */,
+				CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */,
+				CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */,
+				CC23C3AE2A76CB380024C12B /* BarcodMembershipViewController.swift */,
+				CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */,
+				CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */,
+				CC64A4952A869D420092B147 /* AlertViewController.swift */,
+			);
+			path = KioskModal;
+			sourceTree = "<group>";
+		};
+		CC9846592A88FBA100E212AF /* KioskUI */ = {
+			isa = PBXGroup;
+			children = (
+				FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */,
+				FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */,
+			);
+			path = KioskUI;
+			sourceTree = "<group>";
+		};
 		FF185B322A739BF9003E766E /* AR-Kiosk */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,16 +469,8 @@
 		FF185B3C2A739CAA003E766E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */,
-				FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */,
-				FFE42A5F2A73BC2E00752CD7 /* ProductOptionSelectViewController.swift */,
-				FFE42A652A73BC5400752CD7 /* PaymentSelectViewController.swift */,
-				CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */,
-				CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */,
-				CC23C3AE2A76CB380024C12B /* BarcodMembershipViewController.swift */,
-				CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */,
-				CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */,
-				CC64A4952A869D420092B147 /* AlertViewController.swift */,
+				CC9846592A88FBA100E212AF /* KioskUI */,
+				CC9846582A88FB6300E212AF /* KioskModal */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -508,7 +524,7 @@
 			);
 			name = "Silver Explorer";
 			productName = "Silver Explorer";
-			productReference = CC38F8A72A876750008A9C22 /* Silver Explorer.app */;
+			productReference = CCC860EE2A88FCA100AC854A /* Silver Explorer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -760,7 +776,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6NUHA5DNR;
+				DEVELOPMENT_TEAM = YWNQ4RZBTS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -797,7 +813,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6NUHA5DNR;
+				DEVELOPMENT_TEAM = YWNQ4RZBTS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";

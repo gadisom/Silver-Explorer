@@ -23,6 +23,8 @@ protocol KioskMainBoardDelegate: AnyObject {
     // MembershipViewController -> KioskMainBoardViewController
     // payment를 불러오는 코드만 작성하면됨
     func didMembershipVCFinish()
+    
+    func moveToPreviousModalVC(content: KioskModalContent)
 
     func moveToARkioskVC(call : ARCaller)
     
