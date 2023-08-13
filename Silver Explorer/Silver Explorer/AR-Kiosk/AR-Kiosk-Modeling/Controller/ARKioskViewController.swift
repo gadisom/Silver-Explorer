@@ -33,7 +33,8 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         sender.present(self, animated: false)
     }
     
-    @IBOutlet weak var vwContainer: UIView!
+    @IBOutlet weak var arExperienceButton: UIButton!
+    @IBOutlet weak var buttonView: UIView!
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         self.dismiss(animated: false) {
@@ -48,23 +49,20 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     func animateButton ()
     {
         DispatchQueue.main.async {
-            self.vwContainer.alpha = 0.0
-            self.vwContainer.isHidden = false
+            self.buttonView.alpha = 0.0
+            self.arExperienceButton.setTitle("체험 종료", for: .normal)
             UIView.animate(withDuration: 1.0, delay: 0.5,options: .curveEaseIn, animations: {
-                self.vwContainer.alpha = 1.0
+                self.buttonView.alpha = 1.0
             })
         }
 
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateButton()
         loadScene()
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
-        self.vwContainer.isHidden = true
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light}
+        makeCornerRoundShape(targetView: self.buttonView, cornerRadius: 10)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +83,8 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     }
   
     func renderer (_ renderer : SCNSceneRenderer, nodeFor anchor: ARAnchor )-> SCNNode? {
+        
+        animateButton()
         let node = SCNNode()
         
         if let imageAnchor = anchor as? ARImageAnchor {

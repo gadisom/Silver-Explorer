@@ -18,54 +18,61 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEI-Xy-cAl">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </arscnView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFm-Ax-ovp">
-                                <rect key="frame" x="16" y="59.000000000000014" width="196.66666666666666" height="170.33333333333337"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-0S-tPy">
-                                        <rect key="frame" x="10" y="20" width="100" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="R0S-vd-k8W"/>
-                                            <constraint firstAttribute="width" constant="100" id="rbj-cd-P0s"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="체험종료" cornerStyle="large">
-                                            <color key="baseBackgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="P5w-KF-RUO"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-Ud-dCy">
+                                <rect key="frame" x="20" y="69" width="100" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xHL-vH-Wq6">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-0S-tPy">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="tinted" title="건너뛰기" cornerStyle="large" titleAlignment="center">
+                                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="P5w-KF-RUO"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="hFw-0S-tPy" secondAttribute="trailing" id="4Dn-fY-j0G"/>
+                                        <constraint firstItem="hFw-0S-tPy" firstAttribute="top" secondItem="xHL-vH-Wq6" secondAttribute="top" id="RU2-JF-64i"/>
+                                        <constraint firstAttribute="bottom" secondItem="hFw-0S-tPy" secondAttribute="bottom" id="ojh-Dj-rM7"/>
+                                        <constraint firstItem="hFw-0S-tPy" firstAttribute="leading" secondItem="xHL-vH-Wq6" secondAttribute="leading" id="zw8-W9-BEW"/>
+                                    </constraints>
+                                </view>
                                 <constraints>
-                                    <constraint firstItem="hFw-0S-tPy" firstAttribute="top" secondItem="XFm-Ax-ovp" secondAttribute="top" constant="20" id="JyK-Vq-fZZ"/>
-                                    <constraint firstItem="hFw-0S-tPy" firstAttribute="leading" secondItem="XFm-Ax-ovp" secondAttribute="leading" constant="10" id="Ogh-0V-pAk"/>
+                                    <constraint firstAttribute="height" constant="50" id="ewZ-DF-DyW"/>
+                                    <constraint firstAttribute="width" constant="100" id="t87-tt-niV"/>
                                 </constraints>
-                            </view>
+                                <blurEffect style="systemThinMaterialDark"/>
+                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MX5-V0-7fk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hEI-Xy-cAl" firstAttribute="bottom" secondItem="MX5-V0-7fk" secondAttribute="bottom" id="35N-no-CdT"/>
+                            <constraint firstItem="hEI-Xy-cAl" firstAttribute="bottom" secondItem="NKk-D1-5nM" secondAttribute="bottom" id="35N-no-CdT"/>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="trailing" secondItem="MX5-V0-7fk" secondAttribute="trailing" id="3Rc-Uc-XCI"/>
-                            <constraint firstItem="XFm-Ax-ovp" firstAttribute="leading" secondItem="MX5-V0-7fk" secondAttribute="leading" constant="16" id="3kH-c5-bv9"/>
+                            <constraint firstItem="U4e-Ud-dCy" firstAttribute="leading" secondItem="MX5-V0-7fk" secondAttribute="leading" constant="20" id="Cz5-dN-mug"/>
+                            <constraint firstItem="U4e-Ud-dCy" firstAttribute="top" secondItem="MX5-V0-7fk" secondAttribute="top" constant="10" id="L6z-A9-AcD"/>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="leading" secondItem="MX5-V0-7fk" secondAttribute="leading" id="LG0-ci-XEA"/>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="top" secondItem="NKk-D1-5nM" secondAttribute="top" id="aY3-rI-83R"/>
-                            <constraint firstItem="XFm-Ax-ovp" firstAttribute="top" secondItem="MX5-V0-7fk" secondAttribute="top" id="c3t-Ps-hz5"/>
-                            <constraint firstItem="XFm-Ax-ovp" firstAttribute="width" secondItem="NKk-D1-5nM" secondAttribute="width" multiplier="0.5" id="ctt-Ex-GfB"/>
-                            <constraint firstItem="XFm-Ax-ovp" firstAttribute="height" secondItem="NKk-D1-5nM" secondAttribute="height" multiplier="0.2" id="vUG-h6-FYt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arExperienceButton" destination="hFw-0S-tPy" id="HXp-8u-iSC"/>
+                        <outlet property="buttonView" destination="U4e-Ud-dCy" id="d6C-IZ-1Sb"/>
                         <outlet property="sceneView" destination="hEI-Xy-cAl" id="gqr-Nb-w3X"/>
-                        <outlet property="vwContainer" destination="XFm-Ax-ovp" id="4Rc-mt-xTq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="38"/>
+            <point key="canvasLocation" x="32.824427480916029" y="37.323943661971832"/>
         </scene>
     </scenes>
     <resources>
