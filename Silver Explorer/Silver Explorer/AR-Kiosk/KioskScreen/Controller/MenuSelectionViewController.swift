@@ -131,7 +131,7 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
             numberFormatter.groupingSeparator = ","
             
             if let formattedTotalPrice = numberFormatter.string(from: NSNumber(value: totalPrice)) {
-                totalPriceLabel.text = formattedTotalPrice + "₩"
+                totalPriceLabel.text =  "₩" + formattedTotalPrice 
             }
         
     }
@@ -139,9 +139,19 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
 }
 
 extension MenuSelectionViewController : KioskMainBoardDelegate {
-    func didARVCFinish() {
+
+    func moveToPaymentFinishVC()
+    {
         let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentSelectViewController") as! PaymentSelectViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentFinishViewController") as! PaymentFinishViewController
+        vc.kioskMainBoardDelegate = self
+        vc.appear(sender: self)
+        
+    }
+    func moveToPaymentVC(paymentType: PaymentType, call : ARCaller) {
+        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+        vc.payment = paymentType
         vc.appear(sender: self)
         vc.kioskMainBoardDelegate = self
     }
@@ -175,7 +185,8 @@ extension MenuSelectionViewController : KioskMainBoardDelegate {
             return totalPrice
     }
     func backToMainScreen() {
-       moveBacktoHome(vc: self)
+        self.dismiss(animated: false)
+        navigationController?.popViewController(animated: true)
     }
 }
 extension MenuSelectionViewController : MenuSelectionTableViewCellDelegate {

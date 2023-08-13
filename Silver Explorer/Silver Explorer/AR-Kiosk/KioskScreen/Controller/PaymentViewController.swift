@@ -13,13 +13,10 @@ class PaymentViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
     let resource: PaymentResource = PaymentResource()
-    weak var paymentTypeDelegate: SelectedPaymentTypeDelegate?
+    var payment : PaymentType = .none
+  //  weak var paymentTypeDelegate: SelectedPaymentTypeDelegate?
     var paymentType: PaymentType {
-        guard let payment = paymentTypeDelegate?.paymentType() else {
-            self.dismiss(animated: false)
-            return .none
-        }
-        return payment
+        return self.payment
     }
 
     override func viewDidLoad() {
@@ -39,12 +36,10 @@ class PaymentViewController: UIViewController {
     }
     
     @IBAction func arExperienceBtnPressed(_ sender: UIButton) {
-        self.dismiss(animated: true ){
+        self.dismiss(animated: false ){
             if self.paymentType == .creditCard {
-                print("11")
                 self.kioskMainBoardDelegate?.moveToARkioskVC(call: .paymentSelect)
             } else {
-
                 self.kioskMainBoardDelegate?.moveToARkioskVC(call: .membership)
             }
         }
@@ -56,5 +51,6 @@ class PaymentViewController: UIViewController {
 
     func choosePaymentImage() {
         paymentImageView.image = resource.paymentDescriptionImages[paymentType]!
+       
     }
 }

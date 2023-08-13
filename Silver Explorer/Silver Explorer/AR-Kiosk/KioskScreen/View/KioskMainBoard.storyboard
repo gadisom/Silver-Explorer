@@ -389,7 +389,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5o8-gC-7d1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="181" height="100"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0₩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nv-aI-98e">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₩0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nv-aI-98e">
                                                                         <rect key="frame" x="71.666666666666686" y="25.666666666666629" width="38" height="28.666666666666671"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                         <color key="textColor" systemColor="systemPinkColor"/>

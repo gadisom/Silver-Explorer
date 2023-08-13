@@ -8,9 +8,9 @@
 import UIKit
 
 func moveBacktoHome(vc: UIViewController) {
-   let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
-    guard let vc = storyboard.instantiateViewController(withIdentifier: "KioskMainBoardViewController") as? KioskMainBoardViewController else {return}
-    vc.present(vc, animated: true)
+//   let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
+//    guard let vc = storyboard.instantiateViewController(withIdentifier: "KioskMainBoardViewController") as? KioskMainBoardViewController else {return}
+//    vc.appear(sender: self)
     
 }
 

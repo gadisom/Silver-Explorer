@@ -13,6 +13,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     
     var sceneName: String?
     var caller : ARCaller?
+    var paymentType : PaymentType?
     weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
     
     func loadScene() {
@@ -34,13 +35,6 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var vwContainer: UIView!
     @IBAction func buttonTapped(_ sender: Any) {
-        moveToNextScreen()
-
-    }
-    @IBOutlet var sceneView: ARSCNView!
-    var pokeNode : SCNNode?
-    
-    func moveToNextScreen() {
         switch caller {
         case .membership:
             moveToPaymentSelect()  // 위에서 정의한 PaymentSelect로 이동하는 함수
@@ -50,14 +44,17 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
             // 에러 처리나 기본 화면으로 돌아가는 로직
             break
         }
+
     }
+    @IBOutlet var sceneView: ARSCNView!
+    var pokeNode : SCNNode?
     func moveToPaymentSelect() {
-        self.dismiss(animated: true)
-        kioskMainBoardDelegate?.didARVCFinish()
+        self.dismiss(animated: false)
+        kioskMainBoardDelegate?.didMembershipVCFinish()
     }
     func moveToPaymentFinish() {
-        self.dismiss(animated: true)
-        kioskMainBoardDelegate?.backToMainScreen()
+        self.dismiss(animated: false)
+        kioskMainBoardDelegate?.moveToPaymentFinishVC()
     }
     
     // 버튼 콘테이너 애니메이션 관련 프로퍼티
@@ -66,7 +63,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         DispatchQueue.main.async {
             self.vwContainer.alpha = 0.0
             self.vwContainer.isHidden = false
-            UIView.animate(withDuration: 1.5, delay: 0.5,options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 1.0, delay: 0.5,options: .curveEaseIn, animations: {
                 self.vwContainer.alpha = 1.0
             })
         }
@@ -83,14 +80,11 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("djfh")
         let configuration = ARImageTrackingConfiguration()
         
         if let imageToTrack = ARReferenceImage.referenceImages(inGroupNamed: "ARKiosk", bundle: Bundle.main){
             configuration.trackingImages = imageToTrack
             configuration.maximumNumberOfTrackedImages = 1
-            print("성공")
-            
         }
         sceneView.session.run(configuration)
        

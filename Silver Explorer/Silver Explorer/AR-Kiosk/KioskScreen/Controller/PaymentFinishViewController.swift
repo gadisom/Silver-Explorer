@@ -39,7 +39,6 @@ class PaymentFinishViewController: UIViewController {
         } else {
             timer?.invalidate()
             kioskMainBoardDelegate?.backToMainScreen()
-            self.dismiss(animated: false)
         }
     }
 }

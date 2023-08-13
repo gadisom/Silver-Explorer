@@ -26,7 +26,8 @@ protocol KioskMainBoardDelegate: AnyObject {
 
     func moveToARkioskVC(call : ARCaller)
     
-    func didARVCFinish()
+    func moveToPaymentVC(paymentType : PaymentType, call : ARCaller)
     
+    func moveToPaymentFinishVC()
     
 }
