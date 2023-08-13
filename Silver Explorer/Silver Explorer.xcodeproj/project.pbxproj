@@ -58,6 +58,7 @@
 		FF185B522A73B589003E766E /* KioskMainBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */; };
 		FF464C7A2A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF464C792A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift */; };
 		FF502C2F2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF502C2E2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift */; };
+		FF5BD6642A879B3A00E95BFA /* ARKioskBarcode.scn in Resources */ = {isa = PBXBuildFile; fileRef = FF5BD6632A879B3A00E95BFA /* ARKioskBarcode.scn */; };
 		FFE1D1642A7B6D8300E4E049 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1D1632A7B6D8300E4E049 /* MenuCollectionViewCell.swift */; };
 		FFE1D1662A7B733A00E4E049 /* MenuSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */; };
 		FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */; };
@@ -108,7 +109,6 @@
 		CCB04B2F2A7A31060035483C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFinishViewController.swift; sourceTree = "<group>"; };
-		CCD0D42B2A854BB1008391E0 /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Silver Explorer.app"; path = "/Users/jinyoo/Developer/Silver-Explorer/Silver Explorer/build/Debug-iphoneos/Silver Explorer.app"; sourceTree = "<absolute>"; };
 		CCFE1C9A2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPaymentTypeDelegate.swift; sourceTree = "<group>"; };
 		CCFE1C9C2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardDelegate.swift; sourceTree = "<group>"; };
 		FF185B392A739C4F003E766E /* ARKiosk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ARKiosk.usdz; sourceTree = "<group>"; };
@@ -121,6 +121,8 @@
 		FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardViewController.swift; sourceTree = "<group>"; };
 		FF464C792A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		FF502C2E2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		FF5BD6622A878BBE00E95BFA /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silver Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5BD6632A879B3A00E95BFA /* ARKioskBarcode.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskBarcode.scn; sourceTree = "<group>"; };
 		FFE1D1632A7B6D8300E4E049 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionViewController.swift; sourceTree = "<group>"; };
 		FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				CC57ABEB2A710A4200E892FF /* Silver Explorer */,
+				FF5BD6622A878BBE00E95BFA /* Silver Explorer.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -406,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				FF185B392A739C4F003E766E /* ARKiosk.usdz */,
+				FF5BD6632A879B3A00E95BFA /* ARKioskBarcode.scn */,
 				FF185B492A73B3FF003E766E /* ARKiosk.scn */,
 				FF185B432A73AD7B003E766E /* ARKiosk.storyboard */,
 			);
@@ -495,7 +499,7 @@
 			);
 			name = "Silver Explorer";
 			productName = "Silver Explorer";
-			productReference = CCD0D42B2A854BB1008391E0 /* Silver Explorer.app */;
+			productReference = FF5BD6622A878BBE00E95BFA /* Silver Explorer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -547,6 +551,7 @@
 				AD9F67E32A824F1B0056696E /* Scanner.storyboard in Resources */,
 				FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */,
 				FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */,
+				FF5BD6642A879B3A00E95BFA /* ARKioskBarcode.scn in Resources */,
 				CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */,
 				CC57AC112A710D3700E892FF /* UIExplore.storyboard in Resources */,
 				FF185B502A73B56B003E766E /* KioskMainBoard.storyboard in Resources */,
@@ -740,6 +745,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U6NUHA5DNR;
@@ -759,8 +765,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.silver-explorer.www.Silver-Explorer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.silver-explorer.www.Silver-Explore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -775,6 +782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U6NUHA5DNR;
@@ -794,8 +802,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.silver-explorer.www.Silver-Explorer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.silver-explorer.www.Silver-Explore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
