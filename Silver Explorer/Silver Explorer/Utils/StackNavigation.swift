@@ -48,13 +48,6 @@ func moveToUIExploreVC(vc: UIViewController) {
     vc.navigationController?.pushViewController(nextVC, animated: true)
 }
 
-func moveToARKioskVC(vc: UIViewController) {
-    let storyboard = UIStoryboard(name: "ARKiosk", bundle: nil)
-    guard let nextVC = storyboard.instantiateViewController(withIdentifier: "ARKioskViewController") as? ARKioskViewController else { return }
-    vc.present(nextVC, animated: true)
-//    vc.navigationController?.pushViewController(nextVC, animated: true)
-}
-
 func moveToKioskHomeVC (vc : UIViewController)
 {
     let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)

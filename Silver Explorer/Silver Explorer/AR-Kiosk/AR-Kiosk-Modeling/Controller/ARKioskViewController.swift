@@ -14,11 +14,11 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     var sceneName: String?
     var caller : ARCaller?
     var paymentType : PaymentType?
+    
     weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
     weak var arKioskDelegate: ARKioskDelegate?
     
     func loadScene() {
-        
         switch caller {
         case .membership, .barcodePayment:
             sceneName = "ARKioskBarcode.scn"
@@ -27,7 +27,6 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         default:
             break
         }
-        //self.sceneName = name
     }
     func appear(sender: UIViewController) {
         self.modalPresentationStyle = .overFullScreen
@@ -35,30 +34,15 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBOutlet weak var vwContainer: UIView!
-    @IBAction func buttonTapped(_ sender: Any) {
-        switch caller {
-        case .membership:
-            self.dismiss(animated: false) {
-                self.arKioskDelegate?.didARKioskFinish()
-            }
-        case .creditPayment, .barcodePayment:
-            moveToPaymentFinish()  // PaymentFinishViewController로 이동하는 함수, 이것도 위와 같은 방식으로 작성해야 합니다.
-        case .none:
-            // 에러 처리나 기본 화면으로 돌아가는 로직
-            break
-        }
 
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        self.dismiss(animated: false) {
+            self.arKioskDelegate?.didARKioskFinish()
+        }
     }
+    
     @IBOutlet var sceneView: ARSCNView!
     var pokeNode : SCNNode?
-    func moveToPaymentSelect() {
-        self.dismiss(animated: false)
-        kioskMainBoardDelegate?.didMembershipVCFinish()
-    }
-    func moveToPaymentFinish() {
-        self.dismiss(animated: false)
-        kioskMainBoardDelegate?.moveToPaymentFinishVC()
-    }
     
     // 버튼 콘테이너 애니메이션 관련 프로퍼티
     func animateButton ()
