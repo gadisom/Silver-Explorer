@@ -51,6 +51,8 @@ class MembershipViewController: UIViewController {
 
     @IBAction private func arExperienceBtnPressed(_ sender: UIButton) {
         // AR 키오스크 띄우기!!!!!!!
+        self.dismiss(animated: false)
+        kioskMainBoardDelegate?.moveToARkioskVC(call: .membership)
     }
     
     private func initialSettingForSegmentControl() {

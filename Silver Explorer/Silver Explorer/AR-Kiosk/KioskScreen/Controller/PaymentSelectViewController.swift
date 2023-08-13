@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PaymentSelectViewController: UIViewController, SelectedPaymentTypeDelegate {
+class PaymentSelectViewController: UIViewController {
 
     @IBOutlet weak var totalPriceTextField: UITextField!
     @IBOutlet weak var creditCardImageView: UIImageView!
@@ -62,10 +62,9 @@ class PaymentSelectViewController: UIViewController, SelectedPaymentTypeDelegate
     }
     
     @IBAction func paymentBtnPressed(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: PaymentViewController.self)) as! PaymentViewController
-        
-        vc.paymentTypeDelegate = self
-        vc.appear(sender: self)
+        self.dismiss(animated: false)
+
+        kioskMainBoardDelegate?.moveToPaymentVC(paymentType: self.paymentMethod, call: .paymentSelect)
     }
     
     func initialSettingForTextField() {
@@ -81,8 +80,9 @@ class PaymentSelectViewController: UIViewController, SelectedPaymentTypeDelegate
         totalPriceTextField.text = "₩ \(formattedPrice!)"
     }
     
-    func paymentType() -> PaymentType {
-        return paymentMethod
-    }
+//    func paymentType() -> PaymentType {
+//        return paymentMethod
+//    }
+//
     
 }
