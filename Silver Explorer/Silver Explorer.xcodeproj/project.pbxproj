@@ -35,6 +35,8 @@
 		CC47C8C32A836FE700B257AF /* ContentDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47C8C22A836FE700B257AF /* ContentDescriptionViewController.swift */; };
 		CC47C8C52A83768200B257AF /* HomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47C8C42A83768200B257AF /* HomeDelegate.swift */; };
 		CC4AA4A82A88F228005C3201 /* ARKioskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4AA4A72A88F228005C3201 /* ARKioskDelegate.swift */; };
+		CC4AA4AA2A88F6C7005C3201 /* ARKioskBarcode.scn in Resources */ = {isa = PBXBuildFile; fileRef = CC4AA4A92A88F6C7005C3201 /* ARKioskBarcode.scn */; };
+		CC4AA4AC2A88F6D4005C3201 /* ARKiosk.scn in Resources */ = {isa = PBXBuildFile; fileRef = CC4AA4AB2A88F6D4005C3201 /* ARKiosk.scn */; };
 		CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57ABEC2A710A4200E892FF /* AppDelegate.swift */; };
 		CC57ABEF2A710A4200E892FF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABEE2A710A4200E892FF /* art.scnassets */; };
 		CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABF72A710A4300E892FF /* LaunchScreen.storyboard */; };
@@ -54,14 +56,12 @@
 		CCFE1C9D2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE1C9C2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift */; };
 		FF185B442A73AD7B003E766E /* ARKiosk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF185B432A73AD7B003E766E /* ARKiosk.storyboard */; };
 		FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF185B452A73ADA7003E766E /* ARKioskViewController.swift */; };
-		FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */ = {isa = PBXBuildFile; fileRef = FF185B492A73B3FF003E766E /* ARKiosk.scn */; };
 		FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */ = {isa = PBXBuildFile; fileRef = FF185B4B2A73B4AC003E766E /* summerFestival.png */; };
 		FF185B4E2A73B4B0003E766E /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = FF185B4D2A73B4B0003E766E /* camera.png */; };
 		FF185B502A73B56B003E766E /* KioskMainBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */; };
 		FF185B522A73B589003E766E /* KioskMainBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */; };
 		FF464C7A2A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF464C792A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift */; };
 		FF502C2F2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF502C2E2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift */; };
-		FF5BD6642A879B3A00E95BFA /* ARKioskBarcode.scn in Resources */ = {isa = PBXBuildFile; fileRef = FF5BD6632A879B3A00E95BFA /* ARKioskBarcode.scn */; };
 		FFE1D1642A7B6D8300E4E049 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1D1632A7B6D8300E4E049 /* MenuCollectionViewCell.swift */; };
 		FFE1D1662A7B733A00E4E049 /* MenuSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */; };
 		FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */; };
@@ -101,6 +101,8 @@
 		CC47C8C22A836FE700B257AF /* ContentDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDescriptionViewController.swift; sourceTree = "<group>"; };
 		CC47C8C42A83768200B257AF /* HomeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDelegate.swift; sourceTree = "<group>"; };
 		CC4AA4A72A88F228005C3201 /* ARKioskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskDelegate.swift; sourceTree = "<group>"; };
+		CC4AA4A92A88F6C7005C3201 /* ARKioskBarcode.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskBarcode.scn; sourceTree = "<group>"; };
+		CC4AA4AB2A88F6D4005C3201 /* ARKiosk.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKiosk.scn; sourceTree = "<group>"; };
 		CC57ABEC2A710A4200E892FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC57ABEE2A710A4200E892FF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		CC57ABF82A710A4300E892FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,14 +123,12 @@
 		FF185B392A739C4F003E766E /* ARKiosk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ARKiosk.usdz; sourceTree = "<group>"; };
 		FF185B432A73AD7B003E766E /* ARKiosk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARKiosk.storyboard; sourceTree = "<group>"; };
 		FF185B452A73ADA7003E766E /* ARKioskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskViewController.swift; sourceTree = "<group>"; };
-		FF185B492A73B3FF003E766E /* ARKiosk.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKiosk.scn; sourceTree = "<group>"; };
 		FF185B4B2A73B4AC003E766E /* summerFestival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summerFestival.png; sourceTree = "<group>"; };
 		FF185B4D2A73B4B0003E766E /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		FF185B4F2A73B56B003E766E /* KioskMainBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KioskMainBoard.storyboard; sourceTree = "<group>"; };
 		FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardViewController.swift; sourceTree = "<group>"; };
 		FF464C792A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		FF502C2E2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		FF5BD6632A879B3A00E95BFA /* ARKioskBarcode.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskBarcode.scn; sourceTree = "<group>"; };
 		FFE1D1632A7B6D8300E4E049 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionViewController.swift; sourceTree = "<group>"; };
 		FFE42A5A2A73BB2100752CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -417,8 +417,8 @@
 			isa = PBXGroup;
 			children = (
 				FF185B392A739C4F003E766E /* ARKiosk.usdz */,
-				FF5BD6632A879B3A00E95BFA /* ARKioskBarcode.scn */,
-				FF185B492A73B3FF003E766E /* ARKiosk.scn */,
+				CC4AA4AB2A88F6D4005C3201 /* ARKiosk.scn */,
+				CC4AA4A92A88F6C7005C3201 /* ARKioskBarcode.scn */,
 				FF185B432A73AD7B003E766E /* ARKiosk.storyboard */,
 			);
 			path = View;
@@ -554,13 +554,13 @@
 				CC47C8C12A836FCF00B257AF /* ContentDescription.storyboard in Resources */,
 				CC57AC042A710AE100E892FF /* Home.storyboard in Resources */,
 				AD9F67E72A824F3D0056696E /* Reader.storyboard in Resources */,
-				FF185B4A2A73B3FF003E766E /* ARKiosk.scn in Resources */,
 				FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */,
 				FF185B4E2A73B4B0003E766E /* camera.png in Resources */,
 				AD9F67E32A824F1B0056696E /* Scanner.storyboard in Resources */,
+				CC4AA4AC2A88F6D4005C3201 /* ARKiosk.scn in Resources */,
 				FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */,
 				FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */,
-				FF5BD6642A879B3A00E95BFA /* ARKioskBarcode.scn in Resources */,
+				CC4AA4AA2A88F6C7005C3201 /* ARKioskBarcode.scn in Resources */,
 				CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */,
 				CC57AC112A710D3700E892FF /* UIExplore.storyboard in Resources */,
 				FF185B502A73B56B003E766E /* KioskMainBoard.storyboard in Resources */,
