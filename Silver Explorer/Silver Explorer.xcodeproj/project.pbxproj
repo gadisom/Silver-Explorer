@@ -34,6 +34,7 @@
 		CC47C8C12A836FCF00B257AF /* ContentDescription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC47C8C02A836FCF00B257AF /* ContentDescription.storyboard */; };
 		CC47C8C32A836FE700B257AF /* ContentDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47C8C22A836FE700B257AF /* ContentDescriptionViewController.swift */; };
 		CC47C8C52A83768200B257AF /* HomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47C8C42A83768200B257AF /* HomeDelegate.swift */; };
+		CC4AA4A82A88F228005C3201 /* ARKioskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4AA4A72A88F228005C3201 /* ARKioskDelegate.swift */; };
 		CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57ABEC2A710A4200E892FF /* AppDelegate.swift */; };
 		CC57ABEF2A710A4200E892FF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABEE2A710A4200E892FF /* art.scnassets */; };
 		CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABF72A710A4300E892FF /* LaunchScreen.storyboard */; };
@@ -80,7 +81,6 @@
 		AD9F67EE2A824F540056696E /* TTSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSManager.swift; sourceTree = "<group>"; };
 		AD9F67EF2A824F540056696E /* NewsPaperTextRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsPaperTextRecognizer.swift; sourceTree = "<group>"; };
 		AD9F67F42A824F5C0056696E /* DocumentDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentDataDelegate.swift; sourceTree = "<group>"; };
-		ADF844ED2A86590200DEEE79 /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silver Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF844EE2A86638400DEEE79 /* ReaderResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderResource.swift; sourceTree = "<group>"; };
 		CC23C3A82A76AB8D0024C12B /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 		CC47C8C02A836FCF00B257AF /* ContentDescription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContentDescription.storyboard; sourceTree = "<group>"; };
 		CC47C8C22A836FE700B257AF /* ContentDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDescriptionViewController.swift; sourceTree = "<group>"; };
 		CC47C8C42A83768200B257AF /* HomeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDelegate.swift; sourceTree = "<group>"; };
+		CC4AA4A72A88F228005C3201 /* ARKioskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskDelegate.swift; sourceTree = "<group>"; };
 		CC57ABEC2A710A4200E892FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC57ABEE2A710A4200E892FF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		CC57ABF82A710A4300E892FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,7 +128,6 @@
 		FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardViewController.swift; sourceTree = "<group>"; };
 		FF464C792A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		FF502C2E2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		FF5BD6622A878BBE00E95BFA /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silver Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5BD6632A879B3A00E95BFA /* ARKioskBarcode.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskBarcode.scn; sourceTree = "<group>"; };
 		FFE1D1632A7B6D8300E4E049 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +248,7 @@
 				CC47C8C42A83768200B257AF /* HomeDelegate.swift */,
 				CC38F8A82A87697F008A9C22 /* AlertDelegate.swift */,
 				CC38F8AD2A877570008A9C22 /* PhoneNumberMembershipDelegate.swift */,
+				CC4AA4A72A88F228005C3201 /* ARKioskDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -609,6 +610,7 @@
 				FF185B462A73ADA7003E766E /* ARKioskViewController.swift in Sources */,
 				CCB7B4352A777EA900EE46AA /* PaymentViewController.swift in Sources */,
 				AD9F67E52A824F200056696E /* ScannerViewController.swift in Sources */,
+				CC4AA4A82A88F228005C3201 /* ARKioskDelegate.swift in Sources */,
 				FF464C7A2A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift in Sources */,
 				FF502C2F2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift in Sources */,
 				ADF844EF2A86638400DEEE79 /* ReaderResource.swift in Sources */,

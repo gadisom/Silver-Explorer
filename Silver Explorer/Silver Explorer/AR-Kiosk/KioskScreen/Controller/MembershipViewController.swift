@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MembershipViewController: UIViewController, AlertDelegate {
+class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate {
     
     @IBOutlet private weak var barcodeMembershipContainerView: UIView!
     @IBOutlet private weak var phoneMembershipContainerView: UIView!
@@ -52,9 +52,11 @@ class MembershipViewController: UIViewController, AlertDelegate {
     }
 
     @IBAction private func arExperienceBtnPressed(_ sender: UIButton) {
-        // AR 키오스크 띄우기!!!!!!!
-        self.dismiss(animated: false)
-        kioskMainBoardDelegate?.moveToARkioskVC(call: .membership)
+        let storyboard = UIStoryboard(name: Content.ARKiosk.rawValue, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ARKioskViewController.self)) as! ARKioskViewController
+        vc.caller = .membership
+        vc.arKioskDelegate = self
+        vc.appear(sender: self)
     }
     
     private func initialSettingForSegmentControl() {
@@ -96,5 +98,9 @@ class MembershipViewController: UIViewController, AlertDelegate {
         self.dismiss(animated: false) {
             self.kioskMainBoardDelegate?.didMembershipVCFinish()
         }
+    }
+    
+    func didARKioskFinish() {
+        showCustomAlert()
     }
 }
