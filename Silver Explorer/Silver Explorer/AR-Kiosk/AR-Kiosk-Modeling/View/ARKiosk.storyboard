@@ -20,18 +20,43 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEI-Xy-cAl">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                             </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFm-Ax-ovp">
+                                <rect key="frame" x="16" y="89.000000000000014" width="196.66666666666666" height="170.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kei-tr-hd5">
+                                        <rect key="frame" x="60.666666666666671" y="67.666666666666657" width="75.000000000000014" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vy3-Zn-icP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Kei-tr-hd5" firstAttribute="centerX" secondItem="XFm-Ax-ovp" secondAttribute="centerX" id="096-aG-baI"/>
+                                    <constraint firstItem="Kei-tr-hd5" firstAttribute="width" secondItem="XFm-Ax-ovp" secondAttribute="width" multiplier="0.381356" id="ZNX-Nn-NUt"/>
+                                    <constraint firstItem="Kei-tr-hd5" firstAttribute="centerY" secondItem="XFm-Ax-ovp" secondAttribute="centerY" id="kXY-wZ-FNL"/>
+                                    <constraint firstItem="Kei-tr-hd5" firstAttribute="height" secondItem="XFm-Ax-ovp" secondAttribute="height" multiplier="0.205479" id="lsh-WB-JGv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MX5-V0-7fk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="bottom" secondItem="MX5-V0-7fk" secondAttribute="bottom" id="35N-no-CdT"/>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="trailing" secondItem="MX5-V0-7fk" secondAttribute="trailing" id="3Rc-Uc-XCI"/>
+                            <constraint firstItem="XFm-Ax-ovp" firstAttribute="leading" secondItem="MX5-V0-7fk" secondAttribute="leading" constant="16" id="3kH-c5-bv9"/>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="leading" secondItem="MX5-V0-7fk" secondAttribute="leading" id="LG0-ci-XEA"/>
                             <constraint firstItem="hEI-Xy-cAl" firstAttribute="top" secondItem="NKk-D1-5nM" secondAttribute="top" id="aY3-rI-83R"/>
+                            <constraint firstItem="XFm-Ax-ovp" firstAttribute="top" secondItem="MX5-V0-7fk" secondAttribute="top" constant="30" id="c3t-Ps-hz5"/>
+                            <constraint firstItem="XFm-Ax-ovp" firstAttribute="width" secondItem="NKk-D1-5nM" secondAttribute="width" multiplier="0.5" id="ctt-Ex-GfB"/>
+                            <constraint firstItem="XFm-Ax-ovp" firstAttribute="height" secondItem="NKk-D1-5nM" secondAttribute="height" multiplier="0.2" id="vUG-h6-FYt"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="hEI-Xy-cAl" id="Pbt-n1-wvf"/>
+                        <outlet property="sceneView" destination="hEI-Xy-cAl" id="gqr-Nb-w3X"/>
+                        <outlet property="vwContainer" destination="XFm-Ax-ovp" id="4Rc-mt-xTq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

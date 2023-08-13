@@ -63,9 +63,9 @@ class PaymentSelectViewController: UIViewController, SelectedPaymentTypeDelegate
     
     @IBAction func paymentBtnPressed(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: PaymentViewController.self)) as! PaymentViewController
-        
         vc.paymentTypeDelegate = self
         vc.appear(sender: self)
+        vc.kioskMainBoardDelegate = self.kioskMainBoardDelegate
     }
     
     func initialSettingForTextField() {
@@ -84,5 +84,6 @@ class PaymentSelectViewController: UIViewController, SelectedPaymentTypeDelegate
     func paymentType() -> PaymentType {
         return paymentMethod
     }
+    
     
 }

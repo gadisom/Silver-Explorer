@@ -8,7 +8,10 @@
 import UIKit
 
 class KioskMainBoardViewController: UIViewController {
-    
+    func appear(sender: UIViewController) {
+        self.modalPresentationStyle = .overFullScreen
+        sender.present(self, animated: true)
+    }
     @IBAction func moveToMainButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }

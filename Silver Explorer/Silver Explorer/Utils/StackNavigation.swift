@@ -8,7 +8,10 @@
 import UIKit
 
 func moveBacktoHome(vc: UIViewController) {
-    vc.navigationController?.popToRootViewController(animated: true)
+   let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
+    guard let vc = storyboard.instantiateViewController(withIdentifier: "KioskMainBoardViewController") as? KioskMainBoardViewController else {return}
+    vc.present(vc, animated: true)
+    
 }
 
 func moveToContentDescriptionVC(homeVC: UIViewController) {

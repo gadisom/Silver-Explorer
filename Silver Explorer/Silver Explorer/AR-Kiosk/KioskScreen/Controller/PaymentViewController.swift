@@ -11,7 +11,7 @@ class PaymentViewController: UIViewController {
     
     @IBOutlet weak var paymentImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
     let resource: PaymentResource = PaymentResource()
     weak var paymentTypeDelegate: SelectedPaymentTypeDelegate?
     var paymentType: PaymentType {
@@ -39,7 +39,15 @@ class PaymentViewController: UIViewController {
     }
     
     @IBAction func arExperienceBtnPressed(_ sender: UIButton) {
-        moveToARKioskVC(vc: self)
+        self.dismiss(animated: true ){
+            if self.paymentType == .creditCard {
+                print("11")
+                self.kioskMainBoardDelegate?.moveToARkioskVC(call: .paymentSelect)
+            } else {
+
+                self.kioskMainBoardDelegate?.moveToARkioskVC(call: .membership)
+            }
+        }
     }
     
     func chooseDescriptionLabel() {

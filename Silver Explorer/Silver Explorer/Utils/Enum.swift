@@ -8,6 +8,9 @@
 import Foundation
 
 // MARK: - Home Enum
+enum ARCaller {
+    case membership,paymentSelect
+}
 
 enum Content: String {
     case UIExplore, ARKiosk, AIExplore, none

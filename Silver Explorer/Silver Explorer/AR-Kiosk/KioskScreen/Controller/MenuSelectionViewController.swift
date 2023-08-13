@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuSelectionViewController : UIViewController, UITableViewDelegate,UICollectionViewDelegate,UITableViewDataSource, KioskMainBoardDelegate {
+class MenuSelectionViewController : UIViewController, UITableViewDelegate,UICollectionViewDelegate,UITableViewDataSource {
     
     var cartItems : [Product] = []
     
@@ -121,6 +121,39 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
     }
     
     // KisokMainBoardDelegate 관련 프로퍼티
+    
+    func updateTotalPrice() {
+        let totalPrice = totalPriceForPayment()
+        let totalQuantity = cartItems.reduce(0) { $0 + $1.numberOfProduct }
+           totalQuantityLabel.text = "\(totalQuantity) 개"
+        let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            numberFormatter.groupingSeparator = ","
+            
+            if let formattedTotalPrice = numberFormatter.string(from: NSNumber(value: totalPrice)) {
+                totalPriceLabel.text = formattedTotalPrice + "₩"
+            }
+        
+    }
+    
+}
+
+extension MenuSelectionViewController : KioskMainBoardDelegate {
+    func didARVCFinish() {
+        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentSelectViewController") as! PaymentSelectViewController
+        vc.appear(sender: self)
+        vc.kioskMainBoardDelegate = self
+    }
+
+    func moveToARkioskVC(call : ARCaller) {
+        let storyboard = UIStoryboard(name: "ARKiosk", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ARKioskViewController") as! ARKioskViewController
+        vc.caller = call 
+        vc.kioskMainBoardDelegate = self
+        vc.appear(sender: self)
+    }
+
     func didMembershipVCFinish() {
         let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PaymentSelectViewController") as! PaymentSelectViewController
@@ -144,20 +177,6 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
     func backToMainScreen() {
        moveBacktoHome(vc: self)
     }
-    func updateTotalPrice() {
-        let totalPrice = totalPriceForPayment()
-        let totalQuantity = cartItems.reduce(0) { $0 + $1.numberOfProduct }
-           totalQuantityLabel.text = "\(totalQuantity) 개"
-        let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-            numberFormatter.groupingSeparator = ","
-            
-            if let formattedTotalPrice = numberFormatter.string(from: NSNumber(value: totalPrice)) {
-                totalPriceLabel.text = formattedTotalPrice + "₩"
-            }
-        
-    }
-    
 }
 extension MenuSelectionViewController : MenuSelectionTableViewCellDelegate {
     func didIncreaseQuantity(cell: MenuSelectionTableViewCell) {
