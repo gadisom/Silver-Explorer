@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuSelectionViewController : UIViewController, UITableViewDelegate,UICollectionViewDelegate,UITableViewDataSource, KioskMainBoardDelegate {
+class MenuSelectionViewController : UIViewController, UITableViewDelegate,UICollectionViewDelegate,UITableViewDataSource {
     
     var cartItems : [Product] = []
     
@@ -30,11 +30,7 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
            updateDataSource()
     }
     @IBAction func resetButton(_ sender: Any) {
-        cartItems.removeAll()
-        updateTotalPrice()
-        menuSelectionTableView.reloadData()
-        totalPriceLabel.text = " "
-
+        navigationController?.popViewController(animated: true)
     }
     
 
@@ -57,10 +53,13 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
         datasource.apply(snapshot, animatingDifferences: true)
     }
     @IBAction func moveToMemebershipView(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MembershipViewController") as! MembershipViewController
-        vc.kioskMainBoardDelegate = self
-        vc.appear(sender: self)
+       
+        if !cartItems.isEmpty{
+            let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MembershipViewController") as! MembershipViewController
+            vc.kioskMainBoardDelegate = self
+            vc.appear(sender: self)
+        }
     }
    
     func appear(sender: UIViewController) {
@@ -70,14 +69,15 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
     
     // cell 선택시 동작 프로퍼티
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let product = list[indexPath.item]
-        selectedProduct = Product(productName: product.name, productType: product.type, price: product.price)
-        
-        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ProductOptionSelectViewController") as! ProductOptionSelectViewController
-        vc.kioskMenuBoardDelegate = self
-        vc.appear(sender: self)
-        
+        if cartItems.count < 5 {
+            let product = list[indexPath.item]
+            selectedProduct = Product(productName: product.name, productType: product.type, price: product.price)
+            
+            let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ProductOptionSelectViewController") as! ProductOptionSelectViewController
+            vc.kioskMenuBoardDelegate = self
+            vc.appear(sender: self)
+        }
     }
    
     func itemLayout() -> UICollectionViewCompositionalLayout{
@@ -121,6 +121,49 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
     }
     
     // KisokMainBoardDelegate 관련 프로퍼티
+    
+    func updateTotalPrice() {
+        let totalPrice = totalPriceForPayment()
+        let totalQuantity = cartItems.reduce(0) { $0 + $1.numberOfProduct }
+           totalQuantityLabel.text = "\(totalQuantity) 개"
+        let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            numberFormatter.groupingSeparator = ","
+            
+            if let formattedTotalPrice = numberFormatter.string(from: NSNumber(value: totalPrice)) {
+                totalPriceLabel.text =  "₩" + formattedTotalPrice 
+            }
+        
+    }
+    
+}
+
+extension MenuSelectionViewController : KioskMainBoardDelegate {
+
+    func moveToPaymentFinishVC()
+    {
+        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentFinishViewController") as! PaymentFinishViewController
+        vc.kioskMainBoardDelegate = self
+        vc.appear(sender: self)
+        
+    }
+    func moveToPaymentVC(paymentType: PaymentType, call : ARCaller) {
+        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+        vc.payment = paymentType
+        vc.appear(sender: self)
+        vc.kioskMainBoardDelegate = self
+    }
+
+    func moveToARkioskVC(call : ARCaller) {
+        let storyboard = UIStoryboard(name: "ARKiosk", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ARKioskViewController") as! ARKioskViewController
+        vc.caller = call 
+        vc.kioskMainBoardDelegate = self
+        vc.appear(sender: self)
+    }
+
     func didMembershipVCFinish() {
         let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PaymentSelectViewController") as! PaymentSelectViewController
@@ -142,22 +185,9 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
             return totalPrice
     }
     func backToMainScreen() {
-       moveBacktoHome(vc: self)
+        self.dismiss(animated: false)
+        navigationController?.popViewController(animated: true)
     }
-    func updateTotalPrice() {
-        let totalPrice = totalPriceForPayment()
-        let totalQuantity = cartItems.reduce(0) { $0 + $1.numberOfProduct }
-           totalQuantityLabel.text = "\(totalQuantity) 개"
-        let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-            numberFormatter.groupingSeparator = ","
-            
-            if let formattedTotalPrice = numberFormatter.string(from: NSNumber(value: totalPrice)) {
-                totalPriceLabel.text = formattedTotalPrice + "₩"
-            }
-        
-    }
-    
 }
 extension MenuSelectionViewController : MenuSelectionTableViewCellDelegate {
     func didIncreaseQuantity(cell: MenuSelectionTableViewCell) {

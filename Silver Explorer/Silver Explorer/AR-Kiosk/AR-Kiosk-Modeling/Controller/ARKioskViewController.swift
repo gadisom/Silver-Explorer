@@ -11,49 +11,80 @@ import ARKit
 
 class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     
+    var sceneName: String?
+    var caller : ARCaller?
+    var paymentType : PaymentType?
+    weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
     
-//    @IBOutlet weak var vwContainer: UIView!
-//    @IBAction func buttonTapped(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "KioskMainBoardViewController")
-//        let nav = UINavigationController(rootViewController: viewController)
-//        self.present(nav, animated: true, completion: nil)
-//
-//    }
+    func loadScene() {
+        
+        switch caller {
+        case .membership:
+            sceneName = "ARKioskBarcode.scn"
+        case .paymentSelect:
+            sceneName = "ARKiosk.scn"
+        default:
+            break
+        }
+        //self.sceneName = name
+    }
+    func appear(sender: UIViewController) {
+        self.modalPresentationStyle = .overFullScreen
+        sender.present(self, animated: false)
+    }
+    
+    @IBOutlet weak var vwContainer: UIView!
+    @IBAction func buttonTapped(_ sender: Any) {
+        switch caller {
+        case .membership:
+            moveToPaymentSelect()  // 위에서 정의한 PaymentSelect로 이동하는 함수
+        case .paymentSelect:
+            moveToPaymentFinish()  // PaymentFinishViewController로 이동하는 함수, 이것도 위와 같은 방식으로 작성해야 합니다.
+        case .none:
+            // 에러 처리나 기본 화면으로 돌아가는 로직
+            break
+        }
+
+    }
     @IBOutlet var sceneView: ARSCNView!
     var pokeNode : SCNNode?
+    func moveToPaymentSelect() {
+        self.dismiss(animated: false)
+        kioskMainBoardDelegate?.didMembershipVCFinish()
+    }
+    func moveToPaymentFinish() {
+        self.dismiss(animated: false)
+        kioskMainBoardDelegate?.moveToPaymentFinishVC()
+    }
     
     // 버튼 콘테이너 애니메이션 관련 프로퍼티
-//    func animateButton ()
-//    {
-//        DispatchQueue.main.async {
-//            self.vwContainer.alpha = 0.0
-//            self.vwContainer.isHidden = false
-//            UIView.animate(withDuration: 1.5, delay: 0.5,options: .curveEaseIn, animations: {
-//                self.vwContainer.alpha = 1.0
-//            })
-//        }
-//
-//    }
+    func animateButton ()
+    {
+        DispatchQueue.main.async {
+            self.vwContainer.alpha = 0.0
+            self.vwContainer.isHidden = false
+            UIView.animate(withDuration: 1.0, delay: 0.5,options: .curveEaseIn, animations: {
+                self.vwContainer.alpha = 1.0
+            })
+        }
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadScene()
         sceneView.delegate = self
         sceneView.showsStatistics = true
         sceneView.autoenablesDefaultLighting = true
-        //self.vwContainer.isHidden = true
+        self.vwContainer.isHidden = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         let configuration = ARImageTrackingConfiguration()
         
         if let imageToTrack = ARReferenceImage.referenceImages(inGroupNamed: "ARKiosk", bundle: Bundle.main){
             configuration.trackingImages = imageToTrack
             configuration.maximumNumberOfTrackedImages = 1
-            print("성공")
-            
         }
         sceneView.session.run(configuration)
        
@@ -75,15 +106,16 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
             planeNode.eulerAngles.x = -.pi/2
             node.addChildNode(planeNode)
             
-            if let pokeScene = SCNScene(named: "ARKiosk.scn") {
-              if let pokeNode = pokeScene.rootNode.childNodes.first{
-                  self.pokeNode = pokeNode
-                  planeNode.addChildNode(pokeNode)
-                  pokeNode.eulerAngles.x = .pi/3
-                 // animateButton()
-              }
-
-            }
+            if let sceneName = sceneName {
+                   if let pokeScene = SCNScene(named: sceneName) {
+                       if let pokeNode = pokeScene.rootNode.childNodes.first {
+                           self.pokeNode = pokeNode
+                           planeNode.addChildNode(pokeNode)
+                           pokeNode.eulerAngles.x = .pi/2
+                           animateButton()
+                       }
+                   }
+               }
         }
         
         return node
