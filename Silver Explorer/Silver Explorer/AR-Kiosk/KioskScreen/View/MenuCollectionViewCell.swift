@@ -20,6 +20,8 @@ class MenuCollectionViewCell: UICollectionViewCell
         
         
     }
+    
+    // 컬렉션뷰 셀 구성
     func configure (_ info : menuInfo)
     {
         menuName.text = info.name

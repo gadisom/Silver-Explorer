@@ -180,6 +180,21 @@ extension MenuSelectionViewController : KioskMainBoardDelegate {
         updateTotalPrice()
 
     }
+    
+    func moveToPreviousModalVC(content: KioskModalContent) {
+        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+        switch content {
+        case .membership:
+            let vc = storyboard.instantiateViewController(withIdentifier: content.rawValue) as! MembershipViewController
+            vc.kioskMainBoardDelegate = self
+            vc.appear(sender: self)
+        case .payment:
+            let vc = storyboard.instantiateViewController(withIdentifier: content.rawValue) as! PaymentSelectViewController
+            vc.kioskMainBoardDelegate = self
+            vc.appear(sender: self)
+        }
+    }
+    
     func totalPriceForPayment() -> Int {
         let totalPrice = cartItems.reduce(0) { $0 + $1.singleProductPrice * $1.numberOfProduct }
             return totalPrice

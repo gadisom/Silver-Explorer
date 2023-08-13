@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Home Enum
 enum ARCaller {
-    case membership,paymentSelect
+    case membership,creditPayment,barcodePayment
 }
 
 enum Content: String {
@@ -36,6 +36,10 @@ enum IceQuantity {
 
 enum PaymentType {
     case creditCard, barcode, none
+}
+
+enum KioskModalContent: String {
+    case membership = "MembershipViewController", payment = "PaymentSelectViewController"
 }
 
 // MARK: - AR-UI-Explore Enum
