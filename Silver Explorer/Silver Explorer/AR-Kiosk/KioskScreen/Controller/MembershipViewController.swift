@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MembershipViewController: UIViewController {
+class MembershipViewController: UIViewController, AlertDelegate {
     
     @IBOutlet private weak var barcodeMembershipContainerView: UIView!
     @IBOutlet private weak var phoneMembershipContainerView: UIView!
@@ -16,11 +16,13 @@ class MembershipViewController: UIViewController {
     @IBOutlet private weak var membershipButton: UIButton!
     
     weak var kioskMainBoardDelegate: KioskMainBoardDelegate?
-    
+    weak var phoneNumberDelegate: PhoneNumberMembershipDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initialSettingForSegmentControl()
+        initialSettingForPhoneMemebershipVC()
         renderPhoneNumberMembershipScreen()
     }
     
@@ -38,15 +40,15 @@ class MembershipViewController: UIViewController {
     }
     
     @IBAction private func noMembershipBtnPressed(_ sender: UIButton) {
-        self.dismiss(animated: false)
-        kioskMainBoardDelegate?.didMembershipVCFinish()
+        self.dismiss(animated: false) {
+            self.kioskMainBoardDelegate?.didMembershipVCFinish()            
+        }
     }
     
     @IBAction private func memberShipBtnPressed(_ sender: UIButton) {
-
-        // 스탬프 적립 알림창 띄우기
-        self.dismiss(animated: false)
-        kioskMainBoardDelegate?.didMembershipVCFinish()
+        if (phoneNumberDelegate?.isValidPhoneNumber() == true) {
+            showCustomAlert()
+        }
     }
 
     @IBAction private func arExperienceBtnPressed(_ sender: UIButton) {
@@ -58,6 +60,14 @@ class MembershipViewController: UIViewController {
     private func initialSettingForSegmentControl() {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         membershipSelectSegmentedControl.setTitleTextAttributes(textAttributes, for: .normal)
+    }
+    
+    private func initialSettingForPhoneMemebershipVC() {
+        for childVC in self.children {
+            if (childVC is PhoneMemberShipViewController) {
+                self.phoneNumberDelegate = childVC as! PhoneMemberShipViewController
+            }
+        }
     }
     
     private func renderPhoneNumberMembershipScreen() {
@@ -74,5 +84,17 @@ class MembershipViewController: UIViewController {
 
         phoneMembershipContainerView.isHidden = true
         membershipButton.isHidden = true
+    }
+    
+    private func showCustomAlert() {
+        let alertVC = self.storyboard?.instantiateViewController(withIdentifier: String(describing: AlertViewController.self)) as! AlertViewController
+        alertVC.alertDelegate = self
+        alertVC.showAlert(sender: self, text: "스탬프가 적립되었습니다.")
+    }
+    
+    func didAlertDismiss() {
+        self.dismiss(animated: false) {
+            self.kioskMainBoardDelegate?.didMembershipVCFinish()
+        }
     }
 }
