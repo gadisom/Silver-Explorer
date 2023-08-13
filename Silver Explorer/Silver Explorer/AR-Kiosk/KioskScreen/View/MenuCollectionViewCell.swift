@@ -25,7 +25,7 @@ class MenuCollectionViewCell: UICollectionViewCell
         menuName.text = info.name
         menuImage.image = UIImage(named: info.imageName)
         menuName.numberOfLines = 0
-        currentInfo = Product(productName: info.name, productType: info.type, price: info.price)
+        currentInfo = Product(productName: info.name, productType: info.type, price: info.price, productImage: info.imageName)
         
     }
 }
