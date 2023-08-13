@@ -76,9 +76,10 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         loadScene()
         sceneView.delegate = self
-        sceneView.showsStatistics = true
         sceneView.autoenablesDefaultLighting = true
         self.vwContainer.isHidden = true
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light}
     }
 
     override func viewWillAppear(_ animated: Bool) {
