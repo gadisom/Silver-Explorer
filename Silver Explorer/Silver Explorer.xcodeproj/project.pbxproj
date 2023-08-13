@@ -11,12 +11,12 @@
 		AD9F67E52A824F200056696E /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67E42A824F200056696E /* ScannerViewController.swift */; };
 		AD9F67E72A824F3D0056696E /* Reader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9F67E62A824F3D0056696E /* Reader.storyboard */; };
 		AD9F67EA2A824F470056696E /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67E82A824F470056696E /* ReaderViewController.swift */; };
-		AD9F67EB2A824F470056696E /* NavigationBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67E92A824F470056696E /* NavigationBarButtons.swift */; };
 		AD9F67F02A824F540056696E /* ImageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67EC2A824F540056696E /* ImageDetector.swift */; };
 		AD9F67F12A824F540056696E /* TextRecognitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67ED2A824F540056696E /* TextRecognitionModel.swift */; };
 		AD9F67F22A824F540056696E /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67EE2A824F540056696E /* TTSManager.swift */; };
 		AD9F67F32A824F540056696E /* NewsPaperTextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67EF2A824F540056696E /* NewsPaperTextRecognizer.swift */; };
 		AD9F67F52A824F5C0056696E /* DocumentDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9F67F42A824F5C0056696E /* DocumentDataDelegate.swift */; };
+		ADF844EF2A86638400DEEE79 /* ReaderResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF844EE2A86638400DEEE79 /* ReaderResource.swift */; };
 		CC23C3A92A76AB8D0024C12B /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3A82A76AB8D0024C12B /* Enum.swift */; };
 		CC23C3AB2A76CAC10024C12B /* MembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */; };
 		CC23C3AD2A76CB210024C12B /* PhoneMemberShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */; };
@@ -73,12 +73,13 @@
 		AD9F67E42A824F200056696E /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		AD9F67E62A824F3D0056696E /* Reader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reader.storyboard; sourceTree = "<group>"; };
 		AD9F67E82A824F470056696E /* ReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
-		AD9F67E92A824F470056696E /* NavigationBarButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarButtons.swift; sourceTree = "<group>"; };
 		AD9F67EC2A824F540056696E /* ImageDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetector.swift; sourceTree = "<group>"; };
 		AD9F67ED2A824F540056696E /* TextRecognitionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextRecognitionModel.swift; sourceTree = "<group>"; };
 		AD9F67EE2A824F540056696E /* TTSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSManager.swift; sourceTree = "<group>"; };
 		AD9F67EF2A824F540056696E /* NewsPaperTextRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsPaperTextRecognizer.swift; sourceTree = "<group>"; };
 		AD9F67F42A824F5C0056696E /* DocumentDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentDataDelegate.swift; sourceTree = "<group>"; };
+		ADF844ED2A86590200DEEE79 /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silver Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADF844EE2A86638400DEEE79 /* ReaderResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderResource.swift; sourceTree = "<group>"; };
 		CC23C3A82A76AB8D0024C12B /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipViewController.swift; sourceTree = "<group>"; };
 		CC23C3AC2A76CB210024C12B /* PhoneMemberShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneMemberShipViewController.swift; sourceTree = "<group>"; };
@@ -211,7 +212,6 @@
 		AD9F67DF2A824E490056696E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AD9F67E92A824F470056696E /* NavigationBarButtons.swift */,
 				AD9F67E82A824F470056696E /* ReaderViewController.swift */,
 			);
 			path = Controller;
@@ -228,6 +228,7 @@
 		AD9F67E12A824E560056696E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ADF844EE2A86638400DEEE79 /* ReaderResource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -601,8 +602,8 @@
 				CCB7B4352A777EA900EE46AA /* PaymentViewController.swift in Sources */,
 				AD9F67E52A824F200056696E /* ScannerViewController.swift in Sources */,
 				FF464C7A2A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift in Sources */,
-				AD9F67EB2A824F470056696E /* NavigationBarButtons.swift in Sources */,
 				FF502C2F2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift in Sources */,
+				ADF844EF2A86638400DEEE79 /* ReaderResource.swift in Sources */,
 				CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */,
 				CC23C3AB2A76CAC10024C12B /* MembershipViewController.swift in Sources */,
 				CC23C3AF2A76CB380024C12B /* BarcodMembershipViewController.swift in Sources */,
@@ -748,7 +749,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6NUHA5DNR;
+				DEVELOPMENT_TEAM = 3B7S82URMY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -785,7 +786,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6NUHA5DNR;
+				DEVELOPMENT_TEAM = 3B7S82URMY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
