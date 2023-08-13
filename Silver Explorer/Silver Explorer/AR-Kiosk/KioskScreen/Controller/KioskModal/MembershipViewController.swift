@@ -9,14 +9,20 @@ import UIKit
 
 class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate {
     
+    // MARK: - IBOutlet Properties
+    
     @IBOutlet private weak var barcodeMembershipContainerView: UIView!
     @IBOutlet private weak var phoneMembershipContainerView: UIView!
     @IBOutlet private weak var membershipSelectSegmentedControl: UISegmentedControl!
     @IBOutlet private weak var arExperienceButton: UIButton!
     @IBOutlet private weak var membershipButton: UIButton!
     
+    // MARK: Delegate Properties
+    
     weak var kioskMainBoardDelegate: KioskMainBoardDelegate?
     weak var phoneNumberDelegate: PhoneNumberMembershipDelegate?
+    
+    // MARK: - Instance Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +37,8 @@ class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate
         sender.present(self, animated: false)
     }
 
+    // MARK: - IBAction Methods
+    
     @IBAction private func membershipMethodSelected(_ sender: UISegmentedControl) {
         if (sender.selectedSegmentIndex == 0) {
             renderPhoneNumberMembershipScreen()
@@ -59,6 +67,8 @@ class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate
         vc.appear(sender: self)
     }
     
+    // MARK: - Initial Setting Methods
+    
     private func initialSettingForSegmentControl() {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         membershipSelectSegmentedControl.setTitleTextAttributes(textAttributes, for: .normal)
@@ -71,6 +81,8 @@ class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate
             }
         }
     }
+    
+    // MARK: - Container View Control Methods
     
     private func renderPhoneNumberMembershipScreen() {
         phoneMembershipContainerView.isHidden = false
@@ -88,11 +100,15 @@ class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate
         membershipButton.isHidden = true
     }
     
+    // MARK: - Custom Alert Method
+    
     private func showCustomAlert() {
         let alertVC = self.storyboard?.instantiateViewController(withIdentifier: String(describing: AlertViewController.self)) as! AlertViewController
         alertVC.alertDelegate = self
         alertVC.showAlert(sender: self, text: "스탬프가 적립되었습니다.")
     }
+    
+    // MARK: - Delegate Mehtods
     
     func didAlertDismiss() {
         self.dismiss(animated: false) {

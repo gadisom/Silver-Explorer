@@ -148,18 +148,10 @@ extension MenuSelectionViewController : KioskMainBoardDelegate {
         vc.appear(sender: self)
         
     }
-    func moveToPaymentVC(paymentType: PaymentType, call : ARCaller) {
+    func moveToPaymentVC(paymentType: PaymentType) {
         let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
-        vc.payment = paymentType
-        vc.appear(sender: self)
-        vc.kioskMainBoardDelegate = self
-    }
-
-    func moveToARkioskVC(call : ARCaller) {
-        let storyboard = UIStoryboard(name: "ARKiosk", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ARKioskViewController") as! ARKioskViewController
-        vc.caller = call 
+        vc.paymentType = paymentType
         vc.kioskMainBoardDelegate = self
         vc.appear(sender: self)
     }
@@ -199,9 +191,11 @@ extension MenuSelectionViewController : KioskMainBoardDelegate {
         let totalPrice = cartItems.reduce(0) { $0 + $1.singleProductPrice * $1.numberOfProduct }
             return totalPrice
     }
+
     func backToMainScreen() {
-        self.dismiss(animated: false)
-        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: false) {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 extension MenuSelectionViewController : MenuSelectionTableViewCellDelegate {

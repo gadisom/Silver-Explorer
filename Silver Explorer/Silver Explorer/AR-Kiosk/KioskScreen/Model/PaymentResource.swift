@@ -8,6 +8,12 @@
 import UIKit
 
 struct PaymentResource {
+    
+    let paymentModalTitle: [PaymentType: String] = [
+        .creditCard: "신용카드 결제",
+        .barcode: "할인/바코드 결제"
+    ]
+    
     let paymentDescriptionImages: [PaymentType: UIImage] = [
         .creditCard: #imageLiteral(resourceName: "creditPaymentImg"),
         .barcode: #imageLiteral(resourceName: "barcodePaymentImg")

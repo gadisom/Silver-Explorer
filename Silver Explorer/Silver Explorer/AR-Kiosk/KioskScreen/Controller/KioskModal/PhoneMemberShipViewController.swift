@@ -23,6 +23,7 @@ class PhoneMemberShipViewController: UIViewController, PhoneNumberMembershipDele
         initialSettingForPhoneNumberTextField()
     }
     
+    // MARK: - IBAction Method
     
     @IBAction private func phoneNumberBtnPressed(_ sender: UIButton) {
         if (sender.tag == -1) {
@@ -33,6 +34,18 @@ class PhoneMemberShipViewController: UIViewController, PhoneNumberMembershipDele
             addPhoneNumber(number: sender.tag)
         }
     }
+
+    // MARK: - Initial Setting Method
+    
+    private func initialSettingForPhoneNumberTextField() {
+        phoneNumberTextField.borderStyle = .none
+        phoneNumberTextField.layer.borderColor = UIColor(hex: "#D9D9D9").cgColor
+        phoneNumberTextField.layer.borderWidth = 1.0
+        phoneNumberTextField.layer.cornerRadius = 10.0
+        phoneNumberTextField.backgroundColor = .clear
+    }
+    
+    // MARK: - Phone Number Feature Methods
     
     private func erasePhoneNumber() {
         if (phoneNumber.count == 3) {
@@ -57,14 +70,6 @@ class PhoneMemberShipViewController: UIViewController, PhoneNumberMembershipDele
         }
         
         phoneNumber += "\(number)"
-    }
-    
-    private func initialSettingForPhoneNumberTextField() {
-        phoneNumberTextField.borderStyle = .none
-        phoneNumberTextField.layer.borderColor = UIColor(hex: "#D9D9D9").cgColor
-        phoneNumberTextField.layer.borderWidth = 1.0
-        phoneNumberTextField.layer.cornerRadius = 10.0
-        phoneNumberTextField.backgroundColor = .clear
     }
     
     func isValidPhoneNumber() -> Bool {

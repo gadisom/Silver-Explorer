@@ -7,23 +7,26 @@
 
 import UIKit
 
-class PaymentViewController: UIViewController {
+class PaymentViewController: UIViewController, ARKioskDelegate, AlertDelegate {
     
-    @IBOutlet weak var paymentImageView: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
-    let resource: PaymentResource = PaymentResource()
-    var payment : PaymentType = .none
-  //  weak var paymentTypeDelegate: SelectedPaymentTypeDelegate?
-    var paymentType: PaymentType {
-        return self.payment
-    }
+    // MARK: - IBOutlet Properties
+    
+    @IBOutlet private weak var modalTitleLabel: UILabel!
+    @IBOutlet private weak var paymentImageView: UIImageView!
+    @IBOutlet private weak var descriptionLabel: UILabel!
 
+    // MARK: Stored Properties
+
+    weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
+    private let resource: PaymentResource = PaymentResource()
+    var paymentType: PaymentType = .none
+
+    // MARK: - Instance Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        chooseDescriptionLabel()
-        choosePaymentImage()
+        renderPerPaymentMethod()
     }
     
     func appear(sender: UIViewController) {
@@ -31,6 +34,8 @@ class PaymentViewController: UIViewController {
         sender.present(self, animated: false)
     }
 
+    // MARK: - IBAction Methods
+    
     @IBAction func previousBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: false) {
             self.kioskMainBoardDelegate?.moveToPreviousModalVC(content: .payment)
@@ -38,22 +43,36 @@ class PaymentViewController: UIViewController {
     }
     
     @IBAction func arExperienceBtnPressed(_ sender: UIButton) {
-        self.dismiss(animated: false ){
-            
-            if self.paymentType == .creditCard {
-                self.kioskMainBoardDelegate?.moveToARkioskVC(call: .creditPayment)
-            } else {
-                self.kioskMainBoardDelegate?.moveToARkioskVC(call: .barcodePayment)
-            }
-        }
+        let storyboard = UIStoryboard(name: Content.ARKiosk.rawValue, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ARKioskViewController.self)) as! ARKioskViewController
+        vc.caller = (paymentType == .creditCard) ? .creditPayment : .barcodePayment
+        vc.arKioskDelegate = self
+        vc.appear(sender: self)
     }
     
-    func chooseDescriptionLabel() {
+    func renderPerPaymentMethod() {
+        modalTitleLabel.text = resource.paymentModalTitle[paymentType]!
         descriptionLabel.text = resource.paymentDescriptionText[paymentType]!
-    }
-
-    func choosePaymentImage() {
         paymentImageView.image = resource.paymentDescriptionImages[paymentType]!
-       
+    }
+    
+    // MARK: - Custom Alert Method
+    
+    private func showCustomAlert() {
+        let alertVC = self.storyboard?.instantiateViewController(withIdentifier: String(describing: AlertViewController.self)) as! AlertViewController
+        alertVC.alertDelegate = self
+        alertVC.showAlert(sender: self, text: "결제 진행 중 입니다...")
+    }
+    
+    // MARK: - Delegate Methods
+    
+    func didARKioskFinish() {
+        showCustomAlert()
+    }
+    
+    func didAlertDismiss() {
+        self.dismiss(animated: false) {
+            self.kioskMainBoardDelegate?.moveToPaymentFinishVC()
+        }
     }
 }
