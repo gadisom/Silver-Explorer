@@ -15,6 +15,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     var caller : ARCaller?
     var paymentType : PaymentType?
     weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
+    weak var arKioskDelegate: ARKioskDelegate?
     
     func loadScene() {
         
@@ -37,7 +38,9 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func buttonTapped(_ sender: Any) {
         switch caller {
         case .membership:
-            self.dismiss(animated: false)  // 위에서 정의한 PaymentSelect로 이동하는 함수
+            self.dismiss(animated: false) {
+                self.arKioskDelegate?.didARKioskFinish()
+            }
         case .paymentSelect:
             moveToPaymentFinish()  // PaymentFinishViewController로 이동하는 함수, 이것도 위와 같은 방식으로 작성해야 합니다.
         case .none:
