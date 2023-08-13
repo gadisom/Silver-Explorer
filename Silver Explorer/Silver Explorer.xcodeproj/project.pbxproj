@@ -80,7 +80,6 @@
 		AD9F67EE2A824F540056696E /* TTSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSManager.swift; sourceTree = "<group>"; };
 		AD9F67EF2A824F540056696E /* NewsPaperTextRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsPaperTextRecognizer.swift; sourceTree = "<group>"; };
 		AD9F67F42A824F5C0056696E /* DocumentDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentDataDelegate.swift; sourceTree = "<group>"; };
-		ADF844ED2A86590200DEEE79 /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silver Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF844EE2A86638400DEEE79 /* ReaderResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderResource.swift; sourceTree = "<group>"; };
 		CC23C3A82A76AB8D0024C12B /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		CC23C3AA2A76CAC10024C12B /* MembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +126,6 @@
 		FF185B512A73B589003E766E /* KioskMainBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardViewController.swift; sourceTree = "<group>"; };
 		FF464C792A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		FF502C2E2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		FF5BD6622A878BBE00E95BFA /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silver Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5BD6632A879B3A00E95BFA /* ARKioskBarcode.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskBarcode.scn; sourceTree = "<group>"; };
 		FFE1D1632A7B6D8300E4E049 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFE1D1652A7B733A00E4E049 /* MenuSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionViewController.swift; sourceTree = "<group>"; };
@@ -758,7 +756,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YWNQ4RZBTS;
+				DEVELOPMENT_TEAM = U6NUHA5DNR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -795,7 +793,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YWNQ4RZBTS;
+				DEVELOPMENT_TEAM = U6NUHA5DNR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "은빛 탐험가";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";

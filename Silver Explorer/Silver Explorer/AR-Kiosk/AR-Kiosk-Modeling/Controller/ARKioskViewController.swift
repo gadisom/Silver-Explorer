@@ -37,7 +37,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func buttonTapped(_ sender: Any) {
         switch caller {
         case .membership:
-            moveToPaymentSelect()  // 위에서 정의한 PaymentSelect로 이동하는 함수
+            self.dismiss(animated: false)  // 위에서 정의한 PaymentSelect로 이동하는 함수
         case .paymentSelect:
             moveToPaymentFinish()  // PaymentFinishViewController로 이동하는 함수, 이것도 위와 같은 방식으로 작성해야 합니다.
         case .none:
@@ -73,9 +73,10 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         loadScene()
         sceneView.delegate = self
-        sceneView.showsStatistics = true
         sceneView.autoenablesDefaultLighting = true
         self.vwContainer.isHidden = true
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light}
     }
 
     override func viewWillAppear(_ animated: Bool) {

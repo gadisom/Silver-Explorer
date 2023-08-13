@@ -71,7 +71,7 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if cartItems.count < 5 {
             let product = list[indexPath.item]
-            selectedProduct = Product(productName: product.name, productType: product.type, price: product.price)
+            selectedProduct = Product(productName: product.name, productType: product.type, price: product.price, productImage: product.imageName)
             
             let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ProductOptionSelectViewController") as! ProductOptionSelectViewController
