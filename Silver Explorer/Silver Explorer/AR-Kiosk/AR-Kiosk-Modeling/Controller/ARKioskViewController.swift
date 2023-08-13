@@ -20,9 +20,9 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     func loadScene() {
         
         switch caller {
-        case .membership:
+        case .membership, .barcodePayment:
             sceneName = "ARKioskBarcode.scn"
-        case .paymentSelect:
+        case .creditPayment:
             sceneName = "ARKiosk.scn"
         default:
             break
@@ -41,7 +41,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
             self.dismiss(animated: false) {
                 self.arKioskDelegate?.didARKioskFinish()
             }
-        case .paymentSelect:
+        case .creditPayment, .barcodePayment:
             moveToPaymentFinish()  // PaymentFinishViewController로 이동하는 함수, 이것도 위와 같은 방식으로 작성해야 합니다.
         case .none:
             // 에러 처리나 기본 화면으로 돌아가는 로직
@@ -74,6 +74,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        animateButton()
         loadScene()
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
@@ -116,7 +117,6 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
                            self.pokeNode = pokeNode
                            planeNode.addChildNode(pokeNode)
                            pokeNode.eulerAngles.x = .pi/2
-                           animateButton()
                        }
                    }
                }

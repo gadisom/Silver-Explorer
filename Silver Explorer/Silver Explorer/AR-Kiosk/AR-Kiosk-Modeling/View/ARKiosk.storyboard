@@ -24,13 +24,13 @@
                                 <rect key="frame" x="16" y="59.000000000000014" width="196.66666666666666" height="170.33333333333337"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFw-0S-tPy">
-                                        <rect key="frame" x="33.333333333333343" y="67.666666666666671" width="70" height="35"/>
+                                        <rect key="frame" x="10" y="20" width="100" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="R0S-vd-k8W"/>
-                                            <constraint firstAttribute="width" constant="70" id="rbj-cd-P0s"/>
+                                            <constraint firstAttribute="height" constant="50" id="R0S-vd-k8W"/>
+                                            <constraint firstAttribute="width" constant="100" id="rbj-cd-P0s"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title="이전" cornerStyle="large">
+                                        <buttonConfiguration key="configuration" style="filled" title="체험종료" cornerStyle="large">
                                             <color key="baseBackgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -40,8 +40,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="hFw-0S-tPy" firstAttribute="centerY" secondItem="XFm-Ax-ovp" secondAttribute="centerY" id="6Jv-bi-MRx"/>
-                                    <constraint firstItem="hFw-0S-tPy" firstAttribute="centerX" secondItem="XFm-Ax-ovp" secondAttribute="centerX" constant="-30" id="zH4-eB-IaF"/>
+                                    <constraint firstItem="hFw-0S-tPy" firstAttribute="top" secondItem="XFm-Ax-ovp" secondAttribute="top" constant="20" id="JyK-Vq-fZZ"/>
+                                    <constraint firstItem="hFw-0S-tPy" firstAttribute="leading" secondItem="XFm-Ax-ovp" secondAttribute="leading" constant="10" id="Ogh-0V-pAk"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -69,7 +69,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

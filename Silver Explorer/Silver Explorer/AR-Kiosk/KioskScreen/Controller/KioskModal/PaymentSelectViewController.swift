@@ -66,7 +66,7 @@ class PaymentSelectViewController: UIViewController {
     @IBAction func paymentBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: false)
 
-        kioskMainBoardDelegate?.moveToPaymentVC(paymentType: self.paymentMethod, call: .paymentSelect)
+        kioskMainBoardDelegate?.moveToPaymentVC(paymentType: self.paymentMethod, call: .creditPayment)
     }
     
     func initialSettingForTextField() {

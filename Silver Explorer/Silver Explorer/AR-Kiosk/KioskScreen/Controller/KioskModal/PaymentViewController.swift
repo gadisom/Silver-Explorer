@@ -39,10 +39,11 @@ class PaymentViewController: UIViewController {
     
     @IBAction func arExperienceBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: false ){
+            
             if self.paymentType == .creditCard {
-                self.kioskMainBoardDelegate?.moveToARkioskVC(call: .paymentSelect)
+                self.kioskMainBoardDelegate?.moveToARkioskVC(call: .creditPayment)
             } else {
-                self.kioskMainBoardDelegate?.moveToARkioskVC(call: .membership)
+                self.kioskMainBoardDelegate?.moveToARkioskVC(call: .barcodePayment)
             }
         }
     }

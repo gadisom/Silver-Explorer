@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Home Enum
 enum ARCaller {
-    case membership,paymentSelect
+    case membership,creditPayment,barcodePayment
 }
 
 enum Content: String {
