@@ -18,13 +18,10 @@ class ScannerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         // Do any additional setup after loading the view.
         let scannerViewController = VNDocumentCameraViewController()
         scannerViewController.delegate = self
         self.present(scannerViewController, animated: true)
-        
         
         let storyboard = UIStoryboard(name: "Reader", bundle: Bundle.main)
 
@@ -38,21 +35,26 @@ class ScannerViewController: UIViewController {
 
 extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
-        for pageNumber in 0..<scan.pageCount {
-            let docImage = scan.imageOfPage(at: pageNumber)
-            documents.append(docImage)
+        guard scan.pageCount > 0 else {
+            controller.dismiss(animated: true)
+            self.navigationController?.popToRootViewController(animated: true)
+            return
         }
+        let documentImage = scan.imageOfPage(at: 0)
+        documents.append(documentImage)
 
         controller.dismiss(animated: true)
     }
 
     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
         controller.dismiss(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
         print(error)
         controller.dismiss(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
 
