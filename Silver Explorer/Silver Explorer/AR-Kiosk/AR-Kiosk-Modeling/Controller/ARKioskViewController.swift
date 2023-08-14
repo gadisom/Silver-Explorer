@@ -23,7 +23,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         case .membership, .barcodePayment:
             sceneName = "ARKioskBarcode.scn"
         case .creditPayment:
-            sceneName = "ARKiosk.scn"
+            sceneName = "ARKioskCreditCard.scn"
         default:
             break
         }

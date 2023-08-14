@@ -36,7 +36,7 @@
 		CC47C8C52A83768200B257AF /* HomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47C8C42A83768200B257AF /* HomeDelegate.swift */; };
 		CC4AA4A82A88F228005C3201 /* ARKioskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4AA4A72A88F228005C3201 /* ARKioskDelegate.swift */; };
 		CC4AA4AA2A88F6C7005C3201 /* ARKioskBarcode.scn in Resources */ = {isa = PBXBuildFile; fileRef = CC4AA4A92A88F6C7005C3201 /* ARKioskBarcode.scn */; };
-		CC4AA4AC2A88F6D4005C3201 /* ARKiosk.scn in Resources */ = {isa = PBXBuildFile; fileRef = CC4AA4AB2A88F6D4005C3201 /* ARKiosk.scn */; };
+		CC4AA4AC2A88F6D4005C3201 /* ARKioskCreditCard.scn in Resources */ = {isa = PBXBuildFile; fileRef = CC4AA4AB2A88F6D4005C3201 /* ARKioskCreditCard.scn */; };
 		CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57ABEC2A710A4200E892FF /* AppDelegate.swift */; };
 		CC57ABEF2A710A4200E892FF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABEE2A710A4200E892FF /* art.scnassets */; };
 		CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABF72A710A4300E892FF /* LaunchScreen.storyboard */; };
@@ -101,7 +101,7 @@
 		CC47C8C42A83768200B257AF /* HomeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDelegate.swift; sourceTree = "<group>"; };
 		CC4AA4A72A88F228005C3201 /* ARKioskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskDelegate.swift; sourceTree = "<group>"; };
 		CC4AA4A92A88F6C7005C3201 /* ARKioskBarcode.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskBarcode.scn; sourceTree = "<group>"; };
-		CC4AA4AB2A88F6D4005C3201 /* ARKiosk.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKiosk.scn; sourceTree = "<group>"; };
+		CC4AA4AB2A88F6D4005C3201 /* ARKioskCreditCard.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskCreditCard.scn; sourceTree = "<group>"; };
 		CC57ABEC2A710A4200E892FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC57ABEE2A710A4200E892FF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		CC57ABF82A710A4300E892FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -441,7 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				FF185B392A739C4F003E766E /* ARKiosk.usdz */,
-				CC4AA4AB2A88F6D4005C3201 /* ARKiosk.scn */,
+				CC4AA4AB2A88F6D4005C3201 /* ARKioskCreditCard.scn */,
 				CC4AA4A92A88F6C7005C3201 /* ARKioskBarcode.scn */,
 				FF185B432A73AD7B003E766E /* ARKiosk.storyboard */,
 			);
@@ -573,7 +573,7 @@
 				FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */,
 				FF185B4E2A73B4B0003E766E /* camera.png in Resources */,
 				AD9F67E32A824F1B0056696E /* Scanner.storyboard in Resources */,
-				CC4AA4AC2A88F6D4005C3201 /* ARKiosk.scn in Resources */,
+				CC4AA4AC2A88F6D4005C3201 /* ARKioskCreditCard.scn in Resources */,
 				FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */,
 				FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */,
 				CC4AA4AA2A88F6C7005C3201 /* ARKioskBarcode.scn in Resources */,
