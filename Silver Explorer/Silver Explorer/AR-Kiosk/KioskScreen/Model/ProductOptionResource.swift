@@ -21,14 +21,16 @@ struct Product {
     var numberOfProduct: Int
     let singleProductPrice: Int
     let totalProductPrice: Int
+    let productImage : String
     
     // KioskMainBoard에서 넘겨줄 때 사용할 이니셜라이저
-    init(productName: String, productType: ProductType, price: Int) {
+    init(productName: String, productType: ProductType, price: Int, productImage : String) {
         self.productName = productName
         self.productType = productType
         self.singleProductPrice = price
         self.totalProductPrice = 0
         self.numberOfProduct = 1
+        self.productImage = productImage
     }
     
     // ProductOptionSelect에서 넘겨줄 때 사용할 이니셜라이저
@@ -38,5 +40,6 @@ struct Product {
         self.numberOfProduct = numberOfProduct
         self.singleProductPrice = singleProductPrice
         self.totalProductPrice = totalProductPrice
+        self.productImage = ""
     }
 }

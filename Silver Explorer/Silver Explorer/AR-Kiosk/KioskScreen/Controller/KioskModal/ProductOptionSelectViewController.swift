@@ -36,7 +36,6 @@ class ProductOptionSelectViewController: UIViewController {
     private var selectedIceBtnView: UIView!
 
     // MARK: - Computed Properties
-
     private var productName: String {
         guard let name = kioskMenuBoardDelegate?.productForSelectingOption().productName else {
             self.dismiss(animated: false)
@@ -50,6 +49,13 @@ class ProductOptionSelectViewController: UIViewController {
             return .none
         }
         return type
+    }
+    private var productImage : String {
+        guard let name = kioskMenuBoardDelegate?.productForSelectingOption().productImage else {
+            self.dismiss(animated: false)
+            return ""
+        }
+        return name
     }
     
     // MARK: - Property Observers
@@ -182,7 +188,7 @@ extension ProductOptionSelectViewController {
         singlePrice = price
         
         productNameLabel.text = productName
-        productImageView.image = resource.productImages[productType]!
+        productImageView.image = UIImage(named: productImage)
         
         renderDefaultTempSelectButton()
         renderDefaultSizeSelectButton()

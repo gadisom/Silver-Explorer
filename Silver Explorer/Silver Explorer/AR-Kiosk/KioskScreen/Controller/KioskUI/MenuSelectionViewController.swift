@@ -71,7 +71,7 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if cartItems.count < 5 {
             let product = list[indexPath.item]
-            selectedProduct = Product(productName: product.name, productType: product.type, price: product.price)
+            selectedProduct = Product(productName: product.name, productType: product.type, price: product.price, productImage: product.imageName)
             
             let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ProductOptionSelectViewController") as! ProductOptionSelectViewController
@@ -148,18 +148,10 @@ extension MenuSelectionViewController : KioskMainBoardDelegate {
         vc.appear(sender: self)
         
     }
-    func moveToPaymentVC(paymentType: PaymentType, call : ARCaller) {
+    func moveToPaymentVC(paymentType: PaymentType) {
         let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
-        vc.payment = paymentType
-        vc.appear(sender: self)
-        vc.kioskMainBoardDelegate = self
-    }
-
-    func moveToARkioskVC(call : ARCaller) {
-        let storyboard = UIStoryboard(name: "ARKiosk", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ARKioskViewController") as! ARKioskViewController
-        vc.caller = call 
+        vc.paymentType = paymentType
         vc.kioskMainBoardDelegate = self
         vc.appear(sender: self)
     }
@@ -180,13 +172,30 @@ extension MenuSelectionViewController : KioskMainBoardDelegate {
         updateTotalPrice()
 
     }
+    
+    func moveToPreviousModalVC(content: KioskModalContent) {
+        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+        switch content {
+        case .membership:
+            let vc = storyboard.instantiateViewController(withIdentifier: content.rawValue) as! MembershipViewController
+            vc.kioskMainBoardDelegate = self
+            vc.appear(sender: self)
+        case .payment:
+            let vc = storyboard.instantiateViewController(withIdentifier: content.rawValue) as! PaymentSelectViewController
+            vc.kioskMainBoardDelegate = self
+            vc.appear(sender: self)
+        }
+    }
+    
     func totalPriceForPayment() -> Int {
         let totalPrice = cartItems.reduce(0) { $0 + $1.singleProductPrice * $1.numberOfProduct }
             return totalPrice
     }
+
     func backToMainScreen() {
-        self.dismiss(animated: false)
-        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: false) {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 extension MenuSelectionViewController : MenuSelectionTableViewCellDelegate {

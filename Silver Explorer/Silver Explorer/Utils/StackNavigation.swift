@@ -8,9 +8,7 @@
 import UIKit
 
 func moveBacktoHome(vc: UIViewController) {
-//   let storyboard = UIStoryboard(name: "KioskMainBoard", bundle: nil)
-//    guard let vc = storyboard.instantiateViewController(withIdentifier: "KioskMainBoardViewController") as? KioskMainBoardViewController else {return}
-//    vc.appear(sender: self)
+
     
 }
 
@@ -48,13 +46,6 @@ func moveToUIExploreVC(vc: UIViewController) {
     
     nextVC.arCharacterDelegate = vc as! ARCharacterSelectViewController
     vc.navigationController?.pushViewController(nextVC, animated: true)
-}
-
-func moveToARKioskVC(vc: UIViewController) {
-    let storyboard = UIStoryboard(name: "ARKiosk", bundle: nil)
-    guard let nextVC = storyboard.instantiateViewController(withIdentifier: "ARKioskViewController") as? ARKioskViewController else { return }
-    vc.present(nextVC, animated: true)
-//    vc.navigationController?.pushViewController(nextVC, animated: true)
 }
 
 func moveToKioskHomeVC (vc : UIViewController)

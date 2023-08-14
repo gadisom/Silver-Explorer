@@ -20,12 +20,14 @@ class MenuCollectionViewCell: UICollectionViewCell
         
         
     }
+    
+    // 컬렉션뷰 셀 구성
     func configure (_ info : menuInfo)
     {
         menuName.text = info.name
         menuImage.image = UIImage(named: info.imageName)
         menuName.numberOfLines = 0
-        currentInfo = Product(productName: info.name, productType: info.type, price: info.price)
+        currentInfo = Product(productName: info.name, productType: info.type, price: info.price, productImage: info.imageName)
         
     }
 }

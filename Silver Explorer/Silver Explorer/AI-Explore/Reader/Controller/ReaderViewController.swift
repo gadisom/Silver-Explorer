@@ -25,17 +25,19 @@ class ReaderViewController: UIViewController {
     
     
     var fontSize: FontSizeType = .Normal {
-        willSet {
-//            fontSizeButton.titleLabel?.text = readerResource.fontButtonText[newValue]!
-            fontSizeButton.setTitle(readerResource.fontButtonText[newValue], for: .normal)
-            fontSizeButton.titleLabel?.font = readerResource.buttonFont
-            textLabel.font = UIFont.systemFont(ofSize: readerResource.fontSize[newValue]!)
+        didSet {
+            self.fontSizeButton.setTitle(self.readerResource.fontButtonText[self.fontSize], for: .normal)
+            self.fontSizeButton.titleLabel?.font = readerResource.buttonFont
+            textLabel.font = UIFont.systemFont(ofSize: readerResource.fontSize[fontSize]!)
+            fontSizeButton.layoutIfNeeded()
         }
     }
     
     var ttsStatus: TTSStatusType = .Off {
         willSet {
-            ttsButton.titleLabel?.text = readerResource.ttsButtonText[newValue]
+            self.ttsButton.setTitle(readerResource.ttsButtonText[newValue], for: .normal)
+            self.ttsButton.titleLabel?.font = readerResource.buttonFont
+            ttsButton.layoutIfNeeded()
         }
     }
     
@@ -47,6 +49,8 @@ class ReaderViewController: UIViewController {
         TTSManager.shared.setText(text: textLabel.text)
         TTSManager.shared.setDelegate(readerVC: self)
         showImages()
+        makeCornerRoundShape(targetView: fontSizeButton, cornerRadius: 10)
+        makeCornerRoundShape(targetView: ttsButton, cornerRadius: 10)
     }
     
     private func loadDocumentData() {
@@ -88,13 +92,6 @@ class ReaderViewController: UIViewController {
         }
         
         if let firstImage = uiImageViews.first {
-//            let newConstraint = NSLayoutConstraint(item: textLabel!, attribute: .bottom, relatedBy: .equal, toItem: firstImage, attribute: .top, multiplier: 1.0, constant: 10)
-//            scrollView.removeConstraint(labelBottomConstraint)
-//            scrollView.addConstraint(newConstraint)
-            
-//            NSLayoutConstraint.activate([
-//                scrollView.heightAnchor.constraint(equalToConstant: yOffset)
-//            ])
             labelBottomConstraint.constant += yOffset - textLabel.frame.height
             
             var imageViewIterator = uiImageViews.makeIterator()
@@ -116,15 +113,13 @@ class ReaderViewController: UIViewController {
                 ])
                 currentImageView = nextImageView
             }
-//
-//            NSLayoutConstraint.activate([
-//                currentImageView!.leadingAnchor.constraint(equalTo: scrollViewSub.leadingAnchor),
-//                currentImageView!.widthAnchor.constraint(equalToConstant: scrollViewSub.frame.width),
-////                scrollViewSub.bottomAnchor.constraint(equalTo: currentImageView!.bottomAnchor)
-//            ])
         }
     }
     
+    @IBAction func clickPreviousButton(_ sender: Any) {
+        TTSManager.shared.stop()
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     @IBAction func clickFontSizeButton(_ sender: Any) {
         if fontSize == .Normal {

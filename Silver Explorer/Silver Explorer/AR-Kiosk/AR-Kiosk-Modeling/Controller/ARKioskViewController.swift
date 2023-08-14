@@ -14,57 +14,45 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     var sceneName: String?
     var caller : ARCaller?
     var paymentType : PaymentType?
+    
     weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
+    weak var arKioskDelegate: ARKioskDelegate?
     
     func loadScene() {
-        
         switch caller {
-        case .membership:
+        case .membership, .barcodePayment:
             sceneName = "ARKioskBarcode.scn"
-        case .paymentSelect:
-            sceneName = "ARKiosk.scn"
+        case .creditPayment:
+            sceneName = "ARKioskCreditCard.scn"
         default:
             break
         }
-        //self.sceneName = name
     }
     func appear(sender: UIViewController) {
         self.modalPresentationStyle = .overFullScreen
         sender.present(self, animated: false)
     }
     
-    @IBOutlet weak var vwContainer: UIView!
-    @IBAction func buttonTapped(_ sender: Any) {
-        switch caller {
-        case .membership:
-            moveToPaymentSelect()  // 위에서 정의한 PaymentSelect로 이동하는 함수
-        case .paymentSelect:
-            moveToPaymentFinish()  // PaymentFinishViewController로 이동하는 함수, 이것도 위와 같은 방식으로 작성해야 합니다.
-        case .none:
-            // 에러 처리나 기본 화면으로 돌아가는 로직
-            break
-        }
+    @IBOutlet weak var arExperienceButton: UIButton!
+    @IBOutlet weak var buttonView: UIView!
 
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        self.dismiss(animated: false) {
+            self.arKioskDelegate?.didARKioskFinish()
+        }
     }
+    
     @IBOutlet var sceneView: ARSCNView!
     var pokeNode : SCNNode?
-    func moveToPaymentSelect() {
-        self.dismiss(animated: false)
-        kioskMainBoardDelegate?.didMembershipVCFinish()
-    }
-    func moveToPaymentFinish() {
-        self.dismiss(animated: false)
-        kioskMainBoardDelegate?.moveToPaymentFinishVC()
-    }
     
     // 버튼 콘테이너 애니메이션 관련 프로퍼티
     func animateButton ()
     {
         DispatchQueue.main.async {
-            self.vwContainer.alpha = 0.0
-            self.vwContainer.isHidden = false
+            self.buttonView.alpha = 0.0
+            self.arExperienceButton.setTitle("체험 종료", for: .normal)
             UIView.animate(withDuration: 1.0, delay: 0.5,options: .curveEaseIn, animations: {
-                self.vwContainer.alpha = 1.0
+                self.buttonView.alpha = 1.0
             })
         }
 
@@ -73,9 +61,8 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         loadScene()
         sceneView.delegate = self
-        sceneView.showsStatistics = true
         sceneView.autoenablesDefaultLighting = true
-        self.vwContainer.isHidden = true
+        makeCornerRoundShape(targetView: self.buttonView, cornerRadius: 10)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -96,6 +83,8 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     }
   
     func renderer (_ renderer : SCNSceneRenderer, nodeFor anchor: ARAnchor )-> SCNNode? {
+        
+        animateButton()
         let node = SCNNode()
         
         if let imageAnchor = anchor as? ARImageAnchor {
@@ -112,7 +101,6 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
                            self.pokeNode = pokeNode
                            planeNode.addChildNode(pokeNode)
                            pokeNode.eulerAngles.x = .pi/2
-                           animateButton()
                        }
                    }
                }

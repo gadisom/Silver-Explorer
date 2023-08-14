@@ -7,7 +7,9 @@
 
 import UIKit
 
-class MembershipViewController: UIViewController, AlertDelegate {
+class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate {
+    
+    // MARK: - IBOutlet Properties
     
     @IBOutlet private weak var barcodeMembershipContainerView: UIView!
     @IBOutlet private weak var phoneMembershipContainerView: UIView!
@@ -15,8 +17,12 @@ class MembershipViewController: UIViewController, AlertDelegate {
     @IBOutlet private weak var arExperienceButton: UIButton!
     @IBOutlet private weak var membershipButton: UIButton!
     
+    // MARK: Delegate Properties
+    
     weak var kioskMainBoardDelegate: KioskMainBoardDelegate?
     weak var phoneNumberDelegate: PhoneNumberMembershipDelegate?
+    
+    // MARK: - Instance Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +37,8 @@ class MembershipViewController: UIViewController, AlertDelegate {
         sender.present(self, animated: false)
     }
 
+    // MARK: - IBAction Methods
+    
     @IBAction private func membershipMethodSelected(_ sender: UISegmentedControl) {
         if (sender.selectedSegmentIndex == 0) {
             renderPhoneNumberMembershipScreen()
@@ -52,10 +60,14 @@ class MembershipViewController: UIViewController, AlertDelegate {
     }
 
     @IBAction private func arExperienceBtnPressed(_ sender: UIButton) {
-        // AR 키오스크 띄우기!!!!!!!
-        self.dismiss(animated: false)
-        kioskMainBoardDelegate?.moveToARkioskVC(call: .membership)
+        let storyboard = UIStoryboard(name: Content.ARKiosk.rawValue, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ARKioskViewController.self)) as! ARKioskViewController
+        vc.caller = .membership
+        vc.arKioskDelegate = self
+        vc.appear(sender: self)
     }
+    
+    // MARK: - Initial Setting Methods
     
     private func initialSettingForSegmentControl() {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -69,6 +81,8 @@ class MembershipViewController: UIViewController, AlertDelegate {
             }
         }
     }
+    
+    // MARK: - Container View Control Methods
     
     private func renderPhoneNumberMembershipScreen() {
         phoneMembershipContainerView.isHidden = false
@@ -86,15 +100,23 @@ class MembershipViewController: UIViewController, AlertDelegate {
         membershipButton.isHidden = true
     }
     
+    // MARK: - Custom Alert Method
+    
     private func showCustomAlert() {
         let alertVC = self.storyboard?.instantiateViewController(withIdentifier: String(describing: AlertViewController.self)) as! AlertViewController
         alertVC.alertDelegate = self
         alertVC.showAlert(sender: self, text: "스탬프가 적립되었습니다.")
     }
     
+    // MARK: - Delegate Mehtods
+    
     func didAlertDismiss() {
         self.dismiss(animated: false) {
             self.kioskMainBoardDelegate?.didMembershipVCFinish()
         }
+    }
+    
+    func didARKioskFinish() {
+        showCustomAlert()
     }
 }
