@@ -38,11 +38,6 @@ class TTSManager {
     }
         
     internal func play() {
-        if synthesizer.isSpeaking {
-            print("Speaking?")
-            return
-        }
-        
         let utterance = AVSpeechUtterance(string: self.text)
         utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
         utterance.rate = 0.5
@@ -68,5 +63,9 @@ class TTSManager {
         }
         
         synthesizer.continueSpeaking()
+    }
+    
+    internal func stop() {
+        synthesizer.stopSpeaking(at: .immediate)
     }
 }
