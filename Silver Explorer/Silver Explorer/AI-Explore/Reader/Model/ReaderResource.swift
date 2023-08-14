@@ -26,7 +26,7 @@ struct ReaderResource {
         .Paused: "계속읽기"
     ]
     
-    let buttonFont = UIFont(name: "system", size: 22)
+    let buttonFont = UIFont.systemFont(ofSize: 22, weight: .semibold)
 }
 
 enum FontSizeType {

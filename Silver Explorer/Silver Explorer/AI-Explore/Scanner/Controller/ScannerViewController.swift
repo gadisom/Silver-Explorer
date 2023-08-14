@@ -11,11 +11,14 @@ import CoreML
 import VisionKit
 
 class ScannerViewController: UIViewController {
+    
     let documentTexts: [String]? = nil
     var documents: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         // Do any additional setup after loading the view.
         let scannerViewController = VNDocumentCameraViewController()
