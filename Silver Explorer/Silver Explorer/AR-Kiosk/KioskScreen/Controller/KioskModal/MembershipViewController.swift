@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import ARKit
+import SceneKit
 
 class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate {
     
@@ -62,7 +64,6 @@ class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate
     @IBAction private func arExperienceBtnPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: Content.ARKiosk.rawValue, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ARKioskViewController.self)) as! ARKioskViewController
-        vc.caller = .membership
         vc.arKioskDelegate = self
         vc.appear(sender: self)
     }
@@ -118,5 +119,13 @@ class MembershipViewController: UIViewController, ARKioskDelegate, AlertDelegate
     
     func didARKioskFinish() {
         showCustomAlert()
+    }
+
+    func selectedARKiosk() -> ARKioskModel? {
+        guard let containerNode: SCNNode = ARKioskForBarcode.makeContainerNode() else {
+            return nil
+        }
+        
+        return ARKioskForBarcode(containerNode: containerNode)
     }
 }

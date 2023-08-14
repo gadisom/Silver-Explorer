@@ -11,39 +11,78 @@ import ARKit
 
 class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     
-    var sceneName: String?
-    var caller : ARCaller?
+    // MARK: - IBOutlet Properties
+    
+    @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var arExperienceButton: UIButton!
+    @IBOutlet weak var buttonView: UIView!
+    
+    // MARK: - Stored Properties
+    
+    private let arKioskExplore: ARKioskExplore = ARKioskExplore()
+    private var pokeNode : SCNNode?
+    private var sceneName: String?
+    private var arKiosk: ARKioskModel!
     var paymentType : PaymentType?
+    
+    // MARK: - Delegate Properties
     
     weak var kioskMainBoardDelegate : KioskMainBoardDelegate?
     weak var arKioskDelegate: ARKioskDelegate?
     
-    func loadScene() {
-        switch caller {
-        case .membership, .barcodePayment:
-            sceneName = "ARKioskBarcode.scn"
-        case .creditPayment:
-            sceneName = "ARKioskCreditCard.scn"
-        default:
-            break
-        }
+    // MARK: - Instance Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        sceneView.delegate = self
+        sceneView.autoenablesDefaultLighting = true
+        setARKiosk()
+        makeCornerRoundShape(targetView: self.buttonView, cornerRadius: 10)
+        
+        arKioskExplore.addSwipeGestureRecognizer(targetCharacter: arKiosk, handler: #selector(arKiosk.rightAngleRotate), sceneView: sceneView)
+        arKioskExplore.addPinchGestureRecognizer(targetCharacter: arKiosk, handler: #selector(arKiosk.scaleUpAndDown), sceneView: sceneView)
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let configuration = ARImageTrackingConfiguration()
+        
+        if let imageToTrack = ARReferenceImage.referenceImages(inGroupNamed: "Explore Ticket", bundle: Bundle.main){
+            configuration.trackingImages = imageToTrack
+            configuration.maximumNumberOfTrackedImages = 1
+        }
+        sceneView.session.run(configuration)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        sceneView.session.pause()
+        
+    }
+
     func appear(sender: UIViewController) {
         self.modalPresentationStyle = .overFullScreen
         sender.present(self, animated: false)
     }
     
-    @IBOutlet weak var arExperienceButton: UIButton!
-    @IBOutlet weak var buttonView: UIView!
 
+    // MARK: - IBAction Method
+    
     @IBAction func buttonTapped(_ sender: UIButton) {
         self.dismiss(animated: false) {
             self.arKioskDelegate?.didARKioskFinish()
         }
     }
     
-    @IBOutlet var sceneView: ARSCNView!
-    var pokeNode : SCNNode?
+    // MARK: - Initial Setting Methods
+    
+    func setARKiosk() {
+        guard let kiosk = arKioskDelegate?.selectedARKiosk() else {
+            return
+        }
+        self.arKiosk = kiosk
+        self.arKiosk.setSceneView(sceneView: sceneView)
+    }
     
     // 버튼 콘테이너 애니메이션 관련 프로퍼티
     func animateButton ()
@@ -57,56 +96,15 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         }
 
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadScene()
-        sceneView.delegate = self
-        sceneView.autoenablesDefaultLighting = true
-        makeCornerRoundShape(targetView: self.buttonView, cornerRadius: 10)
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let configuration = ARImageTrackingConfiguration()
-        
-        if let imageToTrack = ARReferenceImage.referenceImages(inGroupNamed: "ARKiosk", bundle: Bundle.main){
-            configuration.trackingImages = imageToTrack
-            configuration.maximumNumberOfTrackedImages = 1
-        }
-        sceneView.session.run(configuration)
-       
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        sceneView.session.pause()
-        
-    }
   
     func renderer (_ renderer : SCNSceneRenderer, nodeFor anchor: ARAnchor )-> SCNNode? {
-        
         animateButton()
-        let node = SCNNode()
-        
-        if let imageAnchor = anchor as? ARImageAnchor {
-            let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
-            plane.firstMaterial?.diffuse.contents = UIColor(white: 1.0, alpha: 1.0)
-            
-            let planeNode = SCNNode(geometry: plane)
-            planeNode.eulerAngles.x = -.pi/2
-            node.addChildNode(planeNode)
-            
-            if let sceneName = sceneName {
-                   if let pokeScene = SCNScene(named: sceneName) {
-                       if let pokeNode = pokeScene.rootNode.childNodes.first {
-                           self.pokeNode = pokeNode
-                           planeNode.addChildNode(pokeNode)
-                           pokeNode.eulerAngles.x = .pi/2
-                       }
-                   }
-               }
+
+        guard let imageAnchor = anchor as? ARImageAnchor else {
+            return nil
         }
         
-        return node
+        return arKiosk.kioskContainerNode
     }
  
 }

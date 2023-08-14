@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import ARKit
+import SceneKit
 
 class PaymentViewController: UIViewController, ARKioskDelegate, AlertDelegate {
     
@@ -45,7 +47,6 @@ class PaymentViewController: UIViewController, ARKioskDelegate, AlertDelegate {
     @IBAction func arExperienceBtnPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: Content.ARKiosk.rawValue, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: String(describing: ARKioskViewController.self)) as! ARKioskViewController
-        vc.caller = (paymentType == .creditCard) ? .creditPayment : .barcodePayment
         vc.arKioskDelegate = self
         vc.appear(sender: self)
     }
@@ -73,6 +74,25 @@ class PaymentViewController: UIViewController, ARKioskDelegate, AlertDelegate {
     func didAlertDismiss() {
         self.dismiss(animated: false) {
             self.kioskMainBoardDelegate?.moveToPaymentFinishVC()
+        }
+    }
+    
+    func selectedARKiosk() -> ARKioskModel? {
+        switch paymentType {
+        case .creditCard:
+            guard let containerNode: SCNNode = ARKioskForCreditCard.makeContainerNode() else {
+                return nil
+            }
+
+            return ARKioskForCreditCard(containerNode: containerNode)
+        case .barcode:
+            guard let containerNode: SCNNode = ARKioskForBarcode.makeContainerNode() else {
+                return nil
+            }
+    
+            return ARKioskForBarcode(containerNode: containerNode)
+        default:
+            return nil
         }
     }
 }

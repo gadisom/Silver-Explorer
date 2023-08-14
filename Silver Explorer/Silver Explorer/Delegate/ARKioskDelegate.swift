@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ARKioskDelegate: AnyObject {
+    func selectedARKiosk() -> ARKioskModel?
     func didARKioskFinish()
 }
