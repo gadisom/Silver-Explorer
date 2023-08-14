@@ -69,7 +69,6 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARImageTrackingConfiguration()
         
         guard let trackingImage = ARReferenceImage.referenceImages(inGroupNamed: "Explore Ticket", bundle: Bundle.main) else {
-            print("HI")
             return
         }
         
@@ -88,15 +87,11 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
    
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-       guard let imageAnchor = anchor as? ARImageAnchor else {
-           return nil
-       }
-       
-       if imageAnchor.referenceImage.name == "card1" {
-           return arCharacter.characterContainerNode
-       }
-       
-       return nil
+        guard let imageAnchor = anchor as? ARImageAnchor else {
+            return nil
+        }
+        
+        return arCharacter.characterContainerNode
    }
     
     // MARK: - Move Stage IBAction Methods

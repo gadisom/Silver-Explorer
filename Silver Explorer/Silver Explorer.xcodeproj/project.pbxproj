@@ -35,8 +35,8 @@
 		CC47C8C32A836FE700B257AF /* ContentDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47C8C22A836FE700B257AF /* ContentDescriptionViewController.swift */; };
 		CC47C8C52A83768200B257AF /* HomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47C8C42A83768200B257AF /* HomeDelegate.swift */; };
 		CC4AA4A82A88F228005C3201 /* ARKioskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4AA4A72A88F228005C3201 /* ARKioskDelegate.swift */; };
-		CC4AA4AA2A88F6C7005C3201 /* ARKioskBarcode.scn in Resources */ = {isa = PBXBuildFile; fileRef = CC4AA4A92A88F6C7005C3201 /* ARKioskBarcode.scn */; };
-		CC4AA4AC2A88F6D4005C3201 /* ARKioskCreditCard.scn in Resources */ = {isa = PBXBuildFile; fileRef = CC4AA4AB2A88F6D4005C3201 /* ARKioskCreditCard.scn */; };
+		CC4AA4AA2A88F6C7005C3201 /* ARKioskForBarcode.scn in Resources */ = {isa = PBXBuildFile; fileRef = CC4AA4A92A88F6C7005C3201 /* ARKioskForBarcode.scn */; };
+		CC4AA4AC2A88F6D4005C3201 /* ARKioskForCreditCard.scn in Resources */ = {isa = PBXBuildFile; fileRef = CC4AA4AB2A88F6D4005C3201 /* ARKioskForCreditCard.scn */; };
 		CC57ABED2A710A4200E892FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57ABEC2A710A4200E892FF /* AppDelegate.swift */; };
 		CC57ABEF2A710A4200E892FF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABEE2A710A4200E892FF /* art.scnassets */; };
 		CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC57ABF72A710A4300E892FF /* LaunchScreen.storyboard */; };
@@ -52,6 +52,10 @@
 		CCB04B302A7A31060035483C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB04B2F2A7A31060035483C /* Extension.swift */; };
 		CCB7B4352A777EA900EE46AA /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */; };
 		CCB7B4372A7782FA00EE46AA /* PaymentFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */; };
+		CCE801A02A89FD4100FE0994 /* ARKioskForBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE8019F2A89FD4100FE0994 /* ARKioskForBarcode.swift */; };
+		CCE801A22A89FD8600FE0994 /* ARKioskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE801A12A89FD8600FE0994 /* ARKioskModel.swift */; };
+		CCE801A42A8A05E000FE0994 /* ARKioskExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE801A32A8A05E000FE0994 /* ARKioskExplore.swift */; };
+		CCE801A82A8A0AA800FE0994 /* ARKioskForCreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE801A62A8A09E500FE0994 /* ARKioskForCreditCard.swift */; };
 		CCFE1C9B2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE1C9A2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift */; };
 		CCFE1C9D2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFE1C9C2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift */; };
 		FF185B442A73AD7B003E766E /* ARKiosk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF185B432A73AD7B003E766E /* ARKiosk.storyboard */; };
@@ -100,8 +104,8 @@
 		CC47C8C22A836FE700B257AF /* ContentDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDescriptionViewController.swift; sourceTree = "<group>"; };
 		CC47C8C42A83768200B257AF /* HomeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDelegate.swift; sourceTree = "<group>"; };
 		CC4AA4A72A88F228005C3201 /* ARKioskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskDelegate.swift; sourceTree = "<group>"; };
-		CC4AA4A92A88F6C7005C3201 /* ARKioskBarcode.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskBarcode.scn; sourceTree = "<group>"; };
-		CC4AA4AB2A88F6D4005C3201 /* ARKioskCreditCard.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskCreditCard.scn; sourceTree = "<group>"; };
+		CC4AA4A92A88F6C7005C3201 /* ARKioskForBarcode.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskForBarcode.scn; sourceTree = "<group>"; };
+		CC4AA4AB2A88F6D4005C3201 /* ARKioskForCreditCard.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARKioskForCreditCard.scn; sourceTree = "<group>"; };
 		CC57ABEC2A710A4200E892FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC57ABEE2A710A4200E892FF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		CC57ABF82A710A4300E892FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,10 +121,13 @@
 		CCB04B2F2A7A31060035483C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFinishViewController.swift; sourceTree = "<group>"; };
-		CCC860EE2A88FCA100AC854A /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Silver Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC860EE2A88FCA100AC854A /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Silver Explorer.app"; path = "/Users/jinyoo/Developer/Silver-Explorer/Silver Explorer/build/Debug-iphoneos/Silver Explorer.app"; sourceTree = "<absolute>"; };
+		CCE8019F2A89FD4100FE0994 /* ARKioskForBarcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskForBarcode.swift; sourceTree = "<group>"; };
+		CCE801A12A89FD8600FE0994 /* ARKioskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskModel.swift; sourceTree = "<group>"; };
+		CCE801A32A8A05E000FE0994 /* ARKioskExplore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskExplore.swift; sourceTree = "<group>"; };
+		CCE801A62A8A09E500FE0994 /* ARKioskForCreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskForCreditCard.swift; sourceTree = "<group>"; };
 		CCFE1C9A2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPaymentTypeDelegate.swift; sourceTree = "<group>"; };
 		CCFE1C9C2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardDelegate.swift; sourceTree = "<group>"; };
-		FF185B392A739C4F003E766E /* ARKiosk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ARKiosk.usdz; sourceTree = "<group>"; };
 		FF185B432A73AD7B003E766E /* ARKiosk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARKiosk.storyboard; sourceTree = "<group>"; };
 		FF185B452A73ADA7003E766E /* ARKioskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskViewController.swift; sourceTree = "<group>"; };
 		FF185B4B2A73B4AC003E766E /* summerFestival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summerFestival.png; sourceTree = "<group>"; };
@@ -302,7 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				CC57ABEB2A710A4200E892FF /* Silver Explorer */,
-				CCC860EE2A88FCA100AC854A /* Silver Explorer.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -419,6 +425,16 @@
 			path = KioskUI;
 			sourceTree = "<group>";
 		};
+		CCE801A52A8A078600FE0994 /* ARKioskModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCE8019F2A89FD4100FE0994 /* ARKioskForBarcode.swift */,
+				CCE801A12A89FD8600FE0994 /* ARKioskModel.swift */,
+				CCE801A62A8A09E500FE0994 /* ARKioskForCreditCard.swift */,
+			);
+			path = ARKioskModel;
+			sourceTree = "<group>";
+		};
 		FF185B322A739BF9003E766E /* AR-Kiosk */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,8 +447,10 @@
 		FF185B332A739C0B003E766E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CCE801A52A8A078600FE0994 /* ARKioskModel */,
 				FF185B4B2A73B4AC003E766E /* summerFestival.png */,
 				FF185B4D2A73B4B0003E766E /* camera.png */,
+				CCE801A32A8A05E000FE0994 /* ARKioskExplore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -440,9 +458,8 @@
 		FF185B342A739C14003E766E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FF185B392A739C4F003E766E /* ARKiosk.usdz */,
-				CC4AA4AB2A88F6D4005C3201 /* ARKioskCreditCard.scn */,
-				CC4AA4A92A88F6C7005C3201 /* ARKioskBarcode.scn */,
+				CC4AA4AB2A88F6D4005C3201 /* ARKioskForCreditCard.scn */,
+				CC4AA4A92A88F6C7005C3201 /* ARKioskForBarcode.scn */,
 				FF185B432A73AD7B003E766E /* ARKiosk.storyboard */,
 			);
 			path = View;
@@ -573,10 +590,10 @@
 				FFE42A5B2A73BB2100752CD7 /* Assets.xcassets in Resources */,
 				FF185B4E2A73B4B0003E766E /* camera.png in Resources */,
 				AD9F67E32A824F1B0056696E /* Scanner.storyboard in Resources */,
-				CC4AA4AC2A88F6D4005C3201 /* ARKioskCreditCard.scn in Resources */,
+				CC4AA4AC2A88F6D4005C3201 /* ARKioskForCreditCard.scn in Resources */,
 				FFE42A622A73BC3C00752CD7 /* KioskModal.storyboard in Resources */,
 				FF185B4C2A73B4AC003E766E /* summerFestival.png in Resources */,
-				CC4AA4AA2A88F6C7005C3201 /* ARKioskBarcode.scn in Resources */,
+				CC4AA4AA2A88F6C7005C3201 /* ARKioskForBarcode.scn in Resources */,
 				CC57ABF92A710A4300E892FF /* LaunchScreen.storyboard in Resources */,
 				CC57AC112A710D3700E892FF /* UIExplore.storyboard in Resources */,
 				FF185B502A73B56B003E766E /* KioskMainBoard.storyboard in Resources */,
@@ -604,8 +621,10 @@
 				CC57AC0F2A710D2A00E892FF /* UIExploreViewController.swift in Sources */,
 				AD9F67F32A824F540056696E /* NewsPaperTextRecognizer.swift in Sources */,
 				CCB7B4372A7782FA00EE46AA /* PaymentFinishViewController.swift in Sources */,
+				CCE801A42A8A05E000FE0994 /* ARKioskExplore.swift in Sources */,
 				CC291D6E2A77FEAF00C363DF /* PaymentSelectResource.swift in Sources */,
 				CC23C3A92A76AB8D0024C12B /* Enum.swift in Sources */,
+				CCE801A22A89FD8600FE0994 /* ARKioskModel.swift in Sources */,
 				CCFE1C9B2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift in Sources */,
 				FFE42A602A73BC2E00752CD7 /* ProductOptionSelectViewController.swift in Sources */,
 				CCFE1C9D2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift in Sources */,
@@ -615,6 +634,7 @@
 				AD9F67F52A824F5C0056696E /* DocumentDataDelegate.swift in Sources */,
 				FFE42A5E2A73BBEC00752CD7 /* MenuResource.swift in Sources */,
 				CC23C3AD2A76CB210024C12B /* PhoneMemberShipViewController.swift in Sources */,
+				CCE801A82A8A0AA800FE0994 /* ARKioskForCreditCard.swift in Sources */,
 				AD9F67F02A824F540056696E /* ImageDetector.swift in Sources */,
 				AD9F67F12A824F540056696E /* TextRecognitionModel.swift in Sources */,
 				CC291D702A77FFA800C363DF /* PaymentResource.swift in Sources */,
@@ -630,6 +650,7 @@
 				FF464C7A2A7C2B1F00B02D74 /* MenuSelectionTableViewCell.swift in Sources */,
 				FF502C2F2A8007D600F1CBB2 /* MenuSelectionTableViewCellDelegate.swift in Sources */,
 				ADF844EF2A86638400DEEE79 /* ReaderResource.swift in Sources */,
+				CCE801A02A89FD4100FE0994 /* ARKioskForBarcode.swift in Sources */,
 				CC57AC1A2A710DDA00E892FF /* Finn.swift in Sources */,
 				CC23C3AB2A76CAC10024C12B /* MembershipViewController.swift in Sources */,
 				CC23C3AF2A76CB380024C12B /* BarcodMembershipViewController.swift in Sources */,
