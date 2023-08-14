@@ -9,12 +9,16 @@ import UIKit
 
 class PaymentFinishViewController: UIViewController {
 
-    @IBOutlet weak var countDownLabel: UILabel!
-    @IBOutlet weak var waitingNumberLabel: UILabel!
+    @IBOutlet private weak var countDownLabel: UILabel!
+    @IBOutlet private weak var waitingNumberLabel: UILabel!
     
-    var count = 3
-    var timer: Timer?
     weak var kioskMainBoardDelegate: KioskMainBoardDelegate?
+    private var timer: Timer?
+    private var count = 5 {
+        didSet {
+            countDownLabel.text = "\(count)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +32,13 @@ class PaymentFinishViewController: UIViewController {
         sender.present(self, animated: false)
     }
     
-    func startCountdown() {
+    private func startCountdown() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCountdown), userInfo: nil, repeats: true)
     }
 
-    @objc func updateCountdown() {
+    @objc private func updateCountdown() {
         if count > 1 {
             count -= 1
-            countDownLabel.text = "\(count)"
         } else {
             timer?.invalidate()
             self.dismiss(animated: false) {

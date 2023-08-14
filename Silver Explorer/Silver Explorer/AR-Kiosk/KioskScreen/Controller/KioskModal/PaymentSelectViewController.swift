@@ -9,14 +9,19 @@ import UIKit
 
 class PaymentSelectViewController: UIViewController {
 
-    @IBOutlet weak var totalPriceTextField: UITextField!
-    @IBOutlet weak var creditCardImageView: UIImageView!
-    @IBOutlet weak var barcodeImageView: UIImageView!
-    
-    let resource: PaymentSelectResource = PaymentSelectResource()
-    weak var kioskMainBoardDelegate: KioskMainBoardDelegate?
+    // MARK: - IBOutlet Properties
 
-    var totalPrice: Int {
+    @IBOutlet private weak var totalPriceTextField: UITextField!
+    @IBOutlet private weak var creditCardImageView: UIImageView!
+    @IBOutlet private weak var barcodeImageView: UIImageView!
+    
+    // MARK: Stored Properties
+
+    weak var kioskMainBoardDelegate: KioskMainBoardDelegate?
+    private let resource: PaymentSelectResource = PaymentSelectResource()
+    
+    // MARK: - Computed Properties
+    private var totalPrice: Int {
         guard let price = kioskMainBoardDelegate?.totalPriceForPayment() else {
             self.dismiss(animated: false)
             return 0
@@ -24,17 +29,19 @@ class PaymentSelectViewController: UIViewController {
         
         return price
     }
-    var creditCardImages: [UIImage] {
+    private var creditCardImages: [UIImage] {
         return resource.paymentImages[.creditCard]!
     }
-    var barcodeImages: [UIImage] {
+    private var barcodeImages: [UIImage] {
         return resource.paymentImages[.barcode]!
     }
-    var paymentMethod: PaymentType = .creditCard
+    private var paymentMethod: PaymentType = .creditCard
     
+    // MARK: - Instance Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         initialSettingForTextField()
     }
 
@@ -43,33 +50,38 @@ class PaymentSelectViewController: UIViewController {
         sender.present(self, animated: false)
     }
     
-    @IBAction func creditCardSelected(_ sender: UIButton) {
+    // MARK: - IBAction Methods
+    
+    @IBAction private func creditCardSelected(_ sender: UIButton) {
         creditCardImageView.image = creditCardImages[0]
         barcodeImageView.image = barcodeImages[1]
         
         paymentMethod = .creditCard
     }
     
-    @IBAction func barcodeSelected(_ sender: UIButton) {
+    @IBAction private func barcodeSelected(_ sender: UIButton) {
         barcodeImageView.image = barcodeImages[0]
         creditCardImageView.image = creditCardImages[1]
         
         paymentMethod = .barcode
     }
     
-    @IBAction func previousBtnPressed(_ sender: UIButton) {
+    @IBAction private func previousBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: false) {
             self.kioskMainBoardDelegate?.moveToPreviousModalVC(content: .membership)
         }
     }
     
-    @IBAction func paymentBtnPressed(_ sender: UIButton) {
-        self.dismiss(animated: false)
+    @IBAction private func paymentBtnPressed(_ sender: UIButton) {
+        self.dismiss(animated: false) {
+            self.kioskMainBoardDelegate?.moveToPaymentVC(paymentType: self.paymentMethod)
+        }
 
-        kioskMainBoardDelegate?.moveToPaymentVC(paymentType: self.paymentMethod, call: .creditPayment)
     }
     
-    func initialSettingForTextField() {
+    // MARK: - Initial Setting Method
+    
+    private func initialSettingForTextField() {
         totalPriceTextField.borderStyle = .none
         totalPriceTextField.layer.borderColor = UIColor(hex: "#D9D9D9").cgColor
         totalPriceTextField.layer.borderWidth = 1.0
@@ -81,10 +93,4 @@ class PaymentSelectViewController: UIViewController {
         let formattedPrice = numberFormatter.string(from: NSNumber(value: totalPrice))
         totalPriceTextField.text = "₩ \(formattedPrice!)"
     }
-    
-//    func paymentType() -> PaymentType {
-//        return paymentMethod
-//    }
-//
-    
 }

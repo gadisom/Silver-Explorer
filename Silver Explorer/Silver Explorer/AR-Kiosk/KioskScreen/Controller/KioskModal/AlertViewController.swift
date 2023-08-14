@@ -28,11 +28,11 @@ class AlertViewController: UIViewController {
         sender.present(self, animated: false)
     }
     
-    func startCountdown() {
+    private func startCountdown() {
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(dismissAlert), userInfo: nil, repeats: false)
     }
 
-    @objc func dismissAlert() {
+    @objc private func dismissAlert() {
         timer?.invalidate()
         self.dismiss(animated: false) {
             self.alertDelegate?.didAlertDismiss()            
