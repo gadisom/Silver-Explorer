@@ -118,7 +118,13 @@ class ReaderViewController: UIViewController {
     
     @IBAction func clickPreviousButton(_ sender: Any) {
         TTSManager.shared.stop()
-        self.navigationController?.popToRootViewController(animated: true)
+        let viewControllers = self.navigationController?.viewControllers
+        let viewControllersCount = viewControllers!.count
+        
+        let scannerViewController = viewControllers![viewControllersCount - 2] as! ScannerViewController
+        
+        self.navigationController?.popViewController(animated: true)
+        scannerViewController.scan()
     }
     
     @IBAction func clickFontSizeButton(_ sender: Any) {
