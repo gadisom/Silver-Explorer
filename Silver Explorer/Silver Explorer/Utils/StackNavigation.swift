@@ -8,8 +8,7 @@
 import UIKit
 
 func moveBacktoHome(vc: UIViewController) {
-
-    
+    vc.navigationController?.popToRootViewController(animated: true)
 }
 
 func moveToContentDescriptionVC(homeVC: UIViewController) {

@@ -12,6 +12,11 @@ import ARKit
 class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet private var sceneView: ARSCNView!
+    
+    @IBOutlet weak var informationView: UIView!
+    @IBOutlet weak var informationBlurView: UIVisualEffectView!
+    
+    @IBOutlet weak var touchGestureStageView: UIView!
     @IBOutlet private var stageTitleLabel: UILabel!
     @IBOutlet private weak var stageDescriptionView: UIVisualEffectView!
     @IBOutlet private weak var stageDescriptionLabel: UILabel!
@@ -49,14 +54,10 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         sceneView.autoenablesDefaultLighting = true
         
         setARCharacter()
+        
+        touchGestureStageView.isHidden = true
 
-        uiExplorer.addNewGestureRecognizer(
-            stage: stage,
-            arCharacter: self.arCharacter,
-            sceneView: self.sceneView,
-            swipeDirection: self.swipeDirection
-        )
-
+        makeCornerRoundShape(targetView: informationBlurView, cornerRadius: 40)
         makeCornerRoundShape(targetView: titleView, cornerRadius: 10)
         makeCornerRoundShape(targetView: previousBtnView, cornerRadius: 10)
         makeCornerRoundShape(targetView: nextBtnView, cornerRadius: 10)
@@ -87,11 +88,10 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
    
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        guard let imageAnchor = anchor as? ARImageAnchor else {
-            return nil
+        if let _ = anchor as? ARImageAnchor {
+            return arCharacter.characterContainerNode
         }
-        
-        return arCharacter.characterContainerNode
+        return nil
    }
     
     // MARK: - Move Stage IBAction Methods
@@ -118,8 +118,20 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     
     // MARK: - Description View Gesture Recognizer Method
     
-    @IBAction private func descriptionViewTouched(_ sender: UITapGestureRecognizer) {
+    @IBAction private func stageDescriptionViewTouched(_ sender: UITapGestureRecognizer) {
         self.stageDescriptionView.isHidden = true
+    }
+    
+    
+    @IBAction func informationViewTouched(_ sender: UITapGestureRecognizer) {
+        self.informationView.isHidden = true
+        self.touchGestureStageView.isHidden = false
+        
+        uiExplorer.addNewGestureRecognizer(
+            stage: stage,
+            arCharacter: self.arCharacter,
+            targetView: touchGestureStageView
+        )
     }
     
     // MARK: - Feature Methods
@@ -147,7 +159,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     }
             
     private func moveStage(isNext: Bool) {
-        uiExplorer.removeGestureRecognizer(sceneView: sceneView, stage: stage)
+        uiExplorer.removeGestureRecognizer(targetView: touchGestureStageView, stage: stage)
     
         switch stage {
         case .shortTap:
@@ -173,8 +185,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         uiExplorer.addNewGestureRecognizer(
             stage: stage,
             arCharacter: self.arCharacter,
-            sceneView: self.sceneView,
-            swipeDirection: self.swipeDirection
+            targetView: touchGestureStageView
         )
         stageImageView.image = stageImages[self.stage]!
         stageDescriptionLabel.text = stageDescriptionList[self.stage]!

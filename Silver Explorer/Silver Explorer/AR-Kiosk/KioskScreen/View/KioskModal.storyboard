@@ -1397,7 +1397,7 @@ in the location below)</string>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp4-3h-DJ7">
                                                                                         <rect key="frame" x="19.999999999999993" y="30" width="117.33333333333331" height="40"/>
                                                                                         <state key="normal" title="Button"/>
-                                                                                        <buttonConfiguration key="configuration" style="filled" title="AR 체험">
+                                                                                        <buttonConfiguration key="configuration" style="filled" title="AR 탐험">
                                                                                             <color key="baseBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         </buttonConfiguration>
                                                                                         <connections>
@@ -1948,7 +1948,7 @@ in the location below)</string>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5D-0q-DNf">
                                                                                         <rect key="frame" x="19.999999999999993" y="30" width="117.33333333333331" height="40"/>
                                                                                         <state key="normal" title="Button"/>
-                                                                                        <buttonConfiguration key="configuration" style="filled" title="AR 체험">
+                                                                                        <buttonConfiguration key="configuration" style="filled" title="AR 탐험">
                                                                                             <color key="baseBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         </buttonConfiguration>
                                                                                         <connections>

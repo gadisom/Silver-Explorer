@@ -131,7 +131,7 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
             numberFormatter.groupingSeparator = ","
             
             if let formattedTotalPrice = numberFormatter.string(from: NSNumber(value: totalPrice)) {
-                totalPriceLabel.text =  "₩" + formattedTotalPrice 
+                totalPriceLabel.text =  "₩ " + formattedTotalPrice 
             }
         
     }

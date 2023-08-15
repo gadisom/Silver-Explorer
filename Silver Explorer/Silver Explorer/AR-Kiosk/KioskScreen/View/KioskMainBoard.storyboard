@@ -19,11 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="summerfestival_720 1" translatesAutoresizingMaskIntoConstraints="NO" id="GCQ-pQ-XJR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="summerFestival.png" translatesAutoresizingMaskIntoConstraints="NO" id="GCQ-pQ-XJR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="5aN-WZ-Le6">
-                                <rect key="frame" x="10" y="641.33333333333337" width="355" height="86.666666666666629"/>
+                                <rect key="frame" x="10" y="691.33333333333337" width="355" height="86.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mot-t1-K82">
                                         <rect key="frame" x="0.0" y="0.0" width="174" height="86.666666666666671"/>
@@ -69,7 +69,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.41071957349999999" green="0.62533271310000005" blue="0.99783438440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5aN-WZ-Le6" secondAttribute="bottom" constant="50" id="5py-Nu-ozD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5aN-WZ-Le6" secondAttribute="bottom" id="5py-Nu-ozD"/>
                             <constraint firstItem="5aN-WZ-Le6" firstAttribute="leading" relation="lessThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="6Xx-QO-ZRl"/>
                             <constraint firstItem="GCQ-pQ-XJR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7xb-QS-oK1"/>
                             <constraint firstAttribute="bottom" secondItem="GCQ-pQ-XJR" secondAttribute="bottom" id="WFc-xH-6yt"/>
@@ -106,14 +106,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="은빛 탐험 카페 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0Z-bt-UxE">
-                                                <rect key="frame" x="142.66666666666666" y="51" width="90" height="18"/>
+                                                <rect key="frame" x="142.66666666666666" y="61" width="90" height="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silver Light Exploration Cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FB-dA-7U6">
-                                                <rect key="frame" x="107.66666666666667" y="69" width="159.66666666666663" height="14.333333333333329"/>
+                                                <rect key="frame" x="107.66666666666667" y="79" width="159.66666666666663" height="14.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -123,7 +123,7 @@
                                         <constraints>
                                             <constraint firstItem="1FB-dA-7U6" firstAttribute="centerX" secondItem="ivf-Ky-RK8" secondAttribute="centerX" id="85i-Vs-gJL"/>
                                             <constraint firstItem="n0Z-bt-UxE" firstAttribute="centerX" secondItem="ivf-Ky-RK8" secondAttribute="centerX" id="8os-FH-eq5"/>
-                                            <constraint firstItem="n0Z-bt-UxE" firstAttribute="centerY" secondItem="ivf-Ky-RK8" secondAttribute="centerY" id="99K-l5-w5M"/>
+                                            <constraint firstItem="n0Z-bt-UxE" firstAttribute="centerY" secondItem="ivf-Ky-RK8" secondAttribute="centerY" constant="10" id="99K-l5-w5M"/>
                                             <constraint firstAttribute="width" secondItem="ivf-Ky-RK8" secondAttribute="height" multiplier="375:120" id="jJb-gj-6EY"/>
                                             <constraint firstItem="1FB-dA-7U6" firstAttribute="top" secondItem="n0Z-bt-UxE" secondAttribute="bottom" id="kFC-rg-NXn"/>
                                         </constraints>
@@ -390,8 +390,8 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5o8-gC-7d1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="181" height="100"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₩0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nv-aI-98e">
-                                                                        <rect key="frame" x="71.666666666666686" y="25.666666666666629" width="38" height="28.666666666666671"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₩ 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nv-aI-98e">
+                                                                        <rect key="frame" x="69" y="25.666666666666629" width="43.333333333333343" height="28.666666666666671"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                         <color key="textColor" systemColor="systemPinkColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -499,7 +499,7 @@
         <image name="eat_in_button" width="223" height="108"/>
         <image name="minus.circle.fill" catalog="system" width="128" height="123"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="summerfestival_720 1" width="512.33331298828125" height="780"/>
+        <image name="summerFestival.png" width="304.90908813476562" height="464.72726440429688"/>
         <image name="take_out_button" width="223" height="108"/>
         <image name="xmark.app.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">

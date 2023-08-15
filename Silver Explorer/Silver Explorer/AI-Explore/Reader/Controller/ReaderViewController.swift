@@ -91,7 +91,7 @@ class ReaderViewController: UIViewController {
             yOffset += imageViewHeight
         }
         
-        if let firstImage = uiImageViews.first {
+        if let _ = uiImageViews.first {
             labelBottomConstraint.constant += yOffset - textLabel.frame.height
             
             var imageViewIterator = uiImageViews.makeIterator()

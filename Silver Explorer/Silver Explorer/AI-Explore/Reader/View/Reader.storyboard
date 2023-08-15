@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNm-qh-Xb3">
-                                                <rect key="frame" x="20" y="40" width="70" height="35"/>
+                                                <rect key="frame" x="20" y="50" width="70" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="Pqc-bJ-LQn"/>
                                                     <constraint firstAttribute="height" constant="35" id="li0-xz-nav"/>
@@ -41,9 +41,9 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.52941179279999995" green="0.69019609689999994" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="VNm-qh-Xb3" firstAttribute="top" secondItem="AId-Jb-zr8" secondAttribute="top" constant="40" id="53J-Bd-mYf"/>
                                             <constraint firstItem="VNm-qh-Xb3" firstAttribute="leading" secondItem="AId-Jb-zr8" secondAttribute="leading" constant="20" id="5og-dJ-ToJ"/>
                                             <constraint firstAttribute="height" constant="100" id="Qdr-us-Pd1"/>
+                                            <constraint firstAttribute="bottom" secondItem="VNm-qh-Xb3" secondAttribute="bottom" constant="15" id="l2K-oq-3Fp"/>
                                         </constraints>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4Y-Gg-TgK">
