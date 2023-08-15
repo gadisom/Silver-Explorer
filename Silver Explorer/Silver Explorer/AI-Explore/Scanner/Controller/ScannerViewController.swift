@@ -14,9 +14,14 @@ class ScannerViewController: UIViewController {
     
     let documentTexts: [String]? = nil
     var documents: [UIImage] = []
+    var viewControllers: [UIViewController]!
+    var viewControllersCount: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewControllers = self.navigationController!.viewControllers as [UIViewController]
+        viewControllersCount = viewControllers.count
         
         // Do any additional setup after loading the view.
         let scannerViewController = VNDocumentCameraViewController()
@@ -28,6 +33,7 @@ class ScannerViewController: UIViewController {
         let nextVC = storyboard.instantiateViewController(withIdentifier: "ReaderViewController") as! ReaderViewController
         
         nextVC.documentDataDelegate = self as DocumentDataDelegate
+        
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
 
@@ -48,13 +54,13 @@ extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
 
     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
         controller.dismiss(animated: true)
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popToViewController(viewControllers[viewControllersCount - 2], animated: true)
     }
     
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
         print(error)
         controller.dismiss(animated: true)
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popToViewController(viewControllers[viewControllersCount - 2], animated: true)
     }
 }
 
