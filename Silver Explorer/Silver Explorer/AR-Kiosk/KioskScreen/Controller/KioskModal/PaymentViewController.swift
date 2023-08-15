@@ -40,7 +40,7 @@ class PaymentViewController: UIViewController, ARKioskDelegate, AlertDelegate {
     
     @IBAction func previousBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: false) {
-            self.kioskMainBoardDelegate?.moveToPreviousModalVC(content: .payment)
+            self.kioskMainBoardDelegate?.moveToPaymentSelectVC()
         }
     }
     
