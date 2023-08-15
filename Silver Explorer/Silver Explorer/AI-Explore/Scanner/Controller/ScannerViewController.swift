@@ -19,7 +19,10 @@ class ScannerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.scan()
+    }
+    
+    func scan() {
         viewControllers = self.navigationController!.viewControllers as [UIViewController]
         viewControllersCount = viewControllers.count
         
