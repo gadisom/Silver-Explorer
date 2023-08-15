@@ -35,10 +35,6 @@ enum PaymentType {
     case creditCard, barcode, none
 }
 
-enum KioskModalContent: String {
-    case membership = "MembershipViewController", payment = "PaymentSelectViewController"
-}
-
 // MARK: - AR-UI-Explore Enum
 
 enum Character {

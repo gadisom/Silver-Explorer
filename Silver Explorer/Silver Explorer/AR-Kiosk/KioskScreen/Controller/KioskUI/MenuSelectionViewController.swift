@@ -157,11 +157,9 @@ extension MenuSelectionViewController : KioskMainBoardDelegate {
     }
 
     func didMembershipVCFinish() {
-        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentSelectViewController") as! PaymentSelectViewController
-        vc.kioskMainBoardDelegate = self
-        vc.appear(sender: self)
+        moveToPaymentSelectVC()
     }
+
     func productForSelectingOption() -> Product {
         
         return selectedProduct!
@@ -173,18 +171,11 @@ extension MenuSelectionViewController : KioskMainBoardDelegate {
 
     }
     
-    func moveToPreviousModalVC(content: KioskModalContent) {
+    func moveToPaymentSelectVC() {
         let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
-        switch content {
-        case .membership:
-            let vc = storyboard.instantiateViewController(withIdentifier: content.rawValue) as! MembershipViewController
-            vc.kioskMainBoardDelegate = self
-            vc.appear(sender: self)
-        case .payment:
-            let vc = storyboard.instantiateViewController(withIdentifier: content.rawValue) as! PaymentSelectViewController
-            vc.kioskMainBoardDelegate = self
-            vc.appear(sender: self)
-        }
+        let vc = storyboard.instantiateViewController(withIdentifier: String(describing: PaymentSelectViewController.self)) as! PaymentSelectViewController
+        vc.kioskMainBoardDelegate = self
+        vc.appear(sender: self)
     }
     
     func totalPriceForPayment() -> Int {

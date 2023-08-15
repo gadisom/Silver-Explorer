@@ -24,7 +24,7 @@ protocol KioskMainBoardDelegate: AnyObject {
     // payment를 불러오는 코드만 작성하면됨
     func didMembershipVCFinish()
     
-    func moveToPreviousModalVC(content: KioskModalContent)
+    func moveToPaymentSelectVC()
 
     
     func moveToPaymentVC(paymentType : PaymentType)

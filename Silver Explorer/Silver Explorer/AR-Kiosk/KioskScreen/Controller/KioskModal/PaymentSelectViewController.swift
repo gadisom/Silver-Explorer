@@ -66,10 +66,8 @@ class PaymentSelectViewController: UIViewController {
         paymentMethod = .barcode
     }
     
-    @IBAction private func previousBtnPressed(_ sender: UIButton) {
-        self.dismiss(animated: false) {
-            self.kioskMainBoardDelegate?.moveToPreviousModalVC(content: .membership)
-        }
+    @IBAction private func cancelBtnPressed(_ sender: UIButton) {
+        self.dismiss(animated: false)
     }
     
     @IBAction private func paymentBtnPressed(_ sender: UIButton) {
