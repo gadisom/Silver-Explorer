@@ -16,7 +16,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var arExperienceButton: UIButton!
     @IBOutlet weak var buttonView: UIView!
-    
+    @IBOutlet weak var descriptionView: UIVisualEffectView!
     // MARK: - Stored Properties
     
     private let arKioskExplore: ARKioskExplore = ARKioskExplore()
@@ -36,8 +36,10 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
+
         setARKiosk()
         makeCornerRoundShape(targetView: self.buttonView, cornerRadius: 10)
+        makeCornerRoundShape(targetView: descriptionView, cornerRadius: 20)
         
         arKioskExplore.addSwipeGestureRecognizer(targetCharacter: arKiosk, handler: #selector(arKiosk.rightAngleRotate), sceneView: sceneView)
         arKioskExplore.addPinchGestureRecognizer(targetCharacter: arKiosk, handler: #selector(arKiosk.scaleUpAndDown), sceneView: sceneView)
@@ -74,6 +76,11 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
+    
+    @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
+        descriptionView.isHidden = true
+    }
+    
     // MARK: - Initial Setting Methods
     
     func setARKiosk() {
@@ -83,14 +90,13 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         self.arKiosk = kiosk
         self.arKiosk.setSceneView(sceneView: sceneView)
     }
-    
-    // 버튼 콘테이너 애니메이션 관련 프로퍼티
+
     func animateButton ()
     {
         DispatchQueue.main.async {
             self.buttonView.alpha = 0.0
-            self.arExperienceButton.setTitle("체험 종료", for: .normal)
-            UIView.animate(withDuration: 1.0, delay: 0.5,options: .curveEaseIn, animations: {
+            self.arExperienceButton.setTitle("탐험 종료", for: .normal)
+            UIView.animate(withDuration: 1.0, delay: 0.2,options: .curveEaseIn, animations: {
                 self.buttonView.alpha = 1.0
             })
         }
@@ -100,11 +106,11 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
     func renderer (_ renderer : SCNSceneRenderer, nodeFor anchor: ARAnchor )-> SCNNode? {
         animateButton()
 
-        guard let imageAnchor = anchor as? ARImageAnchor else {
-            return nil
+        if let _ = anchor as? ARImageAnchor {
+            return arKiosk.kioskContainerNode
         }
         
-        return arKiosk.kioskContainerNode
+        return nil
     }
  
 }
