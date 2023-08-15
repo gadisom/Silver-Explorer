@@ -26,14 +26,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDL-dL-uh6">
-                                                <rect key="frame" x="20" y="10" width="70" height="35"/>
+                                                <rect key="frame" x="0.0" y="10" width="90" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="0Rn-Wf-nhJ"/>
-                                                    <constraint firstAttribute="width" constant="70" id="t7d-fB-HJs"/>
+                                                    <constraint firstAttribute="width" constant="90" id="t7d-fB-HJs"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title="이전" cornerStyle="large">
-                                                    <color key="baseBackgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title=" 이전" cornerStyle="large">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="moveBackBtnPressed:" destination="7LA-bS-PMA" eventType="touchUpInside" id="pBy-9Q-9to"/>
@@ -48,7 +50,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GWA-UU-1tQ" secondAttribute="height" multiplier="375:190" id="2Yt-nr-qgC"/>
-                                            <constraint firstItem="fDL-dL-uh6" firstAttribute="leading" secondItem="GWA-UU-1tQ" secondAttribute="leading" constant="20" id="b8D-L0-ugC"/>
+                                            <constraint firstItem="fDL-dL-uh6" firstAttribute="leading" secondItem="GWA-UU-1tQ" secondAttribute="leading" id="b8D-L0-ugC"/>
                                             <constraint firstItem="fDL-dL-uh6" firstAttribute="top" secondItem="GWA-UU-1tQ" secondAttribute="top" constant="10" id="gb8-22-HWR"/>
                                             <constraint firstItem="Zcf-Q1-3VS" firstAttribute="centerY" secondItem="GWA-UU-1tQ" secondAttribute="centerY" id="iVB-ah-Kri"/>
                                             <constraint firstItem="Zcf-Q1-3VS" firstAttribute="centerX" secondItem="GWA-UU-1tQ" secondAttribute="centerX" id="j88-6G-ttF"/>

@@ -33,14 +33,16 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O6-9O-93U">
-                                                <rect key="frame" x="20" y="10" width="70" height="35"/>
+                                                <rect key="frame" x="0.0" y="10" width="90" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="MAr-cF-Ebo"/>
-                                                    <constraint firstAttribute="width" constant="70" id="yXs-kv-7sx"/>
+                                                    <constraint firstAttribute="width" constant="90" id="yXs-kv-7sx"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title="이전" cornerStyle="large">
-                                                    <color key="baseBackgroundColor" red="0.41176470590000003" green="0.62352941179999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title=" 이전" cornerStyle="large">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="moveBackBtnPressed:" destination="NIJ-tm-LWH" eventType="touchUpInside" id="R04-0X-xyQ"/>
@@ -51,7 +53,7 @@
                                             <constraint firstItem="8O6-9O-93U" firstAttribute="top" secondItem="ARb-SX-0NC" secondAttribute="top" constant="10" id="G1v-uy-rxH"/>
                                             <constraint firstItem="aWJ-kb-cAb" firstAttribute="centerX" secondItem="ARb-SX-0NC" secondAttribute="centerX" id="WlO-7g-L2U"/>
                                             <constraint firstItem="aWJ-kb-cAb" firstAttribute="centerY" secondItem="ARb-SX-0NC" secondAttribute="centerY" id="Y6i-9P-Wbf"/>
-                                            <constraint firstItem="8O6-9O-93U" firstAttribute="leading" secondItem="ARb-SX-0NC" secondAttribute="leading" constant="20" id="ZaP-vN-Ogh"/>
+                                            <constraint firstItem="8O6-9O-93U" firstAttribute="leading" secondItem="ARb-SX-0NC" secondAttribute="leading" id="ZaP-vN-Ogh"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arU-pX-5Ez">
@@ -407,7 +409,7 @@ AR 캐릭터를 짧게 탭해보세요!</string>
                                 <rect key="frame" x="0.0" y="50" width="375" height="728"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrq-J5-9xQ">
-                                        <rect key="frame" x="30" y="160" width="315" height="468"/>
+                                        <rect key="frame" x="30" y="130" width="315" height="468"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9eH-n4-hDo">
                                             <rect key="frame" x="0.0" y="0.0" width="315" height="468"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -469,13 +471,13 @@ AR 캐릭터를 짧게 탭해보세요!</string>
                                                 <constraint firstItem="Gd7-MI-pPd" firstAttribute="top" secondItem="9eH-n4-hDo" secondAttribute="top" id="WFP-CF-2ji"/>
                                             </constraints>
                                         </view>
-                                        <blurEffect style="systemThinMaterialDark"/>
+                                        <blurEffect style="systemThinMaterialLight"/>
                                     </visualEffectView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Nrq-J5-9xQ" firstAttribute="leading" secondItem="7ko-Cc-dYn" secondAttribute="leading" constant="30" id="1VR-oN-8MV"/>
-                                    <constraint firstItem="Nrq-J5-9xQ" firstAttribute="top" secondItem="7ko-Cc-dYn" secondAttribute="top" constant="160" id="5At-Ba-2rD"/>
-                                    <constraint firstAttribute="bottom" secondItem="Nrq-J5-9xQ" secondAttribute="bottom" constant="100" id="Vv3-fL-750"/>
+                                    <constraint firstItem="Nrq-J5-9xQ" firstAttribute="top" secondItem="7ko-Cc-dYn" secondAttribute="top" constant="130" id="5At-Ba-2rD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nrq-J5-9xQ" secondAttribute="bottom" constant="130" id="Vv3-fL-750"/>
                                     <constraint firstAttribute="trailing" secondItem="Nrq-J5-9xQ" secondAttribute="trailing" constant="30" id="sXi-id-weJ"/>
                                 </constraints>
                             </view>
@@ -523,7 +525,7 @@ AR 캐릭터를 짧게 탭해보세요!</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="549.60000000000002" y="-89.408866995073893"/>
+            <point key="canvasLocation" x="684" y="-89"/>
         </scene>
     </scenes>
     <resources>

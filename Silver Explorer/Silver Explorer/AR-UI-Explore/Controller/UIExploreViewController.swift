@@ -26,7 +26,6 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet private weak var stageImageView: UIImageView!
     
     private var stage: Stage = .shortTap
-    private var swipeDirection: UISwipeGestureRecognizer.Direction = .right
     
     // 선택된 AR 캐릭터 관련 프로퍼티
     weak var arCharacterDelegate: ARCharacterDelegate?
@@ -63,21 +62,6 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         makeCornerRoundShape(targetView: nextBtnView, cornerRadius: 10)
         makeCornerRoundShape(targetView: stageDescriptionView, cornerRadius: 40)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let configuration = ARImageTrackingConfiguration()
-        
-        guard let trackingImage = ARReferenceImage.referenceImages(inGroupNamed: "Explore Ticket", bundle: Bundle.main) else {
-            return
-        }
-        
-        configuration.trackingImages = trackingImage
-        configuration.maximumNumberOfTrackedImages = 1
-
-        sceneView.session.run(configuration)
-    }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -88,9 +72,12 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
    
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        
         if let _ = anchor as? ARImageAnchor {
+            readyForTouchGestureExplore()
             return arCharacter.characterContainerNode
         }
+        
         return nil
    }
     
@@ -125,13 +112,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func informationViewTouched(_ sender: UITapGestureRecognizer) {
         self.informationView.isHidden = true
-        self.touchGestureStageView.isHidden = false
-        
-        uiExplorer.addNewGestureRecognizer(
-            stage: stage,
-            arCharacter: self.arCharacter,
-            targetView: touchGestureStageView
-        )
+        beginARSession()
     }
     
     // MARK: - Feature Methods
@@ -190,6 +171,36 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         stageImageView.image = stageImages[self.stage]!
         stageDescriptionLabel.text = stageDescriptionList[self.stage]!
         stageDescriptionView.isHidden = false
+    }
+    
+    private func beginARSession() {
+        let configuration = ARImageTrackingConfiguration()
+        
+        guard let trackingImage = ARReferenceImage.referenceImages(inGroupNamed: "Explore Ticket", bundle: Bundle.main) else {
+            return
+        }
+        
+        configuration.trackingImages = trackingImage
+        configuration.maximumNumberOfTrackedImages = 1
+
+        sceneView.session.run(configuration)
+    }
+    
+    private func readyForTouchGestureExplore() {
+        DispatchQueue.main.async {
+            self.touchGestureStageView.isHidden = false
+            self.touchGestureStageView.alpha = 0.0
+            
+            self.uiExplorer.addNewGestureRecognizer(
+                stage: self.stage,
+                arCharacter: self.arCharacter,
+                targetView: self.touchGestureStageView
+            )
+
+            UIView.animate(withDuration: 1.0, delay: 2.0, options: .curveEaseInOut, animations: {
+                self.touchGestureStageView.alpha = 1.0
+            })
+        }
     }
 
 }

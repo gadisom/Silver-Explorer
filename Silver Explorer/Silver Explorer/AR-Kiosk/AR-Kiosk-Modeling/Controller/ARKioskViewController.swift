@@ -96,7 +96,7 @@ class ARKioskViewController: UIViewController, ARSCNViewDelegate {
         DispatchQueue.main.async {
             self.buttonView.alpha = 0.0
             self.arExperienceButton.setTitle("탐험 종료", for: .normal)
-            UIView.animate(withDuration: 1.0, delay: 0.2,options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.8, delay: 0.2, options: .curveEaseIn, animations: {
                 self.buttonView.alpha = 1.0
             })
         }

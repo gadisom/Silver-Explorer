@@ -118,7 +118,6 @@
 		CC57AC172A710DD100E892FF /* Arr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arr.swift; sourceTree = "<group>"; };
 		CC57AC192A710DDA00E892FF /* Finn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finn.swift; sourceTree = "<group>"; };
 		CC64A4952A869D420092B147 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		CC81257F2A8A1DB800D8B3FA /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Silver Explorer.app"; path = "/Users/jinyoo/Developer/Silver-Explorer/Silver Explorer/build/Debug-iphoneos/Silver Explorer.app"; sourceTree = "<absolute>"; };
 		CCB04B2F2A7A31060035483C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CCB7B4342A777EA900EE46AA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		CCB7B4362A7782FA00EE46AA /* PaymentFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFinishViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		CCE801A62A8A09E500FE0994 /* ARKioskForCreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskForCreditCard.swift; sourceTree = "<group>"; };
 		CCFE1C9A2A7B993F0096CDE8 /* SelectedPaymentTypeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPaymentTypeDelegate.swift; sourceTree = "<group>"; };
 		CCFE1C9C2A7BC2E20096CDE8 /* KioskMainBoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KioskMainBoardDelegate.swift; sourceTree = "<group>"; };
+		CCFEDDB22A8BA23000DDA460 /* Silver Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Silver Explorer.app"; path = "/Users/jinyoo/Developer/Silver-Explorer/Silver Explorer/build/Debug-iphoneos/Silver Explorer.app"; sourceTree = "<absolute>"; };
 		FF185B432A73AD7B003E766E /* ARKiosk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARKiosk.storyboard; sourceTree = "<group>"; };
 		FF185B452A73ADA7003E766E /* ARKioskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKioskViewController.swift; sourceTree = "<group>"; };
 		FF185B4B2A73B4AC003E766E /* summerFestival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summerFestival.png; sourceTree = "<group>"; };
@@ -541,7 +541,7 @@
 			);
 			name = "Silver Explorer";
 			productName = "Silver Explorer";
-			productReference = CC81257F2A8A1DB800D8B3FA /* Silver Explorer.app */;
+			productReference = CCFEDDB22A8BA23000DDA460 /* Silver Explorer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
