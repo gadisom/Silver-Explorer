@@ -51,15 +51,16 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMz-ze-wqr">
-                                <rect key="frame" x="20" y="60" width="70" height="35"/>
+                                <rect key="frame" x="0.0" y="60" width="100" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="jjP-Zm-P5X"/>
+                                    <constraint firstAttribute="width" constant="100" id="jjP-Zm-P5X"/>
                                     <constraint firstAttribute="height" constant="35" id="lQs-b6-xT4"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title="이전" cornerStyle="large">
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title=" 나가기" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="moveToMainButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ime-Sh-Vvs"/>
@@ -78,7 +79,7 @@
                             <constraint firstAttribute="top" secondItem="GCQ-pQ-XJR" secondAttribute="top" id="cYi-Mq-hsa"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GCQ-pQ-XJR" secondAttribute="trailing" id="d0L-ML-1Rz"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="5aN-WZ-Le6" secondAttribute="trailing" constant="10" id="rdT-b0-fr3"/>
-                            <constraint firstItem="dMz-ze-wqr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="vNb-06-Mhq"/>
+                            <constraint firstItem="dMz-ze-wqr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vNb-06-Mhq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l9f-jo-9uI">

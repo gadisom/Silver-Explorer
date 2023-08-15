@@ -24,15 +24,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNm-qh-Xb3">
-                                                <rect key="frame" x="20" y="50" width="70" height="35"/>
+                                                <rect key="frame" x="0.0" y="50" width="90" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="Pqc-bJ-LQn"/>
+                                                    <constraint firstAttribute="width" constant="90" id="Pqc-bJ-LQn"/>
                                                     <constraint firstAttribute="height" constant="35" id="li0-xz-nav"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title="이전" cornerStyle="large">
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" red="0.89019608500000003" green="0.92156863209999995" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system" title=" 이전" cornerStyle="large">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="clickPreviousButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GcG-Hx-Oof"/>
@@ -41,7 +42,7 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.52941179279999995" green="0.69019609689999994" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="VNm-qh-Xb3" firstAttribute="leading" secondItem="AId-Jb-zr8" secondAttribute="leading" constant="20" id="5og-dJ-ToJ"/>
+                                            <constraint firstItem="VNm-qh-Xb3" firstAttribute="leading" secondItem="AId-Jb-zr8" secondAttribute="leading" id="5og-dJ-ToJ"/>
                                             <constraint firstAttribute="height" constant="100" id="Qdr-us-Pd1"/>
                                             <constraint firstAttribute="bottom" secondItem="VNm-qh-Xb3" secondAttribute="bottom" constant="15" id="l2K-oq-3Fp"/>
                                         </constraints>
