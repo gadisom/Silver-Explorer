@@ -15,6 +15,7 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var informationView: UIView!
     @IBOutlet weak var informationBlurView: UIVisualEffectView!
+    @IBOutlet weak var informationBackgroundView: UIView!
     
     @IBOutlet weak var touchGestureStageView: UIView!
     @IBOutlet private var stageTitleLabel: UILabel!
@@ -55,6 +56,13 @@ class UIExploreViewController: UIViewController, ARSCNViewDelegate {
         setARCharacter()
         
         touchGestureStageView.isHidden = true
+        
+     //   informationBackgroundView
+       //     .layer.cornerRadius = 40
+        //informationBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        //informationBackgroundView.clipsToBounds = true
+        
+        makeCornerRoundShape(targetView: informationBackgroundView, cornerRadius: 40)
 
         makeCornerRoundShape(targetView: informationBlurView, cornerRadius: 40)
         makeCornerRoundShape(targetView: titleView, cornerRadius: 10)
