@@ -420,23 +420,31 @@ AR 캐릭터를 짧게 탭해보세요!</string>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymy-Cg-xVR">
                                                             <rect key="frame" x="0.0" y="0.0" width="315" height="333"/>
                                                             <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9h-uM-bKD">
+                                                                    <rect key="frame" x="20" y="20" width="275" height="313"/>
+                                                                    <color key="backgroundColor" white="1" alpha="0.90146419701986735" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </view>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket" translatesAutoresizingMaskIntoConstraints="NO" id="wSn-0o-zvr">
                                                                     <rect key="frame" x="40" y="50" width="235" height="213"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="티켓을 위 그림처럼 세로로 놓아주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5t-60-eDo">
-                                                                    <rect key="frame" x="0.0" y="283" width="315" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="263" width="315" height="70"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="wSn-0o-zvr" secondAttribute="trailing" constant="40" id="IF4-ty-1Ry"/>
                                                                 <constraint firstAttribute="bottom" secondItem="m5t-60-eDo" secondAttribute="bottom" id="Pga-dc-MwF"/>
-                                                                <constraint firstItem="m5t-60-eDo" firstAttribute="top" secondItem="wSn-0o-zvr" secondAttribute="bottom" constant="20" id="T8d-CZ-MU7"/>
+                                                                <constraint firstItem="m5t-60-eDo" firstAttribute="top" secondItem="wSn-0o-zvr" secondAttribute="bottom" id="T8d-CZ-MU7"/>
                                                                 <constraint firstItem="m5t-60-eDo" firstAttribute="leading" secondItem="ymy-Cg-xVR" secondAttribute="leading" id="U1F-Ax-qeg"/>
+                                                                <constraint firstAttribute="trailing" secondItem="x9h-uM-bKD" secondAttribute="trailing" constant="20" id="ZXy-Bk-2q7"/>
                                                                 <constraint firstItem="wSn-0o-zvr" firstAttribute="top" secondItem="ymy-Cg-xVR" secondAttribute="top" constant="50" id="a1o-Dd-WgK"/>
+                                                                <constraint firstItem="x9h-uM-bKD" firstAttribute="top" secondItem="ymy-Cg-xVR" secondAttribute="top" constant="20" id="lNP-hv-Cex"/>
                                                                 <constraint firstAttribute="bottom" secondItem="wSn-0o-zvr" secondAttribute="bottom" constant="70" id="lpI-5y-eYs"/>
+                                                                <constraint firstItem="x9h-uM-bKD" firstAttribute="leading" secondItem="ymy-Cg-xVR" secondAttribute="leading" constant="20" id="mLV-nt-5p4"/>
+                                                                <constraint firstAttribute="bottom" secondItem="x9h-uM-bKD" secondAttribute="bottom" id="qB0-yf-C9n"/>
                                                                 <constraint firstItem="wSn-0o-zvr" firstAttribute="leading" secondItem="ymy-Cg-xVR" secondAttribute="leading" constant="40" id="rxf-Ck-hA0"/>
                                                                 <constraint firstAttribute="trailing" secondItem="m5t-60-eDo" secondAttribute="trailing" id="taC-mk-cqB"/>
                                                                 <constraint firstAttribute="width" secondItem="ymy-Cg-xVR" secondAttribute="height" multiplier="299:316" id="zaD-ia-zDo"/>
@@ -500,6 +508,7 @@ AR 캐릭터를 짧게 탭해보세요!</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="informationBackgroundView" destination="x9h-uM-bKD" id="JGn-y0-FRv"/>
                         <outlet property="informationBlurView" destination="Nrq-J5-9xQ" id="IyL-oy-EC9"/>
                         <outlet property="informationView" destination="7ko-Cc-dYn" id="sPf-Uw-fLZ"/>
                         <outlet property="nextBtnView" destination="d3X-IO-eBE" id="sr4-E3-17b"/>
