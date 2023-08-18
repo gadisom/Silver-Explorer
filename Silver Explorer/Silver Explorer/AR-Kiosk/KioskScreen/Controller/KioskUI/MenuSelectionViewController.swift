@@ -10,6 +10,7 @@ import UIKit
 
 class MenuSelectionViewController : UIViewController, UITableViewDelegate,UICollectionViewDelegate,UITableViewDataSource {
     
+    
     var cartItems : [Product] = []
     
     @IBOutlet weak var totalQuantityLabel: UILabel!
@@ -61,6 +62,12 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
             vc.appear(sender: self)
         }
     }
+    private func showCustomAlert(description : String) {
+        let storyboard = UIStoryboard(name: "KioskModal", bundle: nil)
+        let alertVC = storyboard.instantiateViewController(withIdentifier: String(describing: AlertViewController.self)) as! AlertViewController
+       // alertVC.alertDelegate = self
+        alertVC.showAlert(sender: self, text: "\(description) 5개 이내로 선택해주세요.")
+    }
    
     func appear(sender: UIViewController) {
         self.modalPresentationStyle = .overFullScreen
@@ -78,6 +85,9 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
             vc.kioskMenuBoardDelegate = self
             vc.appear(sender: self)
         }
+        else {
+            showCustomAlert(description: "메뉴는")
+        }
     }
    
     func itemLayout() -> UICollectionViewCompositionalLayout{
@@ -92,6 +102,8 @@ class MenuSelectionViewController : UIViewController, UITableViewDelegate,UIColl
                 let layout = UICollectionViewCompositionalLayout(section: section)
                 return layout
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -192,10 +204,19 @@ extension MenuSelectionViewController : KioskMainBoardDelegate {
 extension MenuSelectionViewController : MenuSelectionTableViewCellDelegate {
     func didIncreaseQuantity(cell: MenuSelectionTableViewCell) {
         guard let indexPath = menuSelectionTableView.indexPath(for: cell) else { return }
-               var product = cartItems[indexPath.row]
-               product.numberOfProduct = min(product.numberOfProduct + 1, 5)  // 최대 5개
-               cartItems[indexPath.row] = product
-               cell.configure(product)  // 셀 업데이트
+        var product = cartItems[indexPath.row]
+       
+        if product.numberOfProduct < 5 {
+            product.numberOfProduct = product.numberOfProduct + 1
+            cartItems[indexPath.row] = product
+            cell.configure(product)
+        }
+        else {
+            showCustomAlert(description: "수량은")
+        }
+//               product.numberOfProduct = min(product.numberOfProduct + 1, 5)  // 최대 5개
+//               cartItems[indexPath.row] = product
+//               cell.configure(product)  // 셀 업데이트
     }
 
     func didDecreaseQuantity(cell: MenuSelectionTableViewCell) {
