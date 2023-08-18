@@ -44,6 +44,7 @@ class ScannerViewController: UIViewController {
 
 extension ScannerViewController: VNDocumentCameraViewControllerDelegate {
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        documents.removeAll()
         guard scan.pageCount > 0 else {
             controller.dismiss(animated: true)
             self.navigationController?.popToRootViewController(animated: true)
